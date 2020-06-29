@@ -1,0 +1,24 @@
+# editor files 
+#--------------
+*~
+*#
+*.swp
+*.swo
+
+# osx meta files
+#--------------- 
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# direnv files 
+#---------------
+.direnv
+.envrc
+
+# secrets + keys  
+#---------------
+*.secret*
+*.key*
+

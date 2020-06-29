@@ -1,0 +1,15 @@
+# [created by task 2.5.1 2/4/2020 21:16:30]
+# taskwarrior program configuration file.
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# use the command 'task show' to see all defaults and overrides
+
+# files
+data.location=~/.cache/task
+
+# color theme 
+include ~/.cache/task/themes/dark-blue-256.theme
