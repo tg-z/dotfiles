@@ -1,0 +1,7 @@
+#!/bin/sed 1,6d
+
+# ruler - print an 80-character ruler
+# Steve Kinzler, steve@kinzler.com, Oct 93
+# http://kinzler.com/me/home.html#unix
+
+T...:...T1....:.T..2....T....3..T.:....4T...:...T5....:.T..6....T....7..T.:....8
