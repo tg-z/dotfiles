@@ -10,8 +10,8 @@ prepopulate-query-feeds yes
 
 # -- display -------------------------------------------------------------------
 
-show-read-feeds no
-feed-sort-order unreadarticlecount-asc
+show-read-feeds yes
+feed-sort-order date
 
 color article white default bold
 color info default default reverse
@@ -27,7 +27,7 @@ text-width 80
 
 goto-next-feed no
 
-browser linkhandler
+browser open
 
 bind-key h quit articlelist
 bind-key h quit article
