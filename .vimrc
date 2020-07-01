@@ -24,7 +24,7 @@ augroup END
 " ---------
 "| plugins |
 " --------- 
-
+source ~/.vim/defaults.vim
 source ~/.config/msmtp/iris.vim
 
 " gustav todo manager
