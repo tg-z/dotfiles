@@ -1,10 +1,68 @@
 set hidden true
 set shell sh
 set shellopts '-eu'
+set icons true
 
+cmd trash %trash $fx
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
+cmd mkdir ${{
+  printf "directory name: "
+  read ans
+  mkdir -p $ans
+}}
+
+cmd mkfile ${{
+  printf "file name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd delete ${{
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && mv -f $fx ~/.Trash 
+}}
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
 
 map gh cd ~ 
 map e vim $f
-
-
+map i $less $f
+map D delete
+map br $vimv $fx
+map cd fzf_jump
+map mf mkfile
+map md mkdir
+map R reload 
+map H top
+map L bottom
+map cf cd ~/.config
+map dl cd ~/Downloads
+map dc cd ~/Documents
+map dt cd ~/Desktop
+map gr cd ~/repos
