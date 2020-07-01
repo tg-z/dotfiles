@@ -1,0 +1,3 @@
+set matchbrackets "(<[{)>]}"
+set mouse
+include /usr/local/nanorc/*.nanorc
