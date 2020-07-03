@@ -2,6 +2,7 @@ set hidden true
 set shell sh
 set shellopts '-eu'
 set icons true
+set drawbox true
 
 cmd trash %trash $fx
 cmd zip %zip -r "$f" "$f"
@@ -53,6 +54,7 @@ cmd unarchive ${{
 map gh cd ~ 
 map e vim $f
 map i $less $f
+map u $unf $f
 map D delete
 map br $vimv $fx
 map cd fzf_jump
