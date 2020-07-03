@@ -54,6 +54,8 @@ nmap <leader>w :w<CR>
 noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
+map <C-n> :NERDTreeToggle<CR>
+
 
 execute pathogen#infect()
 call pathogen#helptags()
