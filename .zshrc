@@ -2,10 +2,10 @@ source ~/.zprofile
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.secrets ] && source ~/.secrets 
-[ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh/prompts/polyglot/polyglot.plugin.zsh
-[ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh/functions/codestats.zsh
-[ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh/functions/wakatime.zsh 
-[ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh/functions/forgit.zsh 
+[ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
+[ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
+[ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh 
+[ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh 
 
 export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
 
