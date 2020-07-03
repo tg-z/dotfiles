@@ -27,7 +27,7 @@ text-width 80
 
 goto-next-feed no
 
-browser "open %u -a Firefox\ Developer\ Edition"
+browser firefox
 
 bind-key h quit articlelist
 bind-key h quit article
