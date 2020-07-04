@@ -32,6 +32,7 @@ alias changed='ls -ltrA'
 alias cf='cd ~/.config && ls -a1'
 alias old='ls -ltr'
 alias cfg='dotbare'
+alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
