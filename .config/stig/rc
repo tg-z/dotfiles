@@ -1,5 +1,4 @@
 
-
 # Update torrent/peer/file/etc lists every 10 seconds
 set tui.poll 10
 
