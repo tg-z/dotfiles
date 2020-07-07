@@ -56,7 +56,8 @@ noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
 map <C-n> :NERDTreeToggle<CR>
-
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 execute pathogen#infect()
 call pathogen#helptags()
