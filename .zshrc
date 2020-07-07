@@ -19,6 +19,7 @@ export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
 
 source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
+setopt autocd
 HISTSIZE=10000000
 SAVEHIST=10000000
 
@@ -26,12 +27,16 @@ alias ..='cd ..'
 alias ls='gls --color=always'
 alias nvim='vim'
 alias vi='vim'
+alias firefox='firefox -new-tab'
 alias tl='timeline'
 alias bu='buku --suggest --colors oepxm'
 alias t='go-t'
 alias clr='clear'
 alias grep='grep --color=always'
+alias ffmpeg='ffmpeg -hide_banner'
+alias mkd='mkdir -pv'
 alias dsd='m dir delete dsfiles'
+alias cgo='cargo-go'
 alias urlview='urlscan'
 alias cat='ccat'
 alias _='sudo'
