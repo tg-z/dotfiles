@@ -18,6 +18,9 @@ source ~/.zprofile
 source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 setopt autocd
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
 HISTSIZE=10000000
 SAVEHIST=10000000
 
@@ -27,15 +30,16 @@ alias nvim='vim'
 alias vi='vim'
 alias firefox='firefox -new-tab'
 alias tl='timeline'
-alias feh='feh -T ~/.config/feh/themes
+alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias t='go-t'
-alias clr='clear'
+alias clr='clear && ls -a1'
 alias grep='grep --color=always'
 alias ffmpeg='ffmpeg -hide_banner'
-alias mkd='mkdir -pv'
+alias chmodx='chmod +x'
 alias dsd='m dir delete dsfiles'
 alias cgo='cargo-go'
+alias cask='brew cask'
 alias urlview='urlscan'
 alias cat='ccat'
 alias _='sudo'

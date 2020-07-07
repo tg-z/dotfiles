@@ -50,7 +50,7 @@ video/*; mpv -vo drm -quiet '%s'; needsterminal
 
 # text
 text/html; w3m "%s"
-text/html; open -a Firefox "%s"
+text/html; firefox -new-tab "%s"
 text/plain; less "%s"
 text/*; vim "%s"
 # media

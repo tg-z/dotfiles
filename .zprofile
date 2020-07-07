@@ -6,9 +6,11 @@ export PATH="$HOME/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin:/us
 export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
 
 export EDITOR="vim"
+export VISUAL="vim"
 export READER="zathura"
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 export PAGER="less"
+export MANPAGER="less"
 export BROWSER="firefox"
 
 # TUIR
