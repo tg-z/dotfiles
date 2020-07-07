@@ -1,0 +1,2 @@
+#!/bin/sh
+lynx "https://searx.lukesmith.xyz/?q=$*&categories=general&language=en-US"
