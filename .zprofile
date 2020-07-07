@@ -3,6 +3,7 @@
 export HOME="/Users/bluetooth"
 export ZSH="/usr/local/bin/zsh"
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
 
 export EDITOR="vim"
 export READER="zathura"
