@@ -6,6 +6,7 @@ set rtp+=/usr/local/opt/fzf
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set encoding=UTF-8
 set noswapfile
+set mouse=a
 set termguicolors
 set guifont=MesloLGSDZ\ Nerd\ Font:h11
 syntax on
