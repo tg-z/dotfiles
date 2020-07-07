@@ -15,8 +15,6 @@ source ~/.zprofile
 [ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh 
 [ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh 
 
-export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
-
 source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 setopt autocd
