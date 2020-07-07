@@ -27,6 +27,7 @@ alias nvim='vim'
 alias vi='vim'
 alias firefox='firefox -new-tab'
 alias tl='timeline'
+alias feh='feh -T ~/.config/feh/themes
 alias bu='buku --suggest --colors oepxm'
 alias t='go-t'
 alias clr='clear'
