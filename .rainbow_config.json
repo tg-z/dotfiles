@@ -22,7 +22,7 @@
     "LIST_MAX": 5,
     "ONLY_LIST": [],
     "IGNORE_LIST": [],
-    "HISTORY_FILENAME": "completer.hist",
+    "HISTORY_FILENAME": "/Users/bluetooth/.cache/completer.hist",
     "IMAGE_SHIFT": 2,
     "IMAGE_MAX_HEIGHT": 90,
     "STREAM_DELAY": 0,
@@ -30,12 +30,12 @@
     "PUBLIC_DOMAIN": "stream.twitter.com",
     "SITE_DOMAIN": "sitestream.twitter.com",
     "FORMAT": {
-        "TWEET": {
-            "CLOCK_FORMAT": "%Y/%m/%d %H:%M:%S",
+        "TWEET": { 
+            "CLOCK_ FORMAT": "%Y/%m/%d %H:%M:%S",
             "DISPLAY": "\n  #name #nick #clock \n  \u267a:#rt_count \u2665:#fa_count id:#id via #client #fav\n  #tweet"
         },
         "MESSAGE": {
-            "CLOCK_FORMAT": "%Y/%m/%d %H:%M:%S",
+            "CLOCK_F ORMAT": "%Y/%m/%d %H:%M:%S",
             "DISPLAY": "\n  #sender_name #sender_nick #to #recipient_name #recipient_nick :\n  #clock message_id:#id\n  #message"
         }
     },
