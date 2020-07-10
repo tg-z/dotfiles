@@ -3,7 +3,7 @@
 " ---------
 
 set rtp+=/usr/local/opt/fzf
-set runtimepath^=~/.cache/backup/vim/bundle/ctrlp.vim
+set rtp^=~/.cache/backup/vim/bundle/ctrlp.vim
 set encoding=UTF-8
 set noswapfile
 set expandtab
@@ -64,4 +64,3 @@ xmap ga <Plug>(EasyAlign)
 
 execute pathogen#infect()
 call pathogen#helptags()
-
