@@ -12,7 +12,7 @@ if empty($evervim_root)
 endif
 
 " Core Config
-source $evervim_root/core/core.vim
+so $evervim_root/core/core.vim
 
 " ---------
 "| default |
@@ -23,7 +23,8 @@ source $evervim_root/core/core.vim
 " ----------
 "| keymaps  |
 " ----------
-
+" let mapleader=","
+" nnoremap ; :
 map <leader>/ :Rg<CR>
 nmap <leader>w :w<CR>
 noremap <C-q> :q<CR>
