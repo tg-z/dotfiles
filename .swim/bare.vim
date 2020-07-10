@@ -29,9 +29,9 @@ augroup END
 "| plugins |
 " --------- 
 
-source ~/.cache/backup/vim/autoload/pathogen.vim
-source ~/.cache/backup/vim/defaults.vim
-source ~/.config/msmtp/iris.vim
+so ~/.cache/backup/vim/autoload/pathogen.vim
+so ~/.cache/backup/vim/defaults.vim
+so ~/.config/msmtp/iris.vim
 
 " gustav todo manager
 noremap <Leader>- :call gustav#add()<CR>
@@ -58,7 +58,7 @@ nmap <leader>w :w<CR>
 noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
-map <C-n> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR>
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
