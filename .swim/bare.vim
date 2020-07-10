@@ -8,6 +8,7 @@ set encoding=UTF-8
 set noswapfile
 set expandtab
 set mouse=a
+set showcmd
 set termguicolors
 set guifont=MesloLGSDZ\ Nerd\ Font:h11
 syntax on
@@ -17,12 +18,13 @@ filetype plugin indent on
 "| autocmd |
 " ---------
 
-" Put these in an autocmd group, so that we can delete them easily.
+" put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
-  au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=79
+  autocmd!
+  autocmd FileType text setlocal textwidth=78
+  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+
 augroup END
 
 " ---------
@@ -30,6 +32,7 @@ augroup END
 " --------- 
 
 so ~/.cache/backup/vim/autoload/pathogen.vim
+so ~/.cache/backup/vim/plugins.vim
 so ~/.cache/backup/vim/defaults.vim
 so ~/.config/msmtp/iris.vim
 

@@ -18,7 +18,10 @@ so $evervim_root/core/core.vim
 "| default |
 " ---------
 
-
+augroup Markdown
+  autocmd!
+  autocmd FileType markdown set wrap
+augroup END
 
 " ----------
 "| keymaps  |
