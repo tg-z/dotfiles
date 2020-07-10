@@ -1,0 +1,1 @@
+/Users/bluetooth/.swim/bare.vim
