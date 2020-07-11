@@ -19,6 +19,18 @@ so $evervim_root/core/core.vim
 "| default |
 " ---------
 
+" gist
+let g:github_user = 'tg-z'
+let g:gist_browser_command = 'open %URL%'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
+let g:gist_get_multiplefile = 1
+let g:gist_token_file = '~/.gist.vim'
+let g:gist_update_on_write = 1
+let g:gist_clip_command = 'pbcopy'
+
 augroup Markdown
   autocmd!
   autocmd FileType markdown set wrap
