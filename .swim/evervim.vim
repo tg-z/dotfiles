@@ -13,7 +13,6 @@ endif
 
 " Core Config
 so $evervim_root/core/core.vim
-so ~/.cache/backup/vim/.gist-vim
 
 
 " ---------
@@ -35,3 +34,5 @@ nmap <leader>w :w<CR>
 noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
+" open-browser
+nmap n <Plug>(openbrowser-open)

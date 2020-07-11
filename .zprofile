@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 export HOME="/Users/bluetooth"
+export SHELL="/usr/local/bin/zsh"
 export ZSH="/usr/local/bin/zsh"
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
@@ -12,6 +13,7 @@ export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 export PAGER="less"
 export MANPAGER="less"
 export BROWSER="firefox"
+export COLORTERM="truecolor"
 
 # TUIR
 export TUIR_EDITOR="vim"
