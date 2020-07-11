@@ -34,6 +34,7 @@ augroup END
 so ~/.cache/backup/vim/autoload/pathogen.vim
 so ~/.cache/backup/vim/plugins.vim
 so ~/.cache/backup/vim/defaults.vim
+so ~/.cache/backup/vim/.gist-vim
 so ~/.config/msmtp/iris.vim
 
 " gustav todo manager
