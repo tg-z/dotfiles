@@ -15,6 +15,7 @@ endif
 so $evervim_root/core/core.vim
 so ~/.cache/backup/vim/.gist-vim
 
+
 " ---------
 "| default |
 " ---------
