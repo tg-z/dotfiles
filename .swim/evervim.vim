@@ -19,6 +19,10 @@ so $evervim_root/core/core.vim
 "| default |
 " ---------
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/Documents/wiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
 " gist
 let g:github_user = 'tg-z'
 let g:gist_browser_command = 'open %URL%'
