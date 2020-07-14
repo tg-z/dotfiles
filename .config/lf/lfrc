@@ -3,6 +3,8 @@ set shell sh
 set shellopts '-eu'
 set icons true
 set drawbox true
+set preview true
+set previewer ~/.config/lf/preview
 
 cmd trash %trash $fx
 cmd zip %zip -r "$f" "$f"
@@ -52,7 +54,7 @@ cmd unarchive ${{
 }}
 
 map gh cd ~
-map e vim $f
+map e $vim $f
 map i $less $f
 map r $unf $f
 map D delete
