@@ -27,6 +27,8 @@ augroup vimrcEx
 
 augroup END
 
+let g:calendar_google_calendar = 1
+
 " ---------
 "| plugins |
 " --------- 
@@ -34,6 +36,7 @@ augroup END
 so ~/.cache/backup/vim/autoload/pathogen.vim
 so ~/.cache/backup/vim/plugins.vim
 so ~/.cache/backup/vim/defaults.vim
+so ~/.cache/calendar.vim/credentials.vim
 so ~/.cache/backup/vim/.gist-vim
 so ~/.config/msmtp/iris.vim
 

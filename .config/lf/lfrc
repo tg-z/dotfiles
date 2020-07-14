@@ -51,16 +51,17 @@ cmd unarchive ${{
   esac
 }}
 
-map gh cd ~ 
+map gh cd ~
 map e vim $f
 map i $less $f
-map u $unf $f
+map r $unf $f
 map D delete
 map br $vimv $fx
+map u $unpk $fx
 map cd fzf_jump
 map mf mkfile
 map md mkdir
-map R reload 
+map R reload
 map H top
 map L bottom
 map cf cd ~/.config
@@ -68,3 +69,6 @@ map dl cd ~/Downloads
 map dc cd ~/Documents
 map dt cd ~/Desktop
 map gr cd ~/repos
+map ls cd ~/.local/share
+map ze cd ~/.local/share/zet
+map ca cd ~/.cache

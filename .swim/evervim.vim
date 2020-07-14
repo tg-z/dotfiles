@@ -19,6 +19,9 @@ so $evervim_root/core/core.vim
 "| default |
 " ---------
 
+let g:calendar_google_calendar = 1
+so ~/.cache/calendar.vim/credentials.vim
+
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/wiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
