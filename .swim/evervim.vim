@@ -19,6 +19,8 @@ so $evervim_root/core/core.vim
 "| default |
 " ---------
 
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
 let g:calendar_google_calendar = 1
 so ~/.cache/calendar.vim/credentials.vim
 

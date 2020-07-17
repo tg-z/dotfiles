@@ -3,8 +3,8 @@ set shell sh
 set shellopts '-eu'
 set icons true
 set drawbox true
-set preview true
-set previewer ~/.config/lf/preview
+# set preview true
+# set previewer ~/.config/lf/preview
 
 cmd trash %trash $fx
 cmd zip %zip -r "$f" "$f"

@@ -1,4 +1,4 @@
-#!/bin/sed 1,6d
+#!/usr/bin/sed 1,6d
 
 # ruler - print an 80-character ruler
 # Steve Kinzler, steve@kinzler.com, Oct 93
