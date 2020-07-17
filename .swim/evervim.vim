@@ -13,32 +13,12 @@ endif
 
 " Core Config
 so $evervim_root/core/core.vim
-
+so ~/.cache/backup/vim/plugins.vim 
 
 " ---------
 "| default |
 " ---------
-
-au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-
-let g:calendar_google_calendar = 1
 so ~/.cache/calendar.vim/credentials.vim
-
-" vimwiki
-let g:vimwiki_list = [{'path': '~/Documents/wiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
-" gist
-let g:github_user = 'tg-z'
-let g:gist_browser_command = 'open %URL%'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_show_privates = 1
-let g:gist_post_private = 1
-let g:gist_get_multiplefile = 1
-let g:gist_token_file = '~/.gist.vim'
-let g:gist_update_on_write = 1
-let g:gist_clip_command = 'pbcopy'
 
 augroup Markdown
   autocmd!
@@ -55,5 +35,6 @@ nmap <leader>w :w<CR>
 noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
+nmap <leader>e :PlugInstall<CR>
 " open-browser
 nmap n <Plug>(openbrowser-open)
