@@ -180,7 +180,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.75
+background_opacity: 0.90
 
 # Mouse bindings
 #
@@ -198,7 +198,7 @@ background_opacity: 0.75
 # All available `mods` and `action` values are documented in the key binding
 # section.
 mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
+  - {mouse: Middle, action: PasteSelection}
 
 mouse:
   # Click settings
@@ -206,8 +206,8 @@ mouse:
   # The `double_click` and `triple_click` settings control the time
   # alacritty should wait for accepting multiple clicks as one double
   # or triple click.
-  double_click: { threshold: 300 }
-  triple_click: { threshold: 300 }
+  double_click: {threshold: 300}
+  triple_click: {threshold: 300}
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
@@ -232,7 +232,7 @@ mouse:
     #
     # These are the modifiers that need to be held down for opening URLs when clicking
     # on them. The available modifiers are documented in the key binding section.
-    modifiers: "Command"
+    modifiers: Command
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -250,14 +250,14 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Beam 
+  style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
   unfocused_hollow: false
 
 # Live config reload (changes require restart)
-live_config_reload: false
+live_config_reload: true
 
 # Shell
 #
@@ -269,7 +269,7 @@ live_config_reload: false
 #   - (Linux) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/zsh
+  program: /usr/local/bin/zsh
   args: []
 #    - --login
 
@@ -411,39 +411,43 @@ debug:
 #   - AppKeypad
 
 key_bindings:
-  - { key: Minus,  mods: Command,         action: DecreaseFontSize }
-  - { key: Minus,  mods: Control,         action: IncreaseFontSize }
-  - { key: K,      mods: Command,         action: ClearHistory     }
-  - { key: N,      mods: Command,         action: SpawnNewInstance }
-  - { key: Slash,  mods: Alt,             chars: "\\"              }
-  - { key: X,      mods: Alt,             chars: "\x1bx"           }
+  - {key: Minus, mods: Command, action: DecreaseFontSize}
+  - {key: Minus, mods: Control, action: IncreaseFontSize}
+  - {key: K, mods: Command, action: ClearHistory}
+  - {key: N, mods: Command, action: SpawnNewInstance}
+  - {key: Slash, mods: Alt, chars: \}
+  - {key: X, mods: Alt, chars: "\ex"}
 
 
 # BEGIN ACE
 colors:
+  # COLORSCHEME: ayu_dark.yaml
+  # Default colors
   primary:
-    background: '0x010410'
-    foreground: '0xcbcfdc'
-  cursor:
-    text:       '0x010410'
-    cursor:     '0xcbcfdc'
-  normal:
-    black:      '0x010410'
-    red:        '0x607A9A'
-    green:      '0x6482A3'
-    yellow:     '0x738DAF'
-    blue:       '0x7D9BC2'
-    magenta:    '0x8A9CB9'
-    cyan:       '0x97A7C6'
-    white:      '0xcbcfdc'
-  bright:
-    black:      '0x8e909a'
-    red:        '0x607A9A'
-    green:      '0x6482A3'
-    yellow:     '0x738DAF'
-    blue:       '0x7D9BC2'
-    magenta:    '0x8A9CB9'
-    cyan:       '0x97A7C6'
-    white:      '0xcbcfdc'
+    background: '0x0A0E14'
+    foreground: '0xB3B1AD'
 
-# END ACE
+  # Normal colors
+  cursor:
+    text: '0x010410'
+    cursor: '0xcbcfdc'
+  normal:
+    black: '0x01060E'
+    red: '0xEA6C73'
+    green: '0x91B362'
+    yellow: '0xF9AF4F'
+    blue: '0x53BDFA'
+    magenta: '0xFAE994'
+    cyan: '0x90E1C6'
+    white: '0xC7C7C7'
+
+  # Bright colors
+  bright:
+    black: '0x686868'
+    red: '0xF07178'
+    green: '0xC2D94C'
+    yellow: '0xFFB454'
+    blue: '0x59C2FF'
+    magenta: '0xFFEE99'
+    cyan: '0x95E6CB'
+    white: '0xFFFFFF'
