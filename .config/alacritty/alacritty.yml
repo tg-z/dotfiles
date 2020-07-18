@@ -180,7 +180,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.90
+background_opacity: 0.98
 
 # Mouse bindings
 #
@@ -421,33 +421,36 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: ayu_dark.yaml
+  # COLORSCHEME: base16-gigavolt.yml
   # Default colors
   primary:
-    background: '0x0A0E14'
-    foreground: '0xB3B1AD'
+    background: '0x202126'
+    foreground: '0xe9e7e1'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x202126'
+    cursor: '0xe9e7e1'
 
   # Normal colors
-  cursor:
-    text: '0x010410'
-    cursor: '0xcbcfdc'
   normal:
-    black: '0x01060E'
-    red: '0xEA6C73'
-    green: '0x91B362'
-    yellow: '0xF9AF4F'
-    blue: '0x53BDFA'
-    magenta: '0xFAE994'
-    cyan: '0x90E1C6'
-    white: '0xC7C7C7'
+    black: '0x202126'
+    red: '0xff661a'
+    green: '0xf2e6a9'
+    yellow: '0xffdc2d'
+    blue: '0x40bfff'
+    magenta: '0xae94f9'
+    cyan: '0xfb6acb'
+    white: '0xe9e7e1'
 
   # Bright colors
   bright:
-    black: '0x686868'
-    red: '0xF07178'
-    green: '0xC2D94C'
-    yellow: '0xFFB454'
-    blue: '0x59C2FF'
-    magenta: '0xFFEE99'
-    cyan: '0x95E6CB'
-    white: '0xFFFFFF'
+    black: '0xa1d2e6'
+    red: '0x19f988'
+    green: '0x2d303d'
+    yellow: '0x5a576e'
+    blue: '0xcad3ff'
+    magenta: '0xeff0f9'
+    cyan: '0x6187ff'
+    white: '0xf2fbff'
+

@@ -65,6 +65,7 @@ if type brew &>/dev/null; then
 fi
 
 eval $(ssh-agent -s)
+eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
