@@ -1,0 +1,40 @@
+#!/bin/sh
+alias -g \
+	C="| wc -l" \
+	D="DISPLAY=:0.0" \
+	DN="/dev/null" \
+	ED="export DISPLAY=:0.0" \
+	EG="|& egrep" \
+	EH="|& head" \
+	EL="|& less" \
+	ELS="|& less -S" \
+	ETL="|& tail -20" \
+	ET="|& tail" \
+	F=" | fmt -" \
+	G="| egrep" \
+	H="| head" \
+	HL="|& head -20" \
+	ST="amanogawa -f '%f%t%d' | column -t -s '    ' | peco | awk '{print \$1}'" \
+	Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)" \
+	LL="2>&1 | less" \
+	L="| less" \
+	LS="| less -S" \
+	MM="| most" \
+	M="| more" \
+	NE="2> /dev/null" \
+	NS="| sort -n" \
+	NUL="> /dev/null 2>&1" \
+	RNS="| sort -nr" \
+	S="| sort" \
+	TL="| tail -20" \
+	T="| tail" \
+	US="| sort -u" \
+	VM="/var/log/messages" \
+	X0G="| xargs -0 egrep" \
+	X0="| xargs -0" \
+	XG="| xargs egrep" \
+	XS="fzf | xargs ls -l" \
+	X="| xargs" \
+    UL="| pup 'a attr{href}'"
+    FU="| urlscan"
+

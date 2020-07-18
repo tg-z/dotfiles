@@ -4,7 +4,7 @@
 #  / /_(__  ) / / / /  / /__  
 # /___/____/_/ /_/_/   \___/  
 
-source ~/.zprofile 
+source ~/.zprofile && source ~/.config/aliasrc
 
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/bd.zsh ] && source ~/.zsh.d/functions/bd.zsh
