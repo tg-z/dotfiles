@@ -7,7 +7,7 @@
 source ~/.zprofile && source ~/.config/aliasrc
 
 [ -f ~/.secrets ] && source ~/.secrets
-[ -f ~/.zsh.d/functions/bd.zsh ] && source ~/.zsh.d/functions/bd.zsh
+[ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
@@ -26,6 +26,7 @@ SAVEHIST=10000000
 
 alias ..='cd ..'
 alias ls='gls --color=always'
+alias awk='/usr/local/bin/awk'
 alias nvim='vim'
 alias vi='vim'
 alias zal='alias -L'
@@ -56,7 +57,6 @@ alias changed='ls -ltrA'
 alias cf='cd ~/.config && ls -a1'
 alias old='ls -ltr'
 alias cfg='dotbare'
-alias bd='bd -si'
 alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
 
 if type brew &>/dev/null; then
