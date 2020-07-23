@@ -34,7 +34,7 @@ bind-key h quit articlelist
 bind-key h quit article
 bind-key h quit tagselection
 bind-key h quit feedlist
-
+bind-key A mark-all-feeds-read
 bind-key j down feedlist
 bind-key k up feedlist
 bind-key j next articlelist
