@@ -1,6 +1,6 @@
 # -- feeds 
 
-auto-reload n
+auto-reload no
 reload-time 120
 reload-threads 4
 download-retries 4
