@@ -9,8 +9,9 @@ prepopulate-query-feeds yes
 
 
 # -- display 
-feedlist-format     "%4i %n %11u %t"
-articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
+# feedlist-format     "%4i %n %11u %t"
+# articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
+articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
 
 show-read-feeds no
 feed-sort-order date
