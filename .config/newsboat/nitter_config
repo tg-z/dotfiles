@@ -12,7 +12,6 @@ prepopulate-query-feeds yes
 
 show-read-feeds no
 feed-sort-order date-desc
-adate-desc
 
 color article white default bold
 color info default default reverse
