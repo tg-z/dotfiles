@@ -1,0 +1,3 @@
+#!/bin/sh
+. "$HOME/.zprofile" &>/dev/null
+newsboat -u ~/.config/newsboat/nitter_urls -C ~/.config/newsboat/nitter_config
