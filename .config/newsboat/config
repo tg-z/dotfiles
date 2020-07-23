@@ -6,7 +6,8 @@ reload-threads 4
 download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
-
+save-path "~/.local/share/newsboat/saved"
+download-path "~/.cache/castero/downloads"
 
 # -- display 
 
