@@ -6,7 +6,8 @@ reload-threads 4
 download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
-
+articlelist-format "%-12T|%t"
+datetime-format "%F - %R"
 
 # -- display
 
