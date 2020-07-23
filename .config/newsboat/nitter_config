@@ -1,6 +1,6 @@
 # -- feeds 
 
-auto-reload yes
+auto-reload n
 reload-time 120
 reload-threads 4
 download-retries 4
@@ -8,10 +8,7 @@ download-timeout 10
 prepopulate-query-feeds yes
 
 
-# -- display 
-# feedlist-format     "%4i %n %11u %t"
-# articlelist-format  "%4i %f %D   %?T?|%-17T|  ?%t"
-articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
+# -- display
 
 show-read-feeds no
 feed-sort-order date
