@@ -26,7 +26,7 @@ text-width 80
 
 # -- navigation 
 
-goto-next-feed no
+goto-next-feed yes
 
 browser firefox
 
