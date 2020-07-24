@@ -1,1 +1,1 @@
-/Users/bluetooth/.swim/main.vim
+/Users/bluetooth/.swim/bare.vim

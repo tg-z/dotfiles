@@ -11,7 +11,7 @@ download-path "~/.cache/castero/downloads"
 
 # -- display 
 
-show-read-feeds yes
+show-read-feeds no
 feed-sort-order date
 
 color article white default bold
