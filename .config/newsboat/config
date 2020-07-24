@@ -11,7 +11,7 @@ download-path "~/.cache/castero/downloads"
 
 # -- display 
 
-show-read-feeds no
+show-read-feeds yes
 feed-sort-order date
 
 color article white default bold
@@ -78,7 +78,9 @@ macro a set browser "youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-
 macro v set browser "open -a mpv"; open-in-browser ; set browser linkhandler
 macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
+macro b set browser "wallabag add %u"; open-in-browser ; set browser linkhandler
 macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
+macro i set browser "feh %u"; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" green
 highlight feedlist ".*(0/0))" black
