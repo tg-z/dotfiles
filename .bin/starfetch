@@ -26,7 +26,7 @@ __get_starred_urls() {
     __get_api_url "${url}" "${QUERY}"
 }
 __format_starred() {
-    local -r QUERY='.[] | [.repo [.id, .full_name, .description, .html_url, .homepage, .language]]'
+    local -r QUERY='.[] | [.id, .full_name, .description, .html_url, .homepage, .language]'
     __get_file && cd "${dest_dir}"
     jq "${QUERY}" "$(fd . -t f -e json | fzf)"
 }
