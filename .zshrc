@@ -9,6 +9,7 @@ source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
+[ -f ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh ] && ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
