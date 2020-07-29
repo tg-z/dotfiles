@@ -26,11 +26,17 @@ __get_starred_urls() {
     __get_api_url "${url}" "${QUERY}"
 }
 __format_starred() {
-    local -r QUERY='.[] | [.id, .full_name, .description, .html_url, .homepage, .language] ' 
+    local -r QUERY='.[] | [.id, .full_name, .description, .html_url, .homepage, .language] ' -r | jq .
     __get_file && cd "${dest_dir}"
     jq "${QUERY}" "$(fd . -t f -e json | fzf)"
 }
 main() {
+    if [[ -z "$1"  ]]; then
+        echo "Usage: starfetch <options>"
+        echo "starfetch local"
+    elif [[ -n "$1"  ]]; then
+        echo "backing up local stars..."
+    fi
 }
 
 main "$@"
