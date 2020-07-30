@@ -43,15 +43,33 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-cmd unarchive ${{
-  case "$f" in
-      *.zip) unzip "$f" ;;
-      *.tar.gz) tar -xzvf "$f" ;;
-      *.tar.bz2) tar -xjvf "$f" ;;
-      *.tar) tar -xvf "$f" ;;
-      *) echo "Unsupported format" ;;
-  esac
+cmd unpk ${{
+  if [ -f "$1"  ] ; then
+    case "$1" in
+
 }}
+
+cmd pview ${{
+  case "$f" in 
+    *.json) fx "$f" ;;
+    *.csv) csvpreview "$f" ;;
+    *.md) glow "$f" ;;
+    *.png) mpv "$f" ;;
+    *.jpg) mpv "$f" ;;
+    *.jpeg) mpv "$f" ;;
+    *.gif) mpv "$f" ;;
+    *.html) w3m "$f" ;;
+    *.css) vim "$f" ;;
+    *.
+}}
+
+cmd cpy ${{
+    echo -e "copied ✓"
+    for i
+    do cat $i | pbcopy
+    done;
+}}
+
 
 map gh cd ~
 map e $vim $f
@@ -59,7 +77,8 @@ map i $less $f
 map r $unf $f
 map D delete
 map br $vimv $fx
-map u $unpk $fx
+map u unpk $fx
+map p pview $fx
 map cd fzf_jump
 map mf mkfile
 map md mkdir
@@ -74,3 +93,5 @@ map gr cd ~/repos
 map ls cd ~/.local/share
 map ze cd ~/.local/share/zet
 map ca cd ~/.cache
+map as cd ~/Library/ApplicationSupport
+
