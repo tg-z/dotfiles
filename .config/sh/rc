@@ -2,10 +2,11 @@
 
 eval "$(ssh-agent)" > /dev/null 2>&1
 
-[ -f ~/.secrets ] && source ~/.secrets
-[ -f ~/.config/sh/env ] && source ~/.config/sh/env
-[ -f ~/.config/sh/functions ] && source ~/.config/sh/functions
-[ -f ~/.config/sh/aliases ] && source ~/.config/sh/aliases
+[ -f "$HOME/.secrets" ] && . "$HOME/.secrets"
+[ -f ~/.config/sh/env ] && . ~/.config/sh/env
+[ -f ~/.config/sh/functions ] && . ~/.config/sh/functions
+[ -f ~/.config/sh/aliases ] && . ~/.config/sh/aliases
+[ -f "/usr/local/etc/profile.d/bash_completion.sh"  ] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 shopt -s extglob
 shopt -s no_empty_cmd_completion
