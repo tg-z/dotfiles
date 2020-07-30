@@ -28,6 +28,7 @@ SAVEHIST=10000000
 alias ..='cd ..'
 alias ls='gls --color=always'
 alias awk='/usr/local/bin/awk'
+alias tree='tree -C'
 alias nvim='vim'
 alias vi='vim'
 alias bc='dntk'

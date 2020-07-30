@@ -75,3 +75,8 @@
 	line-numbers-right-format = "| "
 [credential]
 	helper = !pass-git-helper $@
+[gitlab]
+	tls = true
+	format = json
+	host = gitlab.com
+	token = !pass show secrets/gitlab-token
