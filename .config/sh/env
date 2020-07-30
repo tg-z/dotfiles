@@ -1,12 +1,18 @@
 # envrc
 
-export SHELL="/bin/sh"
+export SHELL=/bin/sh
 export HOME="/Users/bluetooth"
 export PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.bin:$HOME/.local/bin:$HOME/.local/share/go/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-export PATH="/Applications/Firefox.app/Contents/MacOS:/usr/local/opt/python@3.8/bin::/usr/local/opt/curl/bin:$PATH"
+export PATH="/Applications/Firefox.app/Contents/MacOS:/usr/local/opt/python@3.8/bin:/usr/local/opt/curl/bin:$PATH"
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
+export MANPAGER="less"
+export BROWSER="firefox"
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export VISUAL="vim"
+export READER="zathura"
+export LESS="-R"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/sh/history"
 export MAILCAPS="$HOME/.config/tuir/mailcap"
 export XDG_CONFIG_HOME="$HOME/.config"
