@@ -78,7 +78,7 @@ macro a set browser "open -a mpv --vid=no --save-position-on-quit"; open-in-brow
 macro v set browser "open -a mpv"; open-in-browser ; set browser linkhandler
 macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
-macro b set browser "wallabag add -q"; open-in-browser ; set browser linkhandler
+macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler
 macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
 macro i set browser "feh <<<"; open-in-browser ; set browser linkhandler
 
