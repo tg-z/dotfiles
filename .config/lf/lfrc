@@ -1,6 +1,7 @@
 set hidden true
 set shell sh
 set shellopts '-eu'
+set color256 true
 set icons true
 set drawbox true
 # set preview true
@@ -72,6 +73,8 @@ cmd cpy ${{
 
 
 map gh cd ~
+map st :set sortby time
+map se :set sortby ext; set info
 map e $vim $f
 map i $less $f
 map b $bat $f
@@ -79,7 +82,14 @@ map r $unf $f
 map D delete
 map br $vimv $fx
 map u unpk $fx
-map p pview $fx
+map p paste
+map x cut
+map y copy
+map <enter> open
+map m mark-save
+map ' mark-load
+map " mark-remove
+map pv pview $fx
 map cd fzf_jump
 map mf mkfile
 map md mkdir
@@ -92,7 +102,7 @@ map dc cd ~/Documents
 map dt cd ~/Desktop
 map gr cd ~/repos
 map ls cd ~/.local/share
-map ze cd ~/.local/share/zet
+map zet cd ~/.local/share/zet
 map ca cd ~/.cache
 map as cd ~/Library/ApplicationSupport
-
+map oc cd /usr/local/Cellar

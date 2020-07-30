@@ -22,6 +22,8 @@ export TUIR_URLVIEWER="urlscan"
 
 export WAKATIME_HOME="$HOME/.config/waka"
 export MAILCAPS="$HOME/.config/tuir/mailcap"
+export SUBS_FILE="$HOME/.local/share/subs/subs.txt"
+export SUBS_MENU_PROG="fzf"
 export GOTTY_CONFIG="$HOME/.config/gotty.conf"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
