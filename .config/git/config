@@ -51,6 +51,7 @@
 	editor = vim
 	hooksPath = ~/.hooks
 	excludesfile = ~/.config/git/ignore
+	pager = delta
 [ghq]
 	root = ~/repos
 	vcs = git
@@ -67,3 +68,10 @@
 	prune = true
 [include]
 	path = ~/.config/git/private
+[delta]
+	syntax-theme = Github
+	side-by-side = true
+	line-numbers-left-format = 
+	line-numbers-right-format = "| "
+[credential]
+	helper = !pass-git-helper $@

@@ -74,6 +74,7 @@ cmd cpy ${{
 map gh cd ~
 map e $vim $f
 map i $less $f
+map b $bat $f
 map r $unf $f
 map D delete
 map br $vimv $fx
