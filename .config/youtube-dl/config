@@ -1,0 +1,9 @@
+
+
+# save all videos under Music in ~ 
+-o ~/Music/mp3/tracks/%(title)s.%(ext)s
+
+# always extract audio
+-x -f bestaudio/best
+
+# 
