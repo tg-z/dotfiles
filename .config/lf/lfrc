@@ -71,39 +71,70 @@ cmd cpy ${{
     done;
 }}
 
+cmd chmod ${{
+  for file in "$fx"
+  do
+    chmod +x $file
+  done
+}}
 
-map gh cd ~
+# unbind
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# functions
 map st :set sortby time
 map se :set sortby ext; set info
-map e $vim $f
-map i $less $f
-map b $bat $f
-map r $unf $f
-map D delete
+map ee $vim $f
+map ii $less $f
+map bb $bat $f
 map br $vimv $fx
-map u unpk $fx
-map za $zathura $fx
+map iv $viu "$f"
+map D delete
+map up unpk $fx
+map zo $zathura "$f"
 map p paste
 map x cut
 map y copy
 map <enter> open
-map m mark-save
-map ' mark-load
-map " mark-remove
-map pv pview $fx
-map cd fzf_jump
+map mm mark-save
+map ml mark-load
+map mr mark-remove
+map P pview $fx
+map fj fzf_jump
 map mf mkfile
 map md mkdir
+map mch chmod
 map R reload
 map H top
 map L bottom
-map cf cd ~/.config
-map dl cd ~/Downloads
-map dc cd ~/Documents
-map dt cd ~/Desktop
-map gr cd ~/repos
-map ls cd ~/.local/share
-map zet cd ~/.local/share/zet
-map ca cd ~/.cache
-map as cd ~/Library/ApplicationSupport
-map oc cd /usr/local/Cellar
+
+# movement
+map gh cd ~
+map gcf cd ~/.config
+map gdl cd ~/Downloads
+map gdc cd ~/Documents
+map gdt cd ~/Desktop
+map gp cd ~/Pictures
+map gls cd ~/.local/share
+map gz cd ~/.local/share/zet
+map gca cd ~/.cache
+map gas cd ~/Library/ApplicationSupport
+map guc cd /usr/local/Cellar
+map gbs cd ~/.bin
+map ghb cd ~/bin
+map gr. cd ~/repos
+map grl cd ~/repos/gitlab.com
+map gre cd ~/repos/exercism
+map grh cd ~/repos/github.com
+map gsh cd ~/repos/git.sr.ht
+map gdP cd ~/Documents/pond
+map gdp cd ~/Documents/promnesia
+map gdw cd ~/Documents/wiki

@@ -1,11 +1,9 @@
-#               __             
 #   ____  _____/ /_  __________
 #  /_  / / ___/ __ \/ ___/ ___/
 #  / /_(__  ) / / / /  / /__  
 # /___/____/_/ /_/_/   \___/  
 
 source ~/.zprofile && source ~/.config/aliasrc
-
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
@@ -16,11 +14,11 @@ source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh 
 [ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh 
 
-source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
 setopt autocd
+bindkey -v
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+# bindkey '^u' 
 
 HISTSIZE=10000000
 SAVEHIST=10000000

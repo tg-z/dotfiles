@@ -19,6 +19,7 @@ so ~/.cache/backup/vim/plugins.vim
 "| default |
 " ---------
 so ~/.cache/calendar.vim/credentials.vim
+so ~/.config/msmtp/iris.vim
 
 augroup Markdown
   autocmd!
