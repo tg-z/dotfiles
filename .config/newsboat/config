@@ -58,7 +58,7 @@ bind-key x pb-delete
 
 # -- bookmarks 
 
-bookmark-cmd ~/.config/newsboat/bookmark.sh
+bookmark-cmd ~/.config/newsboat/bm
 bookmark-interactive no
 bookmark-autopilot yes
 
