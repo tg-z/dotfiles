@@ -1,0 +1,86 @@
+# -- feeds 
+
+auto-reload yes
+reload-time 120
+reload-threads 4
+download-retries 4
+download-timeout 10
+prepopulate-query-feeds yes
+save-path "~/.local/share/newsboat/saved"
+download-path "~/.cache/castero/downloads"
+include "~/.config/newsboat/colors"
+
+# -- display 
+
+goto-next-feed no
+show-read-feeds yes
+feed-sort-order date
+text-width 80
+
+# -- navigation 
+
+browser firefox
+bind-key h quit articlelist
+bind-key h quit article
+bind-key h quit tagselection
+bind-key h quit feedlist
+bind-key j down feedlist
+bind-key k up feedlist
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key j down article
+bind-key k up article
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+# -- misc
+
+bookmark-cmd ~/.config/newsboat/bookmark.sh
+bookmark-interactive no
+bookmark-autopilot yes 
+player mpv
+unbind-key C feedlist
+confirm-exit no
+cleanup-on-quit no
+
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
+
+browser linkhandler
+macro , open-in-browser
+macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+macro a set browser "open -a mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler
+macro v set browser "open -a mpv"; open-in-browser ; set browser linkhandler
+macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
+macro w set browser "w3m"; open-in-browser ; set browser linkhandler
+macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler
+macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
+macro i set browser "feh <<<"; open-in-browser ; set browser linkhandler
+
+
+# colorscheme
+#color background         color244       color234
+#color listnormal         color244       color234
+#color listnormal_unread  color111       default
+#color listfocus          color159       color0
+#color listfocus_unread   color0         color159
+#color info               default        color0
+#color article            color15        default
+
+# highlights
+#highlight all "---.*---" color39 default
+#highlight article "https?://[^ ]+" color157 default
+#highlight article "\\[image\\ [0-9]+\\]" color249 default
+#highlight article "(^Feed:.*|^Title:.*|^Author:.*)" color230 default bold
+#highlight article "(^Link:.*|^Date:.*)" default default
