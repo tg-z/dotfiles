@@ -38,6 +38,7 @@ bind-key l open
 bind-key j down article
 bind-key k up article
 bind-key h quit
+bind-key b bookmark
 bind-key a toggle-article-read
 bind-key n next-unread
 bind-key N prev-unread
