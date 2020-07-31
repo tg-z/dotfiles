@@ -5,11 +5,83 @@
 # if a video or gif, it will view in mpv
 # if a music file or pdf, it will download,
 # otherwise it opens link in browser.
-
 # If no url given. Opens browser. For using script as $BROWSER.
-[ -z "$1" ] && { "$BROWSER"; exit; }
 
-case "$1" in
+web="$BROWSER"
+edit="$TERMINAL -e $EDITOR"
+podcast="$TERMINAL -e mpv --no-audio-display"
+video="mpv --really-quiet"
+picture="mpv --aid=no"
+document="$READER"
+
+input="$1"
+
+[ -z "$input" ] then
+    exit 1
+else
+    notify-send "linkhandler -> trying to open" "$input"
+fi
+
+open() {
+    eval "$2" "$1 $input >/dev/null 2>&1" &
+}
+
+open_tmp() {
+    curl -sL "$input" >"/tmp/$(printf "%s" "$input" \
+        | sed "s/.*\///")" \
+        && eval "$1 /tmp/$(printf "%s" "$input" \
+        | sed "s/.*\///") >/dev/null 2>&1" &
+}
+
+case "$input" in
+    *mkv \
+        | *mp4 \
+        | *webm \
+        | *'youtube.com/watch'* \
+        | *'youtube.com/playlist'* \
+        | *'youtu.be'*)
+            open "$video" "tsp"
+    ;;
+    *mp3 \
+        | *ogg \
+        | *flac \
+        | *opus)
+            open "$podcast" "tsp"
+    ;;
+    *jpg \
+        | *jpe \
+        | *jpeg \
+        | *png \
+        | *gif \
+        | *webp)
+            open_tmp "$picture"
+    ;;
+    *pdf \
+        | *ps \
+        | *djvu \
+        | *epub \
+        | *cbr \
+        | *cbz)
+            open_tmp "$document"
+    ;;
+    *torrent \
+        | 'magnet\:'* \
+        | *metalink \
+        | *iso \
+            open "$download"
+    ;;
+    *)
+        if [ -f "$input" ]; then
+            open "$edit"
+        else
+            open "$web"
+        fi
+    ;;
+esac
+
+
+
+    case "$1" in
 	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
 		setsid mpv --input-ipc-server=/tmp/mpvsoc$(date +%s) -quiet "$1" >/dev/null 2>&1 & ;;
 	*png|*jpg|*jpe|*jpeg|*gif)
