@@ -82,6 +82,7 @@ map r $unf $f
 map D delete
 map br $vimv $fx
 map u unpk $fx
+map za $zathura $fx
 map p paste
 map x cut
 map y copy

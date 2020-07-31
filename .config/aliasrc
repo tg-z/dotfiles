@@ -35,6 +35,6 @@ alias -g \
 	XG="| xargs egrep" \
 	XS="fzf | xargs ls -l" \
 	X="| xargs" \
-    UL="| pup 'a attr{href}'"
+    UL="| pup 'a attr{href}'" \
     FU="| urlscan"
 

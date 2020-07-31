@@ -1,5 +1,11 @@
 set statusbar-h-padding 0
 set statusbar-v-padding 0
+set database plain
+set show-hidden true
+set show-directories true
+set show-recent 10
+set window-title-home-tilde true
+set statusbar-home-tilde true
 set page-padding 1
 map u scroll half-up
 map d scroll half-down
@@ -10,4 +16,6 @@ map K zoom in
 map J zoom out
 map i recolor
 map p print
-map <C-o> feedkeys ":exec zathura-annotate $FILE<Return>"
+map q quit
+map <C-o> exec zathura-annotate "$FILE"
+
