@@ -14,7 +14,7 @@ if empty($evervim_root)
 endif
 
 " Core Config
-so $evervim_root/core/core.vim
+so $evervim_root/core/bore.vim
 so ~/.cache/backup/vim/plugins.vim 
 
 " ---------

@@ -21,17 +21,10 @@ window:
     columns: 0
     lines: 0
 
-  # Window position (changes require restart)
-  #
-  # Specified in number of pixels.
-  # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
 
   # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is scaled
+  
+  # Blank space added around the window in pixels.  
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 5 #10
@@ -39,6 +32,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
+  dynamic_title: true
 
   # Window decorations
   #
@@ -61,12 +55,6 @@ window:
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
   startup_mode: Windowed
-
-  # Window title
-  #title: Alacritty
-
-  # Window class (Linux only):
-  #class: Alacritty
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -131,20 +119,6 @@ font:
     x: 0
     y: 1
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
@@ -171,7 +145,7 @@ font:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: '0xffffff'
@@ -239,9 +213,6 @@ selection:
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: false
-
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
 
 cursor:
   # Cursor style
@@ -453,4 +424,3 @@ colors:
     magenta: '0xeff0f9'
     cyan: '0x6187ff'
     white: '0xf2fbff'
-
