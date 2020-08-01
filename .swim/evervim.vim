@@ -21,10 +21,15 @@ so ~/.cache/backup/vim/plugins.vim
 so ~/.cache/calendar.vim/credentials.vim
 so ~/.config/msmtp/iris.vim
 
-augroup Markdown
-  autocmd!
-  autocmd FileType markdown set wrap
-augroup END
+aug Markdown
+  au!
+  au FileType markdown set wrap
+aug end
+aug CSV_Editing
+    au!
+    au BufRead,BufWritePost *.csv :%ArrangeColumn
+    au BufWritePre *.csv :%UnArrangeColumn
+aug end
 
 " ----------
 "| keymaps  |

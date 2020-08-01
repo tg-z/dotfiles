@@ -10,7 +10,7 @@
             [
                 "footer",
                 "white",
-                "dark red",
+                "light magenta",
                 "standout"
             ],
             [
@@ -49,7 +49,7 @@
             [
                 "url:sel",
                 "white",
-                "dark blue",
+                "blue",
                 "bold"
             ]
         ],

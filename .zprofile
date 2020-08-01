@@ -4,31 +4,30 @@ export HOME="/Users/bluetooth"
 export SHELL="/usr/local/bin/zsh"
 export ZSH="/usr/local/bin/zsh"
 export PATH="$HOME/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-export PATH="/usr/local/opt/python@3.8/bin:$HOME/Applications:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$HOME/Applications:$PATH"
 
-export EDITOR="vim"
-export VISUAL="vim"
-export READER="zathura"
+export EDITOR=vim
+export VISUAL=vim
+export READER=zathura
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
-export PAGER="less"
-export MANPAGER="less"
-export BROWSER="firefox"
-export COLORTERM="truecolor"
+export PAGER=less
+export TERMINAL=alacritty
+export MANPAGER=less
+export BROWSER=firefox
+export COLORTERM=truecolor
 
-# TUIR
-export TUIR_EDITOR="vim"
-export TUIR_BROWSER="firefox"
-export TUIR_URLVIEWER="urlscan"
 
+export TUIR_EDITOR=vim
+export TUIR_BROWSER=firefox
+export TUIR_URLVIEWER=urlscan
 export WAKATIME_HOME="$HOME/.config/waka"
-export MAILCAPS="$HOME/.config/tuir/mailcap"
+export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap"
 export SUBS_FILE="$HOME/.local/share/subs/subs.txt"
 export SUBS_MENU_PROG="fzf"
 export GOTTY_CONFIG="$HOME/.config/gotty.conf"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-# export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export WEGORC="$HOME/.config/wego/wegorc"
@@ -46,7 +45,6 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
-export NOTES_CLI_HOME="$HOME/.local/share/notes"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
@@ -61,6 +59,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 export PATH="/usr/local/opt/flex/bin:$PATH"
 export PATH="/usr/local/opt/bison/bin:$PATH"
 export BOOST_INC_DIR="/usr/local/include/boost"
+
+# fpath + manpages
+# export fpath=
 
 export LF_ICONS="\
 di=:\

@@ -1,7 +1,7 @@
 #   ____  _____/ /_  __________
 #  /_  / / ___/ __ \/ ___/ ___/
-#  / /_(__  ) / / / /  / /__  
-# /___/____/_/ /_/_/   \___/  
+#  / /_(__  ) / / / /  / /__
+# /___/____/_/ /_/_/   \___/
 
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
@@ -11,14 +11,15 @@ source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
-[ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh 
-[ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh 
+[ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh
+[ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh
 
+set -o vi
 setopt autocd
 bindkey -v
-bindkey '^a' beginning-of-line
+bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
-# bindkey '^u' 
+# bindkey '^u'
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -27,47 +28,48 @@ alias ..='cd ..'
 alias ls='gls --color=always'
 alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
-alias nvim='vim'
-alias vi='vim'
-alias bc='dntk'
+alias nvim=vim
+alias vi=vim
+alias bc=dntk
 alias zal='alias -L'
 alias firefox='firefox -new-tab'
 alias gimme='git pull'
 alias cdu='cdu -i'
-alias tl='timeline'
+alias tl=timeline
 alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
 alias gooseberry-serve='mdbook serve /Users/bluetooth/Library/ApplicationSupport/rs.gooseberry/gooseberry'
-alias t='go-t'
+alias t=go-t
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
 alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
-alias clr='clear'
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias clr=clear
 alias ref='zsh --login'
 alias grep='grep --color=always'
 alias ffmpeg='ffmpeg -hide_banner'
 alias chmodx='chmod +x'
 alias tuir='tuir --enable-media'
 alias dsd='m dir delete dsfiles'
-alias cgo='cargo-go'
+alias cgo=cargo-go
 alias cask='brew cask'
-alias urlview='urlscan'
+alias urlview=urlscan
 alias cat='ccat -G String="fuscia" -G Punctuation="faint" -G Plaintext="lightgray"'
-alias _='sudo'
+alias _=sudo
 alias changed='ls -ltrA'
 alias npmls='npm list -g --depth 1'
 alias cf='cd ~/.config && changed'
 alias old='ls -ltr'
-alias cfg='dotbare'
+alias cfg=dotbare
 alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
   autoload -Uz compinit
-  compinit 
+  compinit
 fi
 
 eval $(ssh-agent -s)
