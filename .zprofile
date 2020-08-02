@@ -3,9 +3,6 @@
 export HOME="/Users/bluetooth"
 export SHELL="/usr/local/bin/zsh"
 export ZSH="/usr/local/bin/zsh"
-# export PATH="$HOME/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/share/go/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-# export PATH="/usr/local/opt/python@3.8/bin:/usr/local/opt/gnu-sed/libexec/gnubin:$HOME/Applications:$PATH"
-
 export EDITOR=vim
 export VISUAL=vim
 export READER=zathura
@@ -15,7 +12,7 @@ export TERMINAL=alacritty
 export MANPAGER=less
 export BROWSER=firefox
 export COLORTERM=truecolor
-
+export IRS_CONFIG_LOCATION="$HOME/.config/irs/conf.yaml"
 export TUIR_EDITOR=vim
 export TUIR_BROWSER=firefox
 export TUIR_URLVIEWER=urlscan
@@ -44,7 +41,6 @@ export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
 export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
-# export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
@@ -54,7 +50,6 @@ export MATES_DIR="$HOME/.cache/contacts"
 export PKG_CONFIG_PATH="/usr/local/Cellar/openal-soft/1.20.1/lib/pkgconfig"
 export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/Cellar/libtoxcore/HEAD-56992b0/lib/pkgconfig"
-# export PATH="/Applications/Firefox.app/Contents/MacOS:/Users/bluetooth/Library/Python/3.8/bin:/usr/local/opt/curl/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 # export PATH="/usr/local/opt/flex/bin:$PATH"
 # export PATH="/usr/local/opt/bison/bin:$PATH"
@@ -100,6 +95,10 @@ manpath=(
     /usr/local/Cellar/zsh/5.8/share/man/man1
     /usr/local/Cellar/zsh/5.8/share/zsh/help
     )
+# export LIBTOOL=`which glibtool`
+# export LIBTOOLIZE=`which glibtoolize`
+# ln -s `which glibtoolize` /usr/local/bin/libtoolize
+# ln -s /usr/lib/libncurses.dylib /usr/local/lib/libncursesw.dylib
 
 export LF_ICONS="\
 di=:\

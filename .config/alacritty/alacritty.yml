@@ -23,7 +23,6 @@ window:
 
 
   # Window padding (changes require restart)
-  
   # Blank space added around the window in pixels.  
   # by DPI and the specified value is always added at both opposing sides.
   padding:
@@ -392,35 +391,33 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: base16-gigavolt.yml
-  # Default colors
+  # COLORSCHEME: pencil_light.yaml
+  # Default Colors
   primary:
-    background: '0x202126'
-    foreground: '0xe9e7e1'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
+    background: '0xf1f1f1'
+    foreground: '0x424242'
+  # Normal colors
   cursor:
-    text: '0x202126'
-    cursor: '0xe9e7e1'
+    text: '0xF81CE5'
+    cursor: '0xffffff'
 
   # Normal colors
   normal:
-    black: '0x202126'
-    red: '0xff661a'
-    green: '0xf2e6a9'
-    yellow: '0xffdc2d'
-    blue: '0x40bfff'
-    magenta: '0xae94f9'
-    cyan: '0xfb6acb'
-    white: '0xe9e7e1'
-
+    black: '0x212121'
+    red: '0xc30771'
+    green: '0x10a778'
+    yellow: '0xa89c14'
+    blue: '0x008ec4'
+    magenta: '0x523c79'
+    cyan: '0x20a5ba'
+    white: '0xe0e0e0'
   # Bright colors
   bright:
-    black: '0xa1d2e6'
-    red: '0x19f988'
-    green: '0x2d303d'
-    yellow: '0x5a576e'
-    blue: '0xcad3ff'
-    magenta: '0xeff0f9'
-    cyan: '0x6187ff'
-    white: '0xf2fbff'
+    black: '0x212121'
+    red: '0xfb007a'
+    green: '0x5fd7af'
+    yellow: '0xf3e430'
+    blue: '0x20bbfc'
+    magenta: '0x6855de'
+    cyan: '0x4fb8cc'
+    white: '0xf1f1f1'

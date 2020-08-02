@@ -30,7 +30,9 @@ alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
 alias nvim=vim
 alias vi=vim
+alias nano='/usr/local/bin/nano'
 alias bc=dntk
+alias gem=/usr/local/Cellar/ruby/2.7.1_2/bin/gem
 alias zal='alias -L'
 alias firefox='firefox -new-tab'
 alias gimme='git pull'
@@ -100,3 +102,6 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /Users/bluetooth/.config/broot/launcher/bash/br
+export PATH="/usr/local/opt/binutils/bin:$PATH"
