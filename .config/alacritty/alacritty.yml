@@ -399,7 +399,7 @@ colors:
   # Normal colors
   cursor:
     text: '0xF81CE5'
-    cursor: '0xffffff'
+    cursor: '0x6855de'
 
   # Normal colors
   normal:
