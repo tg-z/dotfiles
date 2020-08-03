@@ -43,6 +43,7 @@ export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
+export PASSWORD_STORE_CLIP_TIME=60
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export MATES_DIR="$HOME/.cache/contacts"
