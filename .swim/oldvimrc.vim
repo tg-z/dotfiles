@@ -1,1 +1,1 @@
-/Users/bluetooth/.swim/evervim.vim
+/Users/bluetooth/.swim/light.vim

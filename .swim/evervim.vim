@@ -15,7 +15,7 @@ endif
 
 " Core Config
 so $evervim_root/core/core.vim
-so ~/.cache/backup/vim/plugins.vim 
+so ~/.cache/backup/vim/plugins.vim
 
 " ---------
 "| default |
@@ -32,6 +32,8 @@ aug CSV_Editing
     au BufRead,BufWritePost *.csv :%ArrangeColumn
     au BufWritePre *.csv :%UnArrangeColumn
 aug end
+
+let g:deoplete#enable_at_startup = 1
 
 " ----------
 "| keymaps  |

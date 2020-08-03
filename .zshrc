@@ -3,7 +3,7 @@
 #  / /_(__  ) / / / /  / /__
 # /___/____/_/ /_/_/   \___/
 
-source ~/.zprofile && source ~/.config/aliasrc
+source ~/.zprofile && source ~/.config/aliasrc && source ~/.config/broot/launcher/bash/br
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
@@ -102,6 +102,3 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source /Users/bluetooth/.config/broot/launcher/bash/br
-export PATH="/usr/local/opt/binutils/bin:$PATH"

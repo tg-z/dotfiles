@@ -59,25 +59,26 @@ export BOOST_INC_DIR="/usr/local/include/boost"
 # fpath + manpages
 # export fpath=
 typeset -U path
-path=( 
-    /usr/local/opt/coreutils/libexec/gnubin 
+path=(
+    /usr/local/opt/coreutils/libexec/gnubin
     /usr/local/opt/gnu-sed/libexec/gnubin
-    ~/.bin 
-    ~/.cargo/bin 
-    ~/bin 
+    ~/.bin
+    ~/.cargo/bin
+    ~/bin
     ~/.local/bin
+    /usr/local/bin
+    /usr/local/opt/binutils/bin
     /usr/bin
     /sbin
     /bin
-    ~/.local/share/go/bin 
-    /usr/local/bin 
-    /opt/X11/bin 
-    /usr/local/MacGPG2/bin 
-    /usr/local/opt/fzf/bin 
-    /Applications/Firefox.app/Contents/MacOS 
-    /usr/local/opt/curl/bin 
-    /usr/local/lib/ruby/gems/2.7.0/bin 
-    /usr/local/opt/python@3.8/bin 
+    ~/.local/share/go/bin
+    /opt/X11/bin
+    /usr/local/MacGPG2/bin
+    /usr/local/opt/fzf/bin
+    /Applications/Firefox.app/Contents/MacOS
+    /usr/local/opt/curl/bin
+    /usr/local/lib/ruby/gems/2.7.0/bin
+    /usr/local/opt/python@3.8/bin
     /Users/bluetooth/Library/Python/3.8/bin
     )
 
