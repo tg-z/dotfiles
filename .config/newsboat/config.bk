@@ -58,7 +58,7 @@ cleanup-on-quit no
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
-browser linkhandler
+browser "firefox -new-tab"
 macro , open-in-browser
 macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
 macro a set browser "open -a mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler

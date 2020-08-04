@@ -391,11 +391,12 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: pencil_light.yaml
-  # Default Colors
+  # COLORSCHEME: ayu_dark.yaml
+  # Default colors
   primary:
-    background: '0xf1f1f1'
-    foreground: '0x424242'
+    background: '0x0A0E14'
+    foreground: '0xB3B1AD'
+
   # Normal colors
   cursor:
     text: '0xF81CE5'
@@ -403,21 +404,22 @@ colors:
 
   # Normal colors
   normal:
-    black: '0x212121'
-    red: '0xc30771'
-    green: '0x10a778'
-    yellow: '0xa89c14'
-    blue: '0x008ec4'
-    magenta: '0x523c79'
-    cyan: '0x20a5ba'
-    white: '0xe0e0e0'
+    black: '0x01060E'
+    red: '0xEA6C73'
+    green: '0x91B362'
+    yellow: '0xF9AF4F'
+    blue: '0x53BDFA'
+    magenta: '0xFAE994'
+    cyan: '0x90E1C6'
+    white: '0xC7C7C7'
+
   # Bright colors
   bright:
-    black: '0x212121'
-    red: '0xfb007a'
-    green: '0x5fd7af'
-    yellow: '0xf3e430'
-    blue: '0x20bbfc'
-    magenta: '0x6855de'
-    cyan: '0x4fb8cc'
-    white: '0xf1f1f1'
+    black: '0x686868'
+    red: '0xF07178'
+    green: '0xC2D94C'
+    yellow: '0xFFB454'
+    blue: '0x59C2FF'
+    magenta: '0xFFEE99'
+    cyan: '0x95E6CB'
+    white: '0xFFFFFF'
