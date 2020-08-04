@@ -43,8 +43,9 @@
 	clean = git-lfs clean -- %f
 [init]
 	templateDir = ~/.git-templates/git-secrets
+	defaultBranch = main
 [gist]
-	home = /Users/bluetooth/Documents/gists
+	home = ~/Documents/gists
 [ghi "highlight"]
 	style = rainbow_dash
 [core]
