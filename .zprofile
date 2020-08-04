@@ -48,10 +48,7 @@ export SURFRAW_CONF="$HOME/.config/surfraw/conf"
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export MATES_DIR="$HOME/.cache/contacts"
 
-export PKG_CONFIG_PATH="/usr/local/Cellar/openal-soft/1.20.1/lib/pkgconfig"
-export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig"
-export PKG_CONFIG_PATH="/usr/local/Cellar/libtoxcore/HEAD-56992b0/lib/pkgconfig"
-export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig:/usr/local/Cellar/libtoxcore/HEAD-56992b0/lib/pkgconfig:/usr/local/opt/curl/lib/pkgconfig:$PKG_CONFIG_PATH"
 # export PATH="/usr/local/opt/flex/bin:$PATH"
 # export PATH="/usr/local/opt/bison/bin:$PATH"
 export BOOST_INC_DIR="/usr/local/include/boost"
@@ -96,6 +93,7 @@ manpath=(
     /usr/local/share/man
     /usr/local/Cellar/zsh/5.8/share/man/man1
     /usr/local/Cellar/zsh/5.8/share/zsh/help
+    /opt/X11/share/man
     )
 # export LIBTOOL=`which glibtool`
 # export LIBTOOLIZE=`which glibtoolize`
