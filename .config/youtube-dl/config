@@ -1,9 +1,14 @@
-
-
-# save all videos under Music in ~ 
--o ~/Music/mp3/tracks/%(title)s.%(ext)s
-
-# always extract audio
+# save all videos under music in ~ 
+-o ~/music/%(artist)-%(title)s.%(ext)s
+--restrict-filenames
 -x -f bestaudio/best
 
-# 
+# get thumbnails
+--write-thumbnail
+
+# --merge-output-format bestaudio+bestvideo
+# --embed-thumbnail
+# -i --add-metadata
+# --embed-subs
+# --embed-thumbnail
+# -f 'best[filesize<50M]'

@@ -7,12 +7,15 @@
 # otherwise it opens link in browser.
 # If no url given. Opens browser. For using script as $BROWSER.
 
+source ~/.zprofile >/dev/null 2>&1
+
 web="$BROWSER"
 edit="$TERMINAL -e $EDITOR"
 podcast="$TERMINAL -e mpv --no-audio-display"
-video="mpv --really-quiet"
+video="mpv --really-quiet --player-operation-mode=pseudo-gui"
 picture="mpv --aid=no"
 document="$READER"
+download="aria2c"
 
 input="$1"
 
@@ -40,13 +43,13 @@ case "$input" in
         | *'youtube.com/watch'* \
         | *'youtube.com/playlist'* \
         | *'youtu.be'*)
-            open "$video" "tsp"
+            open "$video" "ts"
     ;;
     *mp3 \
         | *ogg \
         | *flac \
         | *opus)
-            open "$podcast" "tsp"
+            open "$podcast" "ts"
     ;;
     *jpg \
         | *jpe \
@@ -81,14 +84,14 @@ esac
 
 
 
-    case "$1" in
-	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
-		mpv --input-ipc-server=/tmp/mpvsoc$(date +%s) -quiet "$1" >/dev/null 2>&1 & ;;
-	*png|*jpg|*jpe|*jpeg|*gif)
-		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///")" && feh "/tmp/$(echo "$1" | sed "s/.*\///")"  >/dev/null 2>&1 & ;;
-	*mp3|*flac|*opus|*mp3?source*)
-		ts curl -LO "$1" >/dev/null 2>&1 & ;;
-	*)
-		if [ -f "$1" ]; then "$TERMINAL" -e "$EDITOR $1"
-		else $BROWSER "$1" >/dev/null 2>&1 & fi ;;
-esac
+ #   case "$1" in
+#	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
+#		mpv --input-ipc-server=/tmp/mpvsoc$(date +%s) -quiet "$1" >/dev/null 2>&1 & ;;
+#	*png|*jpg|*jpe|*jpeg|*gif)
+#		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///")" && feh "/tmp/$(echo "$1" | sed "s/.*\///")"  >/dev/null 2>&1 & ;;
+#	*mp3|*flac|*opus|*mp3?source*)
+#		ts curl -LO "$1" >/dev/null 2>&1 & ;;
+#	*)
+#		if [ -f "$1" ]; then "$TERMINAL" -e "$EDITOR $1"
+#		else $BROWSER "$1" >/dev/null 2>&1 & fi ;;
+# esac

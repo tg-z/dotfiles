@@ -28,7 +28,7 @@
 	subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
-	subpull = !git submodule foreach git pull --tags origin master
+	subpull = !git submodule foreach git pull --tags origin main
 [github]
 	user = tg-z
 	oauth-token = !pass show secrets/github-oauth-token
@@ -81,3 +81,5 @@
 	format = json
 	host = gitlab.com
 	token = !pass show secrets/gitlab-token
+[apply]
+        ignoreWhitespace = change
