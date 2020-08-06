@@ -391,35 +391,36 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: ayu_dark.yaml
+  # COLORSCHEME: base16-icy.yml
   # Default colors
   primary:
-    background: '0x0A0E14'
-    foreground: '0xB3B1AD'
+    background: '0x021012'
+    foreground: '0x095b67'
 
-  # Normal colors
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xF81CE5'
-    cursor: '0x6855de'
+    text: '0x021012'
+    cursor: '0x095b67'
 
   # Normal colors
   normal:
-    black: '0x01060E'
-    red: '0xEA6C73'
-    green: '0x91B362'
-    yellow: '0xF9AF4F'
-    blue: '0x53BDFA'
-    magenta: '0xFAE994'
-    cyan: '0x90E1C6'
-    white: '0xC7C7C7'
+    black: '0x021012'
+    red: '0x16c1d9'
+    green: '0x4dd0e1'
+    yellow: '0x80deea'
+    blue: '0x00bcd4'
+    magenta: '0x00acc1'
+    cyan: '0x26c6da'
+    white: '0x095b67'
 
   # Bright colors
   bright:
-    black: '0x686868'
-    red: '0xF07178'
-    green: '0xC2D94C'
-    yellow: '0xFFB454'
-    blue: '0x59C2FF'
-    magenta: '0xFFEE99'
-    cyan: '0x95E6CB'
-    white: '0xFFFFFF'
+    black: '0x052e34'
+    red: '0xb3ebf2'
+    green: '0x031619'
+    yellow: '0x041f23'
+    blue: '0x064048'
+    magenta: '0x0c7c8c'
+    cyan: '0x0097a7'
+    white: '0x109cb0'
+

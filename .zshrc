@@ -16,6 +16,7 @@ source ~/.zprofile && source ~/.config/aliasrc && source ~/.config/broot/launche
 
 set -o vi
 setopt autocd
+autoload -U zmv
 bindkey -v
 bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line

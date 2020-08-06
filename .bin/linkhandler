@@ -1,16 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+HOME=/Users/bluetooth
+. "${HOME}"/.zprofile &>/dev/null
 
-# Feed script a url or file location.
-# If an image, it will view in sxiv,
-# if a video or gif, it will view in mpv
-# if a music file or pdf, it will download,
-# otherwise it opens link in browser.
-# If no url given. Opens browser. For using script as $BROWSER.
-
-source ~/.zprofile >/dev/null 2>&1
-
-web="$BROWSER"
-edit="$TERMINAL -e $EDITOR"
 podcast="$TERMINAL -e mpv --no-audio-display"
 video="mpv --really-quiet --player-operation-mode=pseudo-gui"
 picture="mpv --aid=no"
@@ -70,21 +61,17 @@ case "$input" in
     *torrent \
         | 'magnet\:'* \
         | *metalink \
-        | *iso \
+        | *iso)
             open "$download"
     ;;
     *)
-        if [ -f "$input" ]; then
-            open "$edit"
-        else
-            open "$web"
-        fi
-    ;;
+        if [ -f "$input" ]; then "$TERMINAL" -e "$EDITOR $1"
+        else $BROWSER "$1" >/dev/null 2>&1 & fi ;;
 esac
 
 
 
- #   case "$1" in
+#   case "$1" in
 #	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*)
 #		mpv --input-ipc-server=/tmp/mpvsoc$(date +%s) -quiet "$1" >/dev/null 2>&1 & ;;
 #	*png|*jpg|*jpe|*jpeg|*gif)
