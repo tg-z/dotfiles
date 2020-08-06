@@ -391,36 +391,36 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: base16-icy.yml
+  # COLORSCHEME: base16-material-palenight.yml
   # Default colors
   primary:
-    background: '0x021012'
-    foreground: '0x095b67'
+    background: '0x292d3e'
+    foreground: '0x959dcb'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x021012'
-    cursor: '0x095b67'
+    text: '0x292d3e'
+    cursor: '0x959dcb'
 
   # Normal colors
   normal:
-    black: '0x021012'
-    red: '0x16c1d9'
-    green: '0x4dd0e1'
-    yellow: '0x80deea'
-    blue: '0x00bcd4'
-    magenta: '0x00acc1'
-    cyan: '0x26c6da'
-    white: '0x095b67'
+    black: '0x292d3e'
+    red: '0xf07178'
+    green: '0xc3e88d'
+    yellow: '0xffcb6b'
+    blue: '0x82aaff'
+    magenta: '0xc792ea'
+    cyan: '0x89ddff'
+    white: '0x959dcb'
 
   # Bright colors
   bright:
-    black: '0x052e34'
-    red: '0xb3ebf2'
-    green: '0x031619'
-    yellow: '0x041f23'
-    blue: '0x064048'
-    magenta: '0x0c7c8c'
-    cyan: '0x0097a7'
-    white: '0x109cb0'
+    black: '0x676e95'
+    red: '0xf78c6c'
+    green: '0x444267'
+    yellow: '0x32374d'
+    blue: '0x8796b0'
+    magenta: '0x959dcb'
+    cyan: '0xff5370'
+    white: '0xffffff'
 
