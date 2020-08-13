@@ -1,11 +1,9 @@
 # save all videos under music in ~ 
--o ~/music/%(artist)-%(title)s.%(ext)s
---restrict-filenames
--x -f bestaudio/best
+-o ~/music/%(artist)-%(title)s.%(ext)s --restrict-filenames
 
+# -x -f bestaudio/best
 # get thumbnails
---write-thumbnail
-
+# --write-thumbnail
 # --merge-output-format bestaudio+bestvideo
 # --embed-thumbnail
 # -i --add-metadata

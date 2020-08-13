@@ -16,6 +16,7 @@ export IRS_CONFIG_LOCATION="$HOME/.config/irs/conf.yaml"
 export TUIR_EDITOR=vim
 export TUIR_BROWSER=firefox
 export TUIR_URLVIEWER=urlscan
+export PODCAST="$HOME/podcasts"
 export WAKATIME_HOME="$HOME/.config/waka"
 export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap"
 export SUBS_FILE="$HOME/.local/share/subs/subs.txt"

@@ -10,7 +10,7 @@
             [
                 "footer",
                 "white",
-                "black",
+                "dark red",
                 "standout"
             ],
             [
@@ -49,7 +49,7 @@
             [
                 "url:sel",
                 "white",
-                "blue",
+                "dark blue",
                 "bold"
             ]
         ],
@@ -132,6 +132,7 @@
         "p": "palette",
         "Q": "quit",
         "q": "quit",
+        "R": "reverse",
         "S": "all_shorten",
         "s": "shorten",
         "u": "all_escape"
