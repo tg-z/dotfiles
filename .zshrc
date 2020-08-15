@@ -49,6 +49,7 @@ alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
 alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias cua='cargo update-install'
 alias clr=clear
 alias ref='zsh --login'
 alias grep='grep --color=always'
