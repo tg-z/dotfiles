@@ -28,7 +28,7 @@ text-width 80
 
 goto-next-feed no
 
-browser firefox
+browser 'firefox -new-tab'
 
 bind-key h quit articlelist
 bind-key h quit article
@@ -76,6 +76,7 @@ macro , open-in-browser
 macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
 macro a set browser "mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler
 macro v set browser "nmpv"; open-in-browser ; set browser linkhandler
+macro n set browser "open -a mpv"; open-in-browser ; set browser linkhandler
 macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
 macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler

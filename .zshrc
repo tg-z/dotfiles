@@ -32,6 +32,7 @@ alias tree='tree -C'
 alias nvim=vim
 alias vi=vim
 alias nano='/usr/local/bin/nano'
+alias youtube-dl='/usr/local/bin/youtube-dl'
 alias bc=dntk
 alias gem=/usr/local/Cellar/ruby/2.7.1_2/bin/gem
 alias zal='alias -L'
