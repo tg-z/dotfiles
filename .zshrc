@@ -101,6 +101,8 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat {} || tree -C {}) 2> /dev/null | head -150'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
+# opam configuration
+test -r /Users/bluetooth/.local/share/opam/opam-init/init.zsh && . /Users/bluetooth/.local/share/opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
