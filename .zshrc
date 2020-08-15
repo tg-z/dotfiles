@@ -35,6 +35,7 @@ alias nano='/usr/local/bin/nano'
 alias bc=dntk
 alias gem=/usr/local/Cellar/ruby/2.7.1_2/bin/gem
 alias zal='alias -L'
+alias nmpv='/Applications/mpv.app/Contents/MacOS/mpv'
 alias firefox='firefox -new-tab'
 alias gimme='git pull'
 alias cdu='cdu -i'
