@@ -15,12 +15,12 @@
 	cl = clone
 	cld = clone --depth 1
 	pl = pull
-	push = push
+	pu = push
 	puu = push upstream
 	r = remote
 	ra = remote add
 	grmv = 'git remote rename'
-	grrm = 'git remote remove'
+	rrm = 'git remote remove'
 	gsb = 'git status -sbu'
 	ghi = 'TERM=xterm-256color ghi'
 	start = "!f() { git commit --allow-empty -m 'initial commit' && git add . && git commit -m 'project skeleton'; }; f"
@@ -45,7 +45,7 @@
 	templateDir = ~/.git-templates/git-secrets
 	defaultBranch = main
 [gist]
-	home = ~/Documents/gists
+	home = ~/documents/gists
 [ghi "highlight"]
 	style = rainbow_dash
 [core]
