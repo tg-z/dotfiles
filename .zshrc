@@ -20,7 +20,7 @@ autoload -U zmv
 bindkey -v
 bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
-# bindkey '^u'
+bindkey -s '^o' 'lfcd\n'
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -84,7 +84,7 @@ source <(navi widget zsh)
 source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
 
-export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow --exlude .git --preview 'ccat {}'"
+export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow --exlude .git --preview 'bat {}'"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
@@ -102,6 +102,16 @@ export FORGIT_FZF_DEFAULT_OPTS="
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat {} || tree -C {}) 2> /dev/null | head -150'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
 
 # opam configuration
 test -r /Users/bluetooth/.local/share/opam/opam-init/init.zsh && . /Users/bluetooth/.local/share/opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

@@ -19,7 +19,6 @@ alias -g \
 	LL="2>&1 | less" \
 	L="| less" \
 	LS="| less -S" \
-	MM="| most" \
 	M="| more" \
 	NE="2> /dev/null" \
 	NS="| sort -n" \
@@ -37,4 +36,5 @@ alias -g \
 	X="| xargs" \
     UL="| pup 'a attr{href}'" \
     FU="| urlscan" \
-    JS="| gron | fzf"
+    JS="| gron | fzf" \
+    CS="| awk '{print \$1}'"

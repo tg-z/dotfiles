@@ -391,36 +391,31 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: base16-onedark.yml
-  # Default colors
+  # COLORSCHEME: nocturnal_winter.yml
   primary:
-    background: '0x282c34'
-    foreground: '0xabb2bf'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
+    background: '#0d0d17'
+    foreground: '#e6e5e5'
   cursor:
-    text: '0x282c34'
-    cursor: '0xabb2bf'
-
-  # Normal colors
+    cursor: '#e6e5e5'
+    text: '#ffffff'
   normal:
-    black: '0x282c34'
-    red: '0xe06c75'
-    green: '0x98c379'
-    yellow: '0xe5c07b'
-    blue: '0x61afef'
-    magenta: '0xc678dd'
-    cyan: '0x56b6c2'
-    white: '0xabb2bf'
-
-  # Bright colors
+    black: '#4d4d4d'
+    blue: '#3182e0'
+    cyan: '#09c87a'
+    green: '#09cd7e'
+    magenta: '#ff2b6d'
+    red: '#f12d52'
+    white: '#fcfcfc'
+    yellow: '#f5f17a'
   bright:
-    black: '0x545862'
-    red: '0xd19a66'
-    green: '0x353b45'
-    yellow: '0x3e4451'
-    blue: '0x565c64'
-    magenta: '0xb6bdca'
-    cyan: '0xbe5046'
-    white: '0xc8ccd4'
-
+    black: '#808080'
+    blue: '#6096ff'
+    cyan: '#0ae78d'
+    green: '#0ae78d'
+    magenta: '#ff78a2'
+    red: '#f16d86'
+    white: '#ffffff'
+    yellow: '#fffc67'
+  selection:
+    background: '#adbdd0'
+    text: '#000000'

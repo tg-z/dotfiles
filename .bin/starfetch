@@ -7,7 +7,7 @@ accept=${accept:-'application/vnd.github.v3+json'}
 
 get() {
     local -r url="$1"
-    local -r user="${git config github.user:-"GITHUB_USER"}"
+    local -r user="${git config github.user:-"$GITHUB_USER"}"
     local -r jq_query="${2:-'.'}"
 
     curl -sH -H "Accept: ${accept}" -H "Authorization: token ${GITHUB_TOKEN}" "${url}" | jq -r "${jq_query}"
