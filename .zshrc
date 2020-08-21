@@ -21,6 +21,7 @@ bindkey -v
 bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
 bindkey -s '^o' 'lfcd\n'
+bindkey -s '^l' 'clear\n'
 
 HISTSIZE=10000000
 SAVEHIST=10000000
