@@ -120,10 +120,10 @@ map L bottom
 # movement
 map gh cd ~
 map gcf cd ~/.config
-map gdl cd ~/Downloads
-map gdc cd ~/Documents
-map gdt cd ~/Desktop
-map gp cd ~/Pictures
+map gdl cd ~/downloads
+map gdc cd ~/documents
+map gdt cd ~/desktop
+map gp cd ~/pictures
 map gls cd ~/.local/share
 map gz cd ~/.local/share/zet
 map gca cd ~/.cache
@@ -136,6 +136,6 @@ map grl cd ~/repos/gitlab.com
 map gre cd ~/repos/exercism
 map grh cd ~/repos/github.com
 map gsh cd ~/repos/git.sr.ht
-map gdP cd ~/Documents/pond
-map gdp cd ~/Documents/promnesia
-map gdw cd ~/Documents/wiki
+map gdP cd ~/documents/pond
+map gdp cd ~/documents/promnesia
+map gdw cd ~/documents/wiki
