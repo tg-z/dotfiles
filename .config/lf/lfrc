@@ -93,6 +93,7 @@ map f
 map st :set sortby time
 map se :set sortby ext; set info
 map ee $vim $f
+map re rename $f
 map ii $less $f
 map bb $bat $f
 map br $vimv $fx

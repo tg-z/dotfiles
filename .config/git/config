@@ -45,7 +45,7 @@
 	templateDir = ~/.git-templates/git-secrets
 	defaultBranch = main
 [gist]
-	home = ~/documents/gists
+	home = ~/documents/promnesia/gist
 [ghi "highlight"]
 	style = rainbow_dash
 [core]

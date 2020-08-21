@@ -77,7 +77,9 @@ path=(
     /usr/local/bin
     /usr/local/opt/binutils/bin
     /usr/bin
+    /usr/sbin
     /sbin
+    /usr/libexec
     /bin
     ~/.local/share/go/bin
     /opt/X11/bin
@@ -105,6 +107,7 @@ manpath=(
     /usr/local/Cellar/zsh/5.8/share/man/man1
     /usr/local/Cellar/zsh/5.8/share/zsh/help
     /opt/X11/share/man
+    /usr/share/man
     )
 # export LIBTOOL=`which glibtool`
 # export LIBTOOLIZE=`which glibtoolize`
