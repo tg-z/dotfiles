@@ -20,7 +20,7 @@ yabai -m config active_window_border_color   0xff$CACTV
 yabai -m config normal_window_border_color   0xff$CNORM
 yabai -m config insert_window_border_color   0xff$CINSE
 
-yabai -m config status_bar_text_font         "MesloLGSDZ Nerd Font:Regualar:12.0"
+yabai -m config status_bar_text_font         "MesloLGSDZ Nerd Font:Regular:12.0"
 yabai -m config status_bar_icon_font         "Meslo LG SDZ Nerd Font:Regular:12.0"
 
 
@@ -54,7 +54,7 @@ yabai -m config mouse_action2                resize
 # general space settings
 yabai -m config layout                       bsp
 yabai -m config top_padding                  35
-yabai -m config bottom_padding               45
+yabai -m config bottom_padding               55
 yabai -m config left_padding                 20
 yabai -m config right_padding                20
 yabai -m config window_gap                   10
