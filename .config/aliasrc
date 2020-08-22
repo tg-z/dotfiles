@@ -37,4 +37,5 @@ alias -g \
     UL="| pup 'a attr{href}'" \
     FU="| urlscan" \
     JS="| gron | fzf" \
-    CS="| awk '{print \$1}'"
+    CS="| awk '{print \$1}'" \
+    CE="| awk '{print \$NF}'"
