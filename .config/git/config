@@ -83,3 +83,5 @@
 	token = !pass show secrets/gitlab-token
 [apply]
         ignoreWhitespace = change
+[http "https://pkg.re"]
+	followRedirects = true

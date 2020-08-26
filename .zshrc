@@ -21,7 +21,7 @@ bindkey -v
 bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
 bindkey -s '^o' 'lfcd\n'
-bindkey -s '^l' 'clear\n'
+# bindkey -s '^l' 'clear\n'
 
 HISTSIZE=10000000
 SAVEHIST=10000000
@@ -32,6 +32,8 @@ alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
 alias nvim=vim
 alias vi=vim
+alias whois.sh="~/.whois.sh/whois.sh"
+alias gyb="~/documents/promnesia/gmail/gyb/gyb"
 alias nano='/usr/local/bin/nano'
 alias youtube-dl='/usr/local/bin/youtube-dl'
 alias bc=dntk
@@ -52,7 +54,7 @@ alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
 alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias cua='cargo update-install'
+alias cua='cargo-install-update install-update --all'
 alias clr=clear
 alias ref='zsh --login'
 alias grep='grep --color=always'
