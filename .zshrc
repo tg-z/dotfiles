@@ -23,8 +23,8 @@ bindkey '^e' end-of-line
 bindkey -s '^o' 'lfcd\n'
 # bindkey -s '^l' 'clear\n'
 
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=100000
+SAVEHIST=100000
 
 alias ..='cd ..'
 alias ls='gls --color=always'
