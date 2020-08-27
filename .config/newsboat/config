@@ -7,7 +7,7 @@ download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
-download-path "~/.cache/castero/downloads"
+download-path "~/podcasts/downloads"
 
 # -- display 
 
@@ -83,7 +83,7 @@ macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler
 macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
 macro i set browser "feh <<<"; open-in-browser ; set browser linkhandler
 
-highlight all "---.*---" green
+highlight all "---.*---" cyan
 highlight feedlist ".*(0/0))" black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
 highlight article "(^Link:.*|^Date:.*)" default default
@@ -94,4 +94,3 @@ highlight article "\\[image\\ [0-9]+\\]" green default bold
 highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
 highlight article ":.*\\(link\\)$" cyan default
 highlight article ":.*\\(image\\)$" blue default
-highlight article ":.*\\(embedded flash\\)$" magenta default
