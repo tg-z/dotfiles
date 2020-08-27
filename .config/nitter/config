@@ -1,0 +1,99 @@
+# -- feeds 
+
+auto-reload no
+reload-time 120
+reload-threads 4
+download-retries 4
+download-timeout 10
+prepopulate-query-feeds yes
+articlelist-format "%-12T|%t"
+datetime-format "%F - %R"
+save-path "~/.local/share/nitter/saved"
+download-path "~/podcasts/downloads"
+
+# -- display
+
+show-read-feeds yes
+feed-sort-order date-desc
+
+color article white default bold
+color info default default reverse
+color listnormal_unread cyan default
+color listfocus blue default reverse bold
+color listfocus_unread blue default reverse bold
+color listnormal magenta default
+
+text-width 80
+
+
+# -- navigation 
+
+goto-next-feed no
+
+browser 'firefox -new-tab'
+
+bind-key h quit articlelist
+bind-key h quit article
+bind-key h quit tagselection
+bind-key h quit feedlist
+bind-key A mark-all-feeds-read
+bind-key j down feedlist
+bind-key k up feedlist
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key j down article
+bind-key k up article
+bind-key h quit
+bind-key b bookmark
+bind-key o open-in-browser
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+# -- bookmarks 
+
+bookmark-cmd ~/.config/nitter/bm
+bookmark-interactive no
+bookmark-autopilot yes
+
+
+# -- misc 
+
+unbind-key C feedlist
+confirm-exit no
+cleanup-on-quit no
+
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
+
+browser linkhandler
+macro , open-in-browser
+macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+macro a set browser "mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler
+macro v set browser "open -a mpv"; open-in-browser ; set browser linkhandler
+macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
+macro w set browser "w3m"; open-in-browser ; set browser linkhandler
+macro p set browser "pocketadd"; open-in-browser; set browser linkhandler
+macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
+macro i set browser "feh <<<" ; open-in-browser ; set browser linkhandler
+
+highlight all "---.*---" cyan
+highlight feedlist ".*(0/0))" black
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
+highlight article "(^Link:.*|^Date:.*)" default default
+highlight article "https?://[^ ]+" green default
+highlight article "^(Title):.*$" blue default
+highlight article "\\[[0-9][0-9]*\\]" yellow default
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" cyan default
+highlight article ":.*\\(image\\)$" blue default
