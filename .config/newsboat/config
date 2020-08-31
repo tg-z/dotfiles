@@ -8,6 +8,9 @@ download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
 download-path "~/podcasts/downloads"
+download-filename-format "%F.%e"
+podlist-format "%4i [%3dMB/%3tMB] %-10S %u"
+# podlist-format "%4i [%6dMB/%6tMB] [%5p %%] %-20S %u"
 
 # -- display 
 
@@ -27,7 +30,7 @@ text-width 80
 # -- navigation 
 
 goto-next-feed no
-
+player 'musikcube'
 browser 'firefox -new-tab'
 
 bind-key h quit articlelist
@@ -56,6 +59,7 @@ bind-key N prev-unread
 bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
+bind-key Y pb-toggle-download-all
 
 # -- bookmarks 
 
@@ -64,6 +68,7 @@ bookmark-interactive no
 bookmark-autopilot yes
 
 # -- misc 
+
 
 unbind-key C feedlist
 confirm-exit no
