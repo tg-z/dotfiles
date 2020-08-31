@@ -1,11 +1,3 @@
-" Modeline and Notes {
-"   EverVim is a modern & powerful vim distribution
-"   Repo URL: https://github.com/LER0ever/EverVim
-"   Made by [LER0ever](https://github.com/LER0ever)
-"   Licensed under
-"       * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE.md) or http://www.apache.org/licenses/LICENSE-2.0)
-" }
-
 set shell=/usr/local/bin/zsh
 
 " EverVim Configuration Root Directory
@@ -32,6 +24,7 @@ aug CSV_Editing
     au BufRead,BufWritePost *.csv :%ArrangeColumn
     au BufWritePre *.csv :%UnArrangeColumn
 aug end
+autocmd BufRead,BufNewFile Baskfile call SetFileTypeSH("bash")
 
 let g:deoplete#enable_at_startup = 1
 
