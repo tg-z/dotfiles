@@ -16,12 +16,30 @@ source ~/.zprofile && source ~/.config/aliasrc && source ~/.config/broot/launche
 
 set -o vi
 setopt autocd
+autoload -Uz colors && colors
+autoload -Uz compinit
+
+# zsh completion menu
+zstyle ':completion:*' menu select              # allow selection menu
+zstyle ':completion:*' list-colors ''           # color menu items
+zstyle ':completion:*' special-dirs true        # show dot files and folders
+zstyle ':completion:*' group-name ''            # don't group menu items
+
+bindkey -v "^?" backward-delete-char
+
+# History file
+setopt APPEND_HISTORY           # add session history instead of replace
+setopt EXTENDED_HISTORY         # more info in history file
+setopt HIST_FIND_NO_DUPS        # don't show duplicate commands when finding
+setopt HIST_IGNORE_DUPS         # don't record in history is command same as previous
+setopt HIST_IGNORE_SPACE        # allow private commands with space prefix
+setopt HIST_EXPIRE_DUPS_FIRST   # expire duplicate commands first
+
 autoload -U zmv
 bindkey -v
 bindkey '^b' beginning-of-line
 bindkey '^e' end-of-line
 bindkey -s '^o' 'lfcd\n'
-# bindkey -s '^l' 'clear\n'
 
 HISTSIZE=100000
 SAVEHIST=100000
@@ -37,7 +55,7 @@ alias gyb="~/documents/promnesia/gmail/gyb/gyb"
 alias nano='/usr/local/bin/nano'
 alias youtube-dl='/usr/local/bin/youtube-dl'
 alias bc=dntk
-alias gem=/usr/local/Cellar/ruby/2.7.1_2/bin/gem
+# alias gem=/usr/local/Cellar/ruby/2.7.1_2/bin/gem
 alias zal='alias -L'
 alias nmpv='/Applications/mpv.app/Contents/MacOS/mpv'
 alias firefox='firefox -new-tab'
@@ -47,12 +65,12 @@ alias tl=timeline
 alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
-alias gooseberry-serve='mdbook serve /Users/bluetooth/Library/ApplicationSupport/rs.gooseberry/gooseberry'
+# alias gooseberry-serve='mdbook serve /Users/bluetooth/Library/ApplicationSupport/rs.gooseberry/gooseberry'
 alias t=go-t
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
-alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
+# alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias cua='cargo-install-update install-update --all'
 alias clr=clear
@@ -82,7 +100,7 @@ if type brew &>/dev/null; then
 fi
 
 eval $(ssh-agent -s)
-eval "$(ntfy shell-integration)"
+# eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
@@ -116,8 +134,7 @@ lfcd () {
     fi
 }
 
-# opam configuration
-test -r /Users/bluetooth/.local/share/opam/opam-init/init.zsh && . /Users/bluetooth/.local/share/opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /Users/smp/.config/broot/launcher/bash/br

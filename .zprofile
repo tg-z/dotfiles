@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-export HOME="/Users/bluetooth"
+export HOME="/Users/smp"
 export SHELL="/usr/local/bin/zsh"
 export ZSH="/usr/local/bin/zsh"
 export EDITOR=vim
@@ -12,7 +12,6 @@ export TERMINAL=alacritty
 export MANPAGER=less
 export BROWSER=firefox
 export COLORTERM=truecolor
-export IRS_CONFIG_LOCATION="$HOME/.config/irs/conf.yaml"
 export TUIR_EDITOR=vim
 export TUIR_BROWSER=firefox
 export TUIR_URLVIEWER=urlscan
@@ -24,7 +23,6 @@ export MY_CONFIG="$HOME/.config/my"
 export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded"
 export GISTY_DIR="$HOME/documents/promnesia/gist"
 export WHOIS_WORKING_DIR="$HOME/.whois.sh"
-export GOTTY_CONFIG="$HOME/.config/gotty.conf"
 export XDG_DESKTOP_DIR="$HOME/desktop"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
 export XDG_PUBLICSHARE_DIR="$HOME/public"
@@ -37,7 +35,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
-export OPAMROOT="$HOME/.local/share/opam"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export WEGORC="$HOME/.config/wego/wegorc"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
@@ -90,7 +87,7 @@ path=(
     /usr/local/opt/curl/bin
     /usr/local/lib/ruby/gems/2.7.0/bin
     /usr/local/opt/python@3.8/bin
-    /Users/bluetooth/Library/Python/3.8/bin
+    /Users/smp/Library/Python/3.8/bin
     )
 
 typeset -u fpath
