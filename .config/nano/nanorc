@@ -7,6 +7,4 @@ set linenumbers
 set casesensitive
 set autoindent
 # linter " shellcheck "
-include /usr/local/nanorc/*.nanorc
 include /usr/local/Cellar/nano/*/share/*.nanorc
-

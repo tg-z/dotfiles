@@ -3,7 +3,7 @@
 #  / /_(__  ) / / / /  / /__
 # /___/____/_/ /_/_/   \___/
 
-source ~/.zprofile && source ~/.config/aliasrc && source ~/.config/broot/launcher/bash/br
+source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
@@ -137,4 +137,4 @@ lfcd () {
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /Users/smp/.config/broot/launcher/bash/br
+
