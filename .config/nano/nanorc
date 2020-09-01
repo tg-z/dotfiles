@@ -8,3 +8,4 @@ set casesensitive
 set autoindent
 # linter " shellcheck "
 include /usr/local/Cellar/nano/*/share/*.nanorc
+include /usr/local/nanorc/*.nanorc
