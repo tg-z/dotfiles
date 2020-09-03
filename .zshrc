@@ -5,6 +5,7 @@
 
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
+[ -f ~/.bashhub/bashhub.zsh ] && source ~/.bashhub/bashhub.zsh > /dev/null 2>&1 
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
 [ -f ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh ] && ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh
@@ -99,7 +100,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-eval $(ssh-agent -s)
+eval "$(ssh-agent -s)"
 eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
@@ -138,12 +139,5 @@ ufetch
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-
-source /Users/smp/.config/broot/launcher/bash/br
-
-### Bashhub.com Installation
-if [ -f ~/.bashhub/bashhub.zsh ]; then
-    source ~/.bashhub/bashhub.zsh
-fi
+source ~/.config/broot/launcher/bash/br
 
