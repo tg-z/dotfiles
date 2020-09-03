@@ -65,7 +65,7 @@ alias tl=timeline
 alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
-# alias gooseberry-serve='mdbook serve /Users/bluetooth/Library/ApplicationSupport/rs.gooseberry/gooseberry'
+alias gooseberry-serve='mdbook serve /Users/smp/Documents/promnesia/hypothesis'
 alias t=go-t
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
@@ -134,6 +134,7 @@ lfcd () {
     fi
 }
 
+ufetch
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
