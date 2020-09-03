@@ -100,7 +100,7 @@ if type brew &>/dev/null; then
 fi
 
 eval $(ssh-agent -s)
-# eval "$(ntfy shell-integration)"
+eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
@@ -141,3 +141,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 source /Users/smp/.config/broot/launcher/bash/br
+
+### Bashhub.com Installation
+if [ -f ~/.bashhub/bashhub.zsh ]; then
+    source ~/.bashhub/bashhub.zsh
+fi
+
