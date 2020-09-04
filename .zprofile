@@ -56,14 +56,24 @@ export PASSWORD_STORE_CLIP_TIME=60
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export MATES_DIR="$HOME/.cache/contacts"
-
 export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig:/usr/local/Cellar/libtoxcore/HEAD-56992b0/lib/pkgconfig:/usr/local/opt/curl/lib/pkgconfig:$PKG_CONFIG_PATH"
-# export PATH="/usr/local/opt/flex/bin:$PATH"
-# export PATH="/usr/local/opt/bison/bin:$PATH"
+export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
+export DOTBARE_PREVIEW="bat {}"
+export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"
+export DOTBARE_KEY="
+  --bind=alt-a:toggle-all       # toggle all selection
+  --bind=alt-j:jump             # label jump mode, sort of like vim-easymotion
+  --bind=alt-0:top              # set cursor back to top
+  --bind=alt-s:toggle-sort      # toggle sorting
+  --bind=alt-t:toggle-preview   # toggle preview
+"
 export BOOST_INC_DIR="/usr/local/include/boost"
 
+# export PATH="/usr/local/opt/flex/bin:$PATH"
+# export PATH="/usr/local/opt/bison/bin:$PATH"
+
 # fpath + manpages
-# export fpath=
+
 typeset -U path
 path=(
     /usr/local/opt/coreutils/libexec/gnubin

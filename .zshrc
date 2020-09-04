@@ -5,10 +5,10 @@
 
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
-[ -f ~/.bashhub/bashhub.zsh ] && source ~/.bashhub/bashhub.zsh > /dev/null 2>&1 
+[ -f ~/.bashhub/bashhub.zsh ] && source ~/.bashhub/bashhub.zsh > /dev/null 2>&1
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
-[ -f ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh ] && ~/.zsh.d/functions/jq-plugin/jq.plugin.zsh
+[ -f ~/bin/plugin/jq-zsh/jq.plugin.zsh ] && ~/bin/plugin/jq-zsh/jq.plugin.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
@@ -86,11 +86,14 @@ alias cask='brew cask'
 alias urlview=urlscan
 alias cat='ccat -G String="fuscia" -G Punctuation="faint" -G Plaintext="lightgray"'
 alias _=sudo
+alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
+alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
 alias npmls='npm list -g --depth 1'
 alias cf='cd ~/.config && changed'
 alias old='ls -ltr'
-alias cfg=dotbare
+alias dotbare='~/bin/plugin/dotbare/dotbare'
+alias cfg='dotbare'
 alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
 
 if type brew &>/dev/null; then
@@ -100,10 +103,9 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-eval "$(ssh-agent -s)"
 eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
-source ~/.zsh.d/functions/dotbare/dotbare.plugin.zsh
+source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
 
 export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow --exlude .git --preview 'bat {}'"
