@@ -1,3 +1,6 @@
+*.font:	MesloLGSDZ Nerd Font:pixelsize=11:antialias=true:autohint=true;
+*.alpha: 0.95
+
 ! special
 *.foreground:   #c6c8d1
 *.background:   #161821
@@ -12,12 +15,12 @@
 *.color9:       #e98989
 
 ! green
-*.color2:       #b4be82
-*.color10:      #c0ca8e
+*.color2:       #759375
+*.color10:      #cbffac
 
 ! yellow
-*.color3:       #e2a478
-*.color11:      #e9b189
+*.color3:       #fde290
+*.color11:      #FFFBDa
 
 ! blue
 *.color4:       #84a0c6

@@ -86,6 +86,7 @@ alias cask='brew cask'
 alias urlview=urlscan
 alias cat='ccat -G String="fuscia" -G Punctuation="faint" -G Plaintext="lightgray"'
 alias _=sudo
+alias farbe='farbe -h 10 -w 20'
 alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
