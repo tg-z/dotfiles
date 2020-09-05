@@ -68,6 +68,7 @@ export DOTBARE_KEY="
   --bind=alt-t:toggle-preview   # toggle preview
 "
 export BOOST_INC_DIR="/usr/local/include/boost"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # export PATH="/usr/local/opt/flex/bin:$PATH"
 # export PATH="/usr/local/opt/bison/bin:$PATH"
@@ -79,7 +80,6 @@ path=(
     /usr/local/opt/coreutils/libexec/gnubin
     /usr/local/opt/gnu-sed/libexec/gnubin
     ~/.bin
-    ~/.cargo/bin
     ~/bin
     ~/.local/bin
     /usr/local/bin
@@ -89,6 +89,7 @@ path=(
     /sbin
     /usr/libexec
     /bin
+    ~/.local/share/cargo/bin
     ~/.local/share/go/bin
     /opt/X11/bin
     /usr/local/MacGPG2/bin

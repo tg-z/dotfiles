@@ -26,6 +26,11 @@ zstyle ':completion:*' list-colors ''           # color menu items
 zstyle ':completion:*' special-dirs true        # show dot files and folders
 zstyle ':completion:*' group-name ''            # don't group menu items
 
+# vim keys in tab complete menu
+# bindkey -M menuselect 'h' vi-backward-char
+# bindkey -M menuselect 'k' vi-up-line-or-history
+# bindkey -M menuselect 'l' vi-forward-char
+# bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v "^?" backward-delete-char
 
 # History file
@@ -38,8 +43,10 @@ setopt HIST_EXPIRE_DUPS_FIRST   # expire duplicate commands first
 
 autoload -U zmv
 bindkey -v
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 bindkey '^b' beginning-of-line
-bindkey '^e' end-of-line
 bindkey -s '^o' 'lfcd\n'
 
 HISTSIZE=100000
