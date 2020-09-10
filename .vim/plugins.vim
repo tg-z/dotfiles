@@ -55,7 +55,6 @@ Plug 'HP4k1h5/ephemeris', { 'branch': 'main' }
 Plug 'voldikss/vim-floaterm'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'wakatime/vim-wakatime'
-Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
 Plug 'h1mesuke/unite-outline'
 Plug 'basyura/bitly.vim'
 Plug 'Shougo/unite.vim'
