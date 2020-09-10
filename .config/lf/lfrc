@@ -2,7 +2,7 @@ set hidden true
 set shell sh
 set shellopts '-eu'
 set color256 true
-set icons true
+# set icons true
 set drawbox true
 # set preview true
 # set previewer ~/.config/lf/preview
