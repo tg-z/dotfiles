@@ -17,7 +17,7 @@ export TUIR_BROWSER=firefox
 export TUIR_URLVIEWER=urlscan
 export PODCAST="$HOME/podcasts"
 export WAKATIME_HOME="$HOME/.config/waka"
-export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap"
+export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap:$HOME/.mailcap"
 export SUBS_FILE="$HOME/.local/share/subs/subs.txt"
 export MY_CONFIG="$HOME/.config/my"
 export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded"
