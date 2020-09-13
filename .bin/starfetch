@@ -3,40 +3,48 @@
 set -ueo pipefail
 
 downloads_dir="${HOME}/.cache/stars"
-accept=${accept:-'application/vnd.github.v3+json'}
+accept="${accept:-'application/vnd.github.v3+json'}"
+
+help(){
+    cat<<__EOF__
+usage: starfetch <options> 
+
+options:
+     help
+     ls, list
+     download
+__EOF__
+}
 
 get() {
-    local -r url="$1"
-    local -r user="${git config github.user:-"$GITHUB_USER"}"
-    local -r jq_query="${2:-'.'}"
-
-    curl -sH -H "Accept: ${accept}" -H "Authorization: token ${GITHUB_TOKEN}" "${url}" | jq -r "${jq_query}"
-}
-__get_api_url() {
-    local -r url="$1"
-    get "https://api.github.com/users/${user}/starred?per_page=100" '.'
-}
-__get_file() {
-    local -r dest_dir="${2:-"${downloads_dir}"}"
-    mkdir -p "${dest_dir}"
-    __get_api_url > "${dest_dir}/$(date -I).json"
-}
-__get_starred_urls() {
-    local -r QUERY='.[] | [.html_url, .description]'
-    __get_api_url "${url}" "${QUERY}"
-}
-__format_starred() {
-    local -r QUERY='.[] | [.id, .full_name, .description, .html_url, .homepage, .language] ' -r | jq .
-    __get_file && cd "${dest_dir}"
-    jq "${QUERY}" "$(fd . -t f -e json | fzf)"
-}
-main() {
-    if [[ -z "$1"  ]]; then
-        echo "Usage: starfetch <options>"
-        echo "starfetch local"
-    elif [[ -n "$1"  ]]; then
-        echo "backing up local stars..."
-    fi
+    url="$1"
+    curl -sH -H "Accept: ${accept}" -H "Authorization: token ${GITHUB_TOKEN}" "${url}"
 }
 
-main "$@"
+list() {
+ user="$(git config user.username)"    
+ get "https://api.github.com/users/${user}/starred?per_page=100" | jq '.'
+}
+
+download() {
+    [ -z "${downloads_dir}" ] && mkdir -p "${downloads_dir}"
+    list > "${downloads_dir}/s_$(date -I).json"
+}
+
+case $* in
+    help)
+        help
+        ;;
+    list|ls)
+        list
+        ;;
+    download)
+        shift
+        download
+        ;;
+    *)
+        help
+        ;;
+
+esac
+
