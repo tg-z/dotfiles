@@ -1,12 +1,11 @@
 #!/bin/bash
-HOME=/Users/bluetooth
-. "${HOME}"/.zprofile &>/dev/null
+source ~/.zprofile > /dev/null 2>&1
 
 podcast="$TERMINAL -e mpv --no-audio-display"
 video="mpv --really-quiet --player-operation-mode=pseudo-gui"
-picture="mpv --aid=no"
+picture="mpv --config-dir=$HOME/.config/mvi"
 document="$READER"
-download="aria2c"
+download="wget -q"
 
 input="$1"
 
