@@ -13,6 +13,7 @@ set rtp+=/usr/local/opt/fzf
 
 syntax on 
 filetype plugin on 
+set term=screen-256color
 set termguicolors
 colorscheme iceberg
 set guifont=MesloLGSDZ\ Nerd\ Font:h11 
