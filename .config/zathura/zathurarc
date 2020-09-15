@@ -1,3 +1,4 @@
+set selection-clipboard clipboard
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set database plain
@@ -17,5 +18,3 @@ map J zoom out
 map i recolor
 map p print
 map q quit
-map <C-o> exec zathura-annotate "$FILE"
-

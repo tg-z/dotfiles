@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-export HOME="/Users/smp"
+export USER="bluetooth"
+export HOME="/Users/$USER"
 export SHELL="/usr/local/bin/zsh"
 export ZSH="/usr/local/bin/zsh"
 export EDITOR="vim"
@@ -94,31 +95,30 @@ path=(
     ~/.local/share/cargo/bin
     ~/.local/share/go/bin
     /opt/X11/bin
-    /usr/local/MacGPG2/bin
     /usr/local/opt/fzf/bin
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
     /usr/local/lib/ruby/gems/2.7.0/bin
     /usr/local/opt/python@3.8/bin
-    /Users/smp/Library/Python/3.8/bin
+    ~/Library/Python/3.8/bin
     )
 
 typeset -u fpath
 fpath=(
-    /usr/local/share/zsh/site-functions
+    ~/.zsh.d/comp
     /usr/local/Cellar/zsh/5.8/share/zsh/functions
-    /usr/local/share/zsh-completions
-    /usr/share/zsh/5.7.1/help
+    /usr/local/Cellar/zsh-completions/0.32.0/share/zsh-completions
     /usr/share/zsh/5.7.1/functions
     )
 
 typeset -u manpath
 manpath=(
     /usr/local/share/man
-    /usr/local/Cellar/zsh/5.8/share/man/man1
+    /usr/local/Cellar/zsh/5.8/share/man
     /usr/local/Cellar/zsh/5.8/share/zsh/help
     /opt/X11/share/man
     /usr/share/man
+    ~/.local/share/man
     )
 # export LIBTOOL=`which glibtool`
 # export LIBTOOLIZE=`which glibtoolize`
@@ -287,3 +287,5 @@ ex=:\
 *.nix=:\
 "
 
+
+export PATH="/Users/bluetooth/.local/share/cargo/bin:$PATH"
