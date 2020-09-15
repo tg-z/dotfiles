@@ -10,7 +10,7 @@ set drawbox true
 cmd trash %trash $fx
 cmd zip %zip -r "$f" "$f"
 cmd tar %tar cvf "$f.tar" "$f"
-cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd targz %tar -cvzf "$f.tar.gz" "$f"
 cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
 cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
@@ -112,6 +112,7 @@ map P pview $fx
 map fj fzf_jump
 map mf mkfile
 map md mkdir
+map tg targz
 map mch chmod
 map R reload
 map H top

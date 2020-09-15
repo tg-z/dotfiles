@@ -3,6 +3,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'michal-h21/vimwiki-sync'
 Plug 'michal-h21/vim-zettel'
 Plug 'cocopon/iceberg.vim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'gkeep/iceberg-dark'
 Plug 'tyru/notify-changed.vim'
 Plug 'mbbill/undotree'

@@ -1,11 +1,15 @@
 " plugin customizations
-" colorscheme 
+ 
 " airline
+let g:webdevicons_enable = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='icebergDark'
 let g:airline#extensions#tabline#enabled = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 
 " NERD Tree
+let g:webdevicons_enable_nerdtree = 1
 map <C-o> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -26,6 +30,12 @@ nmap <leader>ef  :EphemerisFold<CR>
 nmap <leader>eft :EphemerisFilterTasks 1 1<CR>
 "           1 = archive, 0 = delete ---^ ^---- 1 = summary, 0 = no summary
 nmap <leader>et  :EphemerisToggleTask<CR>
+
+" syntastic checkers
+let g:syntastic_python_checkers=['mypy']
+let g:syntastic_applescript_checkers=['osacompile']
+let g:syntastic_css_checkers=['stylelint']
+let g:syntastic_go_checkers=['gofmt']
 
 " floatterm
 hi FloatermNF guibg=black
