@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 source ~/.pocketshrc
 
 curl -sS -X POST \

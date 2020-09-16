@@ -18,7 +18,11 @@ source ~/.zprofile && source ~/.config/aliasrc
 set -o vi
 setopt autocd
 autoload -Uz colors && colors
+autoload -U zmv
 autoload -Uz compinit
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots) 
 
 # zsh completion menu
 zstyle ':completion:*' menu select              # allow selection menu
@@ -26,14 +30,7 @@ zstyle ':completion:*' list-colors ''           # color menu items
 zstyle ':completion:*' special-dirs true        # show dot files and folders
 zstyle ':completion:*' group-name ''            # don't group menu items
 
-# vim keys in tab complete menu
-# bindkey -M menuselect 'h' vi-backward-char
-# bindkey -M menuselect 'k' vi-up-line-or-history
-# bindkey -M menuselect 'l' vi-forward-char
-# bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v "^?" backward-delete-char
-
-# History file
+# history file
 setopt APPEND_HISTORY           # add session history instead of replace
 setopt EXTENDED_HISTORY         # more info in history file
 setopt HIST_FIND_NO_DUPS        # don't show duplicate commands when finding
@@ -41,10 +38,8 @@ setopt HIST_IGNORE_DUPS         # don't record in history is command same as pre
 setopt HIST_IGNORE_SPACE        # allow private commands with space prefix
 setopt HIST_EXPIRE_DUPS_FIRST   # expire duplicate commands first
 
-autoload -U zmv
-bindkey -v
-# Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
+bindkey -v "^?" backward-delete-char
 bindkey '^e' edit-command-line
 bindkey '^b' beginning-of-line
 bindkey -s '^o' 'lfcd\n'
@@ -105,13 +100,6 @@ alias old='ls -ltr'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
 alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
 
 eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
