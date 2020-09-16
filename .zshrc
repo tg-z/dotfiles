@@ -56,7 +56,6 @@ alias ..='cd ..'
 alias ls='gls --color=always'
 alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
-alias nvim='vim'
 alias vi='vim'
 alias _='sudo'
 alias gyb="~/documents/promnesia/gmail/gyb/gyb"

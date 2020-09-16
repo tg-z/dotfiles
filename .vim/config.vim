@@ -28,7 +28,6 @@ nmap <leader>ect :EphemerisCopyTodos<CR>
 nmap <leader>epa :EphemerisPrintAgenda<CR>
 nmap <leader>ef  :EphemerisFold<CR>
 nmap <leader>eft :EphemerisFilterTasks 1 1<CR>
-"           1 = archive, 0 = delete ---^ ^---- 1 = summary, 0 = no summary
 nmap <leader>et  :EphemerisToggleTask<CR>
 
 " syntastic checkers
@@ -43,11 +42,12 @@ hi FloatermBorderNF guibg=black guifg=blue
 let g:floatterm_width = 0.75
 let g:floatterm_height = 0.50
 let g:floaterm_position = 'bottomright'
-" floatterm example
+
 let g:floaterm_keymap_new    = '<F7>'
 let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_toggle = '<F10>'
+let g:floaterm_keymap_kill   = '<F12>'
 
 " markdown
 let g:vim_markdown_folding_level = 6
