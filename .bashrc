@@ -87,5 +87,6 @@ alias clr='clear'
 alias cgo='cargo-go'
 alias cua='cargo-install-update install-update --all'
 
+source ~/.local/share/icons-in-terminal/icons_bash.sh
 source ~/.config/broot/launcher/bash/br
 
