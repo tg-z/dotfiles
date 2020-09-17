@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
+delete_dsfiles(){
+    DIRS="${*:-.}"
+    echo "Files to be deleted: "
+    find "${DIRS}" -type f -name .DS_Store -print
+    find "${DIRS}" -type f -name .DS_Store -print -delete
+}
+
+delete_dsfiles "$@"
