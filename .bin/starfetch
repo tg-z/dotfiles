@@ -10,9 +10,9 @@ help(){
 usage: starfetch <options> 
 
 options:
-     help
+     h, help
      ls, list
-     download
+     dl, download
 __EOF__
 }
 
@@ -31,19 +31,18 @@ download() {
     list > "${downloads_dir}/s_$(date -I).json"
 }
 
-case $* in
-    help)
+case "$*" in
+    help|h)
         help
         ;;
     list|ls)
         list
         ;;
-    download)
+    download|dl)
         shift
         download
         ;;
-    *)
-        help
+    *) help
         ;;
 
 esac
