@@ -42,6 +42,7 @@ export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
 export WEGORC="$HOME/.config/wego/wegorc"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export GOBIN="$GOPATH/bin"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export ZSH_PECO_HISTORY_OPTS="--initial-filter=Fuzzy"
@@ -93,7 +94,7 @@ path=(
     /usr/libexec
     /bin
     ~/.local/share/cargo/bin
-    ~/.local/share/go/bin
+    $GOPATH
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
