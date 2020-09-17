@@ -3,7 +3,7 @@
 export USER="bluetooth"
 export HOME="/Users/$USER"
 export SHELL="/usr/local/bin/zsh"
-export ZSH="/usr/local/bin/zsh"
+export ZSH="zsh"
 export EDITOR="vim"
 export VISUAL="vim"
 export READER="zathura"
@@ -38,7 +38,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
-# export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export WEGORC="$HOME/.config/wego/wegorc"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
@@ -93,8 +92,8 @@ path=(
     /sbin
     /usr/libexec
     /bin
+    $GOBIN
     ~/.local/share/cargo/bin
-    $GOPATH
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
