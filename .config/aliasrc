@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 alias -g \
 	C="| wc -l" \
 	D="DISPLAY=:0.0" \
@@ -14,7 +14,6 @@ alias -g \
 	G="| egrep" \
 	H="| head" \
 	HL="|& head -20" \
-	ST="amanogawa -f '%f%t%d' | column -t -s '    ' | peco | awk '{print \$1}'" \
 	Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)" \
 	LL="2>&1 | less" \
 	L="| less" \
@@ -34,8 +33,10 @@ alias -g \
 	XG="| xargs egrep" \
 	XS="fzf | xargs ls -l" \
 	X="| xargs" \
-    UL="| pup 'a attr{href}'" \
-    FU="| urlscan" \
-    JS="| gron | fzf" \
-    CS="| awk '{print \$1}'" \
-    CE="| awk '{print \$NF}'"
+	UL="| pup 'a attr{href}'" \
+	FU="| urlscan" \
+	JS="| gron | fzf" \
+	CS="| awk '{print \$1}'" \
+	CE="| awk '{print \$NF}'" \
+	JL="| jc --ls | jq '.[].filename'"
+

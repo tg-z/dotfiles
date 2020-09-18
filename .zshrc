@@ -5,12 +5,10 @@
 
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
-[ -f ~/.bashhub/bashhub.zsh ] && source ~/.bashhub/bashhub.zsh > /dev/null 2>&1
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
-[ -f ~/bin/plugin/jq-zsh/jq.plugin.zsh ] && ~/bin/plugin/jq-zsh/jq.plugin.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
-[ -f ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh ] && source ~/.zsh.d/prompts/polyglot/polyglot.plugin.zsh
+[ -f ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh ] && source ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
 [ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh
 [ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh
@@ -26,11 +24,6 @@ zstyle ':completion:*' list-colors ''           # color menu items
 zstyle ':completion:*' special-dirs true        # show dot files and folders
 zstyle ':completion:*' group-name ''            # don't group menu items
 
-# vim keys in tab complete menu
-# bindkey -M menuselect 'h' vi-backward-char
-# bindkey -M menuselect 'k' vi-up-line-or-history
-# bindkey -M menuselect 'l' vi-forward-char
-# bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v "^?" backward-delete-char
 
 # History file
@@ -53,33 +46,23 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 alias ..='cd ..'
-alias ls='gls --color=always'
-alias awk='/usr/local/bin/awk'
+alias ls='ls --color=always'
 alias tree='tree -C'
 alias nvim='vim'
 alias vi='vim'
-alias whois.sh="~/.whois.sh/whois.sh"
-alias gyb="~/documents/promnesia/gmail/gyb/gyb"
-alias nano='/usr/local/bin/nano'
-alias youtube-dl='/usr/local/bin/youtube-dl'
-alias canvas-assignments='canvas assignment ls 52351'
 alias bc='dntk'
 alias e='vim'
 alias zal='alias -L'
-alias nmpv='/Applications/mpv.app/Contents/MacOS/mpv'
-alias firefox='firefox -new-tab'
 alias gimme='git pull'
 alias cdu='cdu -i'
-alias tl=timeline
+alias tl='timeline'
 alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
-alias gooseberry-serve='mdbook serve /Users/smp/Documents/promnesia/hypothesis'
 alias t='go-t'
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
-# alias tscr='tiktok-scraper -t all -s true -historypath /Users/bluetooth/Documents/promnesia/tiktok'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias cua='cargo-install-update install-update --all'
 alias clr='clear'
@@ -89,32 +72,19 @@ alias ffmpeg='ffmpeg -hide_banner'
 alias chmodx='chmod +x'
 alias mvi='mpv --config-dir=$HOME/.config/mvi'
 alias tuir='tuir --enable-media'
-alias dsd='m dir delete dsfiles'
 alias cgo='cargo-go'
 alias aadb='autoadb scrcpy --window-borderless --always-on-top -s {}'
-alias cask='brew cask'
 alias urlview='urlscan'
 alias cat='ccat -G String="fuscia" -G Punctuation="faint" -G Plaintext="lightgray"'
-alias _='sudo'
 alias farbe='farbe -h 10 -w 20'
 alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
 alias npmls='npm list -g --depth 1'
 alias cf='cd ~/.config && changed'
-alias old='ls -ltr'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
-alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
@@ -148,8 +118,6 @@ lfcd () {
     fi
 }
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source ~/.config/broot/launcher/bash/br
+source ~/.zsh.d/functions/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.zsh.d/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
