@@ -38,10 +38,11 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
-export WEGORC="$HOME/.config/wego/wegorc"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export CARGO_HOME="${XDG_DATA_HOME:-HOME/.local/share}/cargo"
+export CARGOBIN="${CARGO_HOME}/bin"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export GOBIN="$GOPATH/bin"
+export GOBIN="${GOPATH}/bin"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export ZSH_PECO_HISTORY_OPTS="--initial-filter=Fuzzy"
@@ -71,7 +72,6 @@ export DOTBARE_KEY="
   --bind=alt-t:toggle-preview   # toggle preview
 "
 export BOOST_INC_DIR="/usr/local/include/boost"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # export PATH="/usr/local/opt/flex/bin:$PATH"
 # export PATH="/usr/local/opt/bison/bin:$PATH"
@@ -93,7 +93,7 @@ path=(
     /usr/libexec
     /bin
     $GOBIN
-    ~/.local/share/cargo/bin
+    $CARGOBIN
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin

@@ -7,10 +7,12 @@ download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
-download-path "~/podcasts/downloads"
-download-filename-format "%F.%e"
-podlist-format "%4i [%3dMB/%3tMB] %-10S %u"
-# podlist-format "%4i [%6dMB/%6tMB] [%5p %%] %-20S %u"
+
+urls-source "ocnews"
+ocnews-url "https://nc.nl.tab.digital/s/ZSYYxTNATr9FkPa" # Domain of your Nextcloud
+ocnews-login "blue_tooth@zoho.com" # Desired nextcloud user to log in as
+ocnews-password "MAqXxxDSq2aLvSS" # Nextcloud password (app password if using
+cookie-cache "~/.local/share/newsboat/cookies"
 
 # -- display 
 
