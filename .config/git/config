@@ -31,6 +31,7 @@
 	subpull = !git submodule foreach git pull --tags origin main
 [github]
 	user = tg-z
+	username = tg-z
 	oauth-token = !pass show secrets/github-oauth-token
 [ghi]
 	token = !pass show secrets/github-token
