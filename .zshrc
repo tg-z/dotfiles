@@ -87,7 +87,7 @@ alias cfg='dotbare'
 
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
-source ~/.zsh.d/functions/fiz.zsh
+source ~/.zsh.d/functions/termux.zsh
 
 export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow --exlude .git --preview 'bat {}'"
 

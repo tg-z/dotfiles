@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 alias -g \
 	C="| wc -l" \
 	D="DISPLAY=:0.0" \
@@ -39,4 +39,3 @@ alias -g \
 	CS="| awk '{print \$1}'" \
 	CE="| awk '{print \$NF}'" \
 	JL="| jc --ls | jq '.[].filename'"
-
