@@ -288,5 +288,3 @@ ex=:\
 *.nix=:\
 "
 
-
-export PATH="/Users/bluetooth/.local/share/cargo/bin:$PATH"
