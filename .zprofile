@@ -87,12 +87,13 @@ path=(
 	$HOME/.bin
 	$HOME/.local/bin
 	$GOBIN
-	$CARGO_HOME/bin
+	$CARGOBIN
 	$HOME/arch
 	)
 typeset -u fpath
 fpath=(
     ~/.zsh.d/comp
+    ~/.zsh.d/comp/termux
     $PREFIX/share/zsh/5.8/functions
     ~/.zsh.d/functions/zsh-completions/src
      )
