@@ -6,7 +6,6 @@
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
-[ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh ] && source ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
@@ -60,6 +59,9 @@ alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
 alias t='go-t'
+alias got='go-t'
+alias gols='ls -1 $GOBIN'
+alias carls='ls -1 $CARGOBIN'
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
