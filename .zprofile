@@ -107,6 +107,7 @@ path=(
 typeset -u fpath
 fpath=(
     ~/.zsh.d/comp
+    ~/.zsh.d/comp/macos
     /usr/local/Cellar/zsh/5.8/share/zsh/functions
     /usr/local/Cellar/zsh-completions/0.32.0/share/zsh-completions
     /usr/share/zsh/5.7.1/functions
