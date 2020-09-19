@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 # send an url to getpocket.com, using the token from ~/.pocket_access_token.
 #
 # (c) 2013, Andreas Happe <andreashappe@snikt.net>

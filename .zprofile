@@ -46,6 +46,7 @@ export PODCAST="$STORAGED/shared/Podcasts"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export RDR="$STORAGED/shared/buildapks"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
@@ -63,11 +64,8 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
-
 export PASSWORD_STORE_CLIP_TIME=60
-
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
-
 export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
 export DOTBARE_PREVIEW="bat {}"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"

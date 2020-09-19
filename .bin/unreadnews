@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 num=$(newsboat -x print-unread | cut -d " " -f 1)
 [ $num != 0 ] && echo "|"  $num

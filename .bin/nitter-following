@@ -1,0 +1,29 @@
+import requests, re, sys
+
+url = "https://mobile.twitter.com/{}/following"
+cursor = ""
+usernames = []
+first = True
+
+if len(sys.argv) < 2:
+    print("Usage: python followers.py <username>")
+    quit(1)
+
+while True:
+    u = url.format(sys.argv[1])
+    if not first:
+        u += "?cursor={}".format(cursor)
+    first = False
+    
+    req = requests.get(u)
+    users = re.findall(r"@[^>]+>(.+)</s.+", req.text)
+    usernames.extend(users)
+
+    c = re.search(r"cursor=([0-9]+)", req.text)
+    if c is not None:
+        cursor = c.groups(0)[0]
+        print(cursor)
+    else:
+        break
+
+print(",".join(usernames))

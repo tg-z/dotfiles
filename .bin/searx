@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 lynx "https://searx.lukesmith.xyz/?q=$*&categories=general&language=en-US"
