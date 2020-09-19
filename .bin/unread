@@ -1,3 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+. "$HOME/.zprofile" &>/dev/null
+
 mailnum="$(find $XDG_DATA_HOME/mail/*/INBOX/new/* -type f 2>/dev/null | wc -l)"
 newsnum="$(newsboat -x print-unread | cut -d " " -f 1)"
+
 echo   $mailnum && echo   $newsnum
