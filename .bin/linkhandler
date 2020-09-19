@@ -1,12 +1,13 @@
 #!/data/data/com.termux/files/usr/bin/bash
-HOME=/Users/bluetooth
-. "${HOME}"/.zprofile &>/dev/null
 
-podcast="$TERMINAL -e mpv --no-audio-display"
-video="mpv --really-quiet --player-operation-mode=pseudo-gui"
-picture="mpv --aid=no"
+HOME="/data/data/com.termux/files/home"
+source ~/.zprofile > /dev/null 2>&1
+
+podcast="termux-media-player"
+video="mpv --player-operation-mode=pseudo-gui"
+picture="mpv --config-dir=$HOME/.config/mvi"
 document="$READER"
-download="aria2c"
+download="wget -q"
 
 input="$1"
 
