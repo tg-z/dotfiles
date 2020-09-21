@@ -102,7 +102,7 @@ alias cf='cd ~/.config && changed'
 alias old='ls -ltr'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
-alias twtxt='twtxt -c ~/Library/ApplicationSupport/twtxt/config'
+alias twt='twtxt -c ~/.config/twtxt/config'
 
 eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
