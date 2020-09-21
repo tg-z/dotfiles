@@ -32,11 +32,12 @@ zstyle ':completion:*' group-name ''            # don't group menu items
 
 # history file
 setopt APPEND_HISTORY           # add session history instead of replace
-setopt EXTENDED_HISTORY         # more info in history file
 setopt HIST_FIND_NO_DUPS        # don't show duplicate commands when finding
 setopt HIST_IGNORE_DUPS         # don't record in history is command same as previous
 setopt HIST_IGNORE_SPACE        # allow private commands with space prefix
 setopt HIST_EXPIRE_DUPS_FIRST   # expire duplicate commands first
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 autoload edit-command-line; zle -N edit-command-line
 bindkey -v "^?" backward-delete-char

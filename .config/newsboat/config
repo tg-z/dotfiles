@@ -8,12 +8,6 @@ download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
 
-urls-source "ocnews"
-ocnews-url "https://nc.nl.tab.digital/s/ZSYYxTNATr9FkPa" # Domain of your Nextcloud
-ocnews-login "blue_tooth@zoho.com" # Desired nextcloud user to log in as
-ocnews-password "MAqXxxDSq2aLvSS" # Nextcloud password (app password if using
-cookie-cache "~/.local/share/newsboat/cookies"
-
 # -- display 
 
 show-read-feeds yes
