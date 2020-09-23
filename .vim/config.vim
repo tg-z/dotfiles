@@ -18,9 +18,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vimwiki
-let g:vimwiki_list = \
-  [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}, \
- {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md']}]
+let g:vimwiki_list = [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}, {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
 
 " ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
@@ -47,11 +45,6 @@ nnoremap <leader>zn :ZettelNew<space>
 nnoremap <silent> <c-s> :NV<CR>
 let g:nv_search_paths = ['~/.local/share/zet', '~/.local/share/til', '~/documents/wiki/diary']
 let g:nv_default_extension = '.md'
-let g:nv_keymap = {
-                    \ 'ctrl-s': 'split ',
-                    \ 'ctrl-v': 'vertical split ',
-                    \ 'ctrl-t': 'tabedit ',
-                    \ })
 let g:nv_show_preview = 1
 let g:nv_wrap_preview_text = 1
 let g:nv_include_hidden = 1

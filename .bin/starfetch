@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -ueo pipefail
-
+d="$(date -I)"
 downloads_dir="${HOME}/.cache/stars"
 accept="${accept:-'application/vnd.github.v3+json'}"
 
@@ -28,7 +28,7 @@ list() {
 
 download() {
     [ -z "${downloads_dir}" ] && mkdir -p "${downloads_dir}"
-    list > "${downloads_dir}/s_$(date -I).json"
+    list > "${downloads_dir}/s_$d.json"
 }
 
 case "$*" in
