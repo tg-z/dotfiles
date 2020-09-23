@@ -19,9 +19,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vimwiki
 let g:vimwiki_list = \
-  [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'},
-  	\ {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md']}]
-
+  [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}, \
+ {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md']}]
 
 " ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
@@ -34,15 +33,14 @@ nmap <leader>eft :EphemerisFilterTasks 1 1<CR>
 nmap <leader>et  :EphemerisToggleTask<CR>
 
 " zettelkasten
-let g:zettel_format = "%Y%m%d%H%M%S-%title"
-let g:zettel_date_format = "%B%m,%Y"
+let g:zettel_format = '%Y%m%d%H%M%S-%title'
+let g:zettel_date_format = '%B%m,%Y'
 let g:vimwiki_markdown_link_ext = 1
-let g:zettel_fzf_command = "rg --column --line-number --ignore-case \
-     --no-heading --color=always "
+let g:zettel_fzf_command = 'rg --column --line-number --ignore-case --no-heading --color=always'
 let g:zettel_fzf_options = ['--exact', '--tiebreak=end']
-let g:zettel_backlinks_title = "backlinks"
-let g:zettel_link_format="[%title](%link)"
-let g:zettel_options = [{}, {"template" :  "~/.local/share/tpl/zet.tpl"}]
+let g:zettel_backlinks_title = 'backlinks'
+let g:zettel_link_format='[%title](%link)'
+let g:zettel_options = [{}, {'template': '~/.local/share/tpl/zet.tpl'}]
 nnoremap <leader>zn :ZettelNew<space>
 
 " notational vim
