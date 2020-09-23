@@ -18,9 +18,12 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/.local/share/til',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = \
+  [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'},
+  	\ {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md']}]
 
+
+" ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
 nmap <leader>eci :EphemerisCreateIndex<CR>
 nmap <leader>egt :EphemerisGotoToday<CR>
@@ -29,6 +32,37 @@ nmap <leader>epa :EphemerisPrintAgenda<CR>
 nmap <leader>ef  :EphemerisFold<CR>
 nmap <leader>eft :EphemerisFilterTasks 1 1<CR>
 nmap <leader>et  :EphemerisToggleTask<CR>
+
+" zettelkasten
+let g:zettel_format = "%Y%m%d%H%M%S-%title"
+let g:zettel_date_format = "%B%m,%Y"
+let g:vimwiki_markdown_link_ext = 1
+let g:zettel_fzf_command = "rg --column --line-number --ignore-case \
+     --no-heading --color=always "
+let g:zettel_fzf_options = ['--exact', '--tiebreak=end']
+let g:zettel_backlinks_title = "backlinks"
+let g:zettel_link_format="[%title](%link)"
+let g:zettel_options = [{}, {"template" :  "~/.local/share/tpl/zet.tpl"}]
+nnoremap <leader>zn :ZettelNew<space>
+
+" notational vim
+nnoremap <silent> <c-s> :NV<CR>
+let g:nv_search_paths = ['~/.local/share/zet', '~/.local/share/til', '~/documents/wiki/diary']
+let g:nv_default_extension = '.md'
+let g:nv_keymap = {
+                    \ 'ctrl-s': 'split ',
+                    \ 'ctrl-v': 'vertical split ',
+                    \ 'ctrl-t': 'tabedit ',
+                    \ })
+let g:nv_show_preview = 1
+let g:nv_wrap_preview_text = 1
+let g:nv_include_hidden = 1
+let g:nv_window_width = '40%'
+let g:nv_window_direction = 'down'
+let g:nv_preview_width = 50
+let g:nv_preview_direction = 'right'
+let g:nv_yank_key = 'ctrl-y'
+let g:nv_yank_separator = "\n"
 
 " syntastic checkers
 let g:syntastic_python_checkers=['mypy']
