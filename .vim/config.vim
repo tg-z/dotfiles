@@ -18,7 +18,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/.local/share/til', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}, {'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
 
 " ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
