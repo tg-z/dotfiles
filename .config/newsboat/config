@@ -7,10 +7,6 @@ download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
-download-path "~/podcasts/downloads"
-download-filename-format "%F.%e"
-podlist-format "%4i [%3dMB/%3tMB] %-10S %u"
-# podlist-format "%4i [%6dMB/%6tMB] [%5p %%] %-20S %u"
 
 # -- display 
 
@@ -80,13 +76,12 @@ browser linkhandler
 macro , open-in-browser
 macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
 macro a set browser "mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler
-macro v set browser "nmpv"; open-in-browser ; set browser linkhandler
 macro n set browser "open -a mpv"; open-in-browser ; set browser linkhandler
 macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
 macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler
 macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
-macro i set browser "feh <<<"; open-in-browser ; set browser linkhandler
+macro i set browser "mvi"; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" cyan
 highlight feedlist ".*(0/0))" black
