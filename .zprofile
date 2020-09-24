@@ -99,6 +99,7 @@ path=(
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
+    /usr/local/Cellar/perl/*/bin
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
     /usr/local/lib/ruby/gems/2.7.0/bin
