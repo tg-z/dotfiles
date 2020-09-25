@@ -99,6 +99,7 @@ map bb $bat $f
 map br $vimv $fx
 map iv $viu "$f"
 map D delete
+map dd rm -rf 
 map up unpk $fx
 map zo $zathura "$f"
 map p paste

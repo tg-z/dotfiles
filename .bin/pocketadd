@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-source ~/.pocketshrc
+source ~/.secrets
 
 curl -sS -X POST \
     -F "url=$1" \
     -F "tags=$2" \
-    -F "consumer_key=$CONSUMER_KEY" \
-    -F "access_token=$ACCESS_TOKEN" \
+    -F "consumer_key=$POCKET_CONSUMER_KEY" \
+    -F "access_token=$POCKET_ACCESS_TOKEN" \
     https://getpocket.com/v3/add | jq 
