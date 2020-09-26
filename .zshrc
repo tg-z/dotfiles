@@ -77,7 +77,7 @@ alias carls='ls -1 $CARGOBIN'
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
 alias ytv='youtube-viewer'
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias rr='curl -sL https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias cua='cargo-install-update install-update --all'
 alias clr='clear'
 alias ref='zsh --login'
@@ -142,4 +142,3 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.config/broot/launcher/bash/br
-export PATH="/usr/local/opt/openjdk/bin:$PATH"

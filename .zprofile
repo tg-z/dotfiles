@@ -39,6 +39,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
 export PERLBREW_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/perlbrew"
+export PERLBREW_BIN="${PERLBREW_ROOT}/bin"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export CARGO_HOME="${XDG_DATA_HOME:-HOME/.local/share}/cargo"
 export CARGOBIN="${CARGO_HOME}/bin"
@@ -62,7 +63,6 @@ export PASSWORD_STORE_CLIP_TIME=120
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export MATES_DIR="$HOME/.cache/contacts"
-export PKG_CONFIG_PATH="/opt/X11/lib/pkgconfig:/usr/local/Cellar/libtoxcore/HEAD-56992b0/lib/pkgconfig:/usr/local/opt/curl/lib/pkgconfig:$PKG_CONFIG_PATH"
 export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
 export DOTBARE_PREVIEW="bat {}"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"
@@ -74,9 +74,6 @@ export DOTBARE_KEY="
   --bind=alt-t:toggle-preview   # toggle preview
 "
 export BOOST_INC_DIR="/usr/local/include/boost"
-
-# export PATH="/usr/local/opt/flex/bin:$PATH"
-# export PATH="/usr/local/opt/bison/bin:$PATH"
 
 # fpath + manpages
 
@@ -96,10 +93,11 @@ path=(
     /bin
     $GOBIN
     $CARGOBIN
+    $PERLBREW_BIN
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
-    /usr/local/Cellar/perl/5.32.0/bin
+    /usr/local/opt/openjdk/bin
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
     /usr/local/lib/ruby/gems/2.7.0/bin
@@ -123,12 +121,28 @@ manpath=(
     /usr/local/Cellar/zsh/5.8/share/zsh/help
     /opt/X11/share/man
     /usr/share/man
+    /usr/local/opt/ghi/share/man
+    /usr/local/opt/gist/share/man    
+    /usr/local/opt/help2man/share/man/man1
+    /usr/local/opt/irssi/share/man
+    /usr/local/opt/gh/share/man
+    /usr/local/opt/feh/share/man
+    /usr/local/opt/entr/share/man
+    /usr/local/opt/exif/share/man
+    /usr/local/fdupes/share/man
+    /usr/local/opt/coreutils/share/man
+    /usr/local/opt/cowsay/share/man
     ~/.local/share/man
     )
-# export LIBTOOL=`which glibtool`
-# export LIBTOOLIZE=`which glibtoolize`
-# ln -s `which glibtoolize` /usr/local/bin/libtoolize
-# ln -s /usr/lib/libncurses.dylib /usr/local/lib/libncursesw.dylib
+
+typeset -u pkg_config_path
+pkg_config_path=(
+    ~/.local/lib/pkgconfig
+    /usr/local/opt/openal-soft/lib/pkgconfig
+    /usr/local/lib/pkgconfig
+    /usr/local/Cellar/libtoxcore/HEAD-470fa79/lib/pkgconfig
+    /usr/local/opt/curl/lib/pkgconfig
+    )
 
 export LF_ICONS="\
 di=:\
