@@ -44,6 +44,7 @@ bindkey -v "^?" backward-delete-char
 bindkey '^e' edit-command-line
 bindkey '^b' beginning-of-line
 bindkey -s '^o' 'lfcd\n'
+bindkey -s '^k' 'hstr\n'
 
 HISTSIZE=100000
 SAVEHIST=100000
@@ -54,6 +55,7 @@ alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
 alias vi='vim'
 alias _='sudo'
+alias hh='hstr'
 alias gyb="~/documents/promnesia/gmail/gyb/gyb"
 alias nano='/usr/local/bin/nano'
 alias youtube-dl='/usr/local/bin/youtube-dl'
@@ -142,3 +144,8 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.config/broot/launcher/bash/br
+
+# HSTR configuration
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor,prompt-bottom,keywords-matching,help-on-opposite-side
+
