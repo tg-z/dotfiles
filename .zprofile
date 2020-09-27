@@ -61,6 +61,7 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export PASSWORD_STORE_CLIP_TIME=120
 export SURFRAW_CONF="$HOME/.config/surfraw/conf"
+export RFC_DIR="$HOME/.cache/rfc"
 export VDIRSYNCER_CONFIG="$XDG_CONFIG_HOME/vdirsyncer/config"
 export MATES_DIR="$HOME/.cache/contacts"
 export DOTBARE_BACKUP="${XDG_DATA_HOME:-$HOME/.local/share}/dotbare"
