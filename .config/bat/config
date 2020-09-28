@@ -1,6 +1,6 @@
 # run `bat --list-themes` for a list of all available themes
 --theme="base16"
---style="numbers,header,grid"
+--style="header,grid"
 #--italic-text=always
 #--paging=never
 #--pager="--RAW-CONTROL-CHARS --quit-if-one-screen --mouse"

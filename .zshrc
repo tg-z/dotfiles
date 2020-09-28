@@ -51,7 +51,6 @@ SAVEHIST=100000
 
 alias ..='cd ..'
 alias ls='gls --color=always'
-alias awk='/usr/local/bin/awk'
 alias tree='tree -C'
 alias vi='vim'
 alias _='sudo'
