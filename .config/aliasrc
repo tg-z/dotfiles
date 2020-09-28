@@ -38,4 +38,5 @@ alias -g \
 	JS="| gron | fzf" \
 	CS="| awk '{print \$1}'" \
 	CE="| awk '{print \$NF}'" \
-	JL="| jc --ls | jq '.[].filename'"
+	JL="| jc --ls | jq '.[].filename'" \
+	EE="| xargs open -a MacVim"

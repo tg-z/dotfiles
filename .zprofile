@@ -21,7 +21,7 @@ export TTRV_BROWSER="firefox"
 export TTRV_EDITOR="vim"
 export PODCAST="$HOME/podcasts"
 export WAKATIME_HOME="$HOME/.config/waka"
-export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap:$HOME/.mailcap"
+export MAILCAPS="$HOME/.config/mailcap:$HOME/.mailcap"
 export SUBS_FILE="$HOME/.local/share/subs/subs.txt"
 export MY_CONFIG="$HOME/.config/my"
 export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded"
@@ -82,11 +82,14 @@ typeset -U path
 path=(
     /usr/local/opt/coreutils/libexec/gnubin
     /usr/local/opt/gnu-sed/libexec/gnubin
+    /usr/local/opt/grep/libexec/gnubin
     ~/.bin
     ~/bin
     ~/.local/bin
     /usr/local/bin
     /usr/local/opt/binutils/bin
+    /usr/local/opt/ruby/bin
+    /usr/local/lib/ruby/gems/2.7.0/bin
     /usr/bin
     /usr/sbin
     /sbin
@@ -101,7 +104,6 @@ path=(
     /usr/local/opt/openjdk/bin
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
-    /usr/local/lib/ruby/gems/2.7.0/bin
     /usr/local/opt/python@3.8/bin
     ~/Library/Python/3.8/bin
     )
