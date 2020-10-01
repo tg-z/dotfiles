@@ -18,6 +18,9 @@ colorscheme iceberg
 set guifont=MesloLGSDZ_Nerd_Font:h11 
 set background=dark
 set mouse=a
+set noerrorbells 
+set novisualbell
+set visualbell t_vb=
 set encoding=UTF-8
 set showmatch
 set noswapfile
