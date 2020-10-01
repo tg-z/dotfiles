@@ -13,9 +13,6 @@ let g:fern_git_status#disable_ignored = 1
 let g:fern_git_status#disable_submodules = 1
 let g:fern_git_status#disable_untracked = 0
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Fern . -reveal=% | endif
-
 " vimwiki
 let g:vimwiki_list = [{'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
 
