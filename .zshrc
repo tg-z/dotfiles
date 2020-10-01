@@ -44,7 +44,7 @@ bindkey -v "^?" backward-delete-char
 bindkey '^e' edit-command-line
 bindkey '^b' beginning-of-line
 bindkey -s '^o' 'lfcd\n'
-bindkey -s '^k' 'hstr\n'
+bindkey -s '^k' 'hstr -f\n'
 
 HISTSIZE=100000
 SAVEHIST=100000
@@ -152,3 +152,5 @@ source ~/.config/broot/launcher/bash/br
 setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor,prompt-bottom,keywords-matching,help-on-opposite-side
 
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
