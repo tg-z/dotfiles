@@ -154,3 +154,5 @@ export HSTR_CONFIG=hicolor,prompt-bottom,keywords-matching,help-on-opposite-side
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
+
+PATH="/Users/bluetooth/.local/share/mangadl:${PATH}"
