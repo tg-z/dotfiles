@@ -28,7 +28,7 @@ list() {
 
 download() {
     [ -z "${downloads_dir}" ] && mkdir -p "${downloads_dir}"
-    list > "${downloads_dir}/s_$d.json"
+    list > $downloads_dir/s_$d.json
 }
 
 case "$*" in
