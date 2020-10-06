@@ -156,3 +156,7 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 
 PATH="/Users/bluetooth/.local/share/mangadl:${PATH}"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/bluetooth/.sdkman"
+[[ -s "/Users/bluetooth/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bluetooth/.sdkman/bin/sdkman-init.sh"

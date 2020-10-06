@@ -105,6 +105,7 @@ path=(
     /usr/local/opt/openjdk/bin
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
+    $HOME/.local/share/flutter/bin
     /usr/local/opt/python@3.8/bin
     ~/Library/Python/3.8/bin
     )
