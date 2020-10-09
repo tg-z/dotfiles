@@ -38,6 +38,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
+export NIMBLE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/nimble"
 export PERLBREW_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/perlbrew"
 export PERLBREW_BIN="${PERLBREW_ROOT}/bin"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
@@ -99,6 +100,7 @@ path=(
     $GOBIN
     $CARGOBIN
     $PERLBREW_BIN
+    $NIMBLE_DIR
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
