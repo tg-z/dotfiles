@@ -105,7 +105,7 @@ alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
 alias twt='twtxt -c ~/.config/twtxt/config'
 
-eval "$(ntfy shell-integration)"
+# eval "$(ntfy shell-integration)"
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh

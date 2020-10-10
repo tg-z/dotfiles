@@ -40,7 +40,7 @@
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
+	required = false
 	clean = git-lfs clean -- %f
 [init]
 	templateDir = ~/.git-templates/git-secrets
