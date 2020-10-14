@@ -100,7 +100,7 @@ path=(
     $GOBIN
     $CARGOBIN
     $PERLBREW_BIN
-    $NIMBLE_DIR
+    $NIMBLE_DIR/bin
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
