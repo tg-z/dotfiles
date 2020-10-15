@@ -71,6 +71,7 @@ alias tl='timeline'
 alias feh='feh -T ~/.config/feh/themes'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
+alias mux="tmuxinator"
 alias gooseberry-serve='mdbook serve ~/documents/promnesia/hypothesis'
 alias got='go-t'
 alias gols='ls -1 $GOBIN'
