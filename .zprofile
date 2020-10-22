@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/data/data/com.termux/files/usr/env zsh
 
 export PREFIX="/data/data/com.termux/files/usr"
 export HOME="/data/data/com.termux/files/home"
