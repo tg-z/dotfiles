@@ -1,9 +1,7 @@
 " plugin customizations
-colorscheme ancient  
-
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='lucious'
+let g:airline_theme='lucius'
 let g:airline#extensions#tabline#enabled = 1
 
 " Fern.vim

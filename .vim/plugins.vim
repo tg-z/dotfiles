@@ -68,4 +68,4 @@ Plug 'Quramy/vison'
 Plug 'bfrg/vim-jq'
 Plug 'bfrg/vim-jqplay'
 Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
-all plug#end()
+call plug#end()

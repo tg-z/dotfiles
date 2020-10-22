@@ -87,6 +87,7 @@ path=(
 	$HOME/.local/bin
 	$GOBIN
 	$CARGOBIN
+	$PREFIX/tmp/rust_install_v8iyq27t/bin
 	)
 typeset -u fpath
 fpath=(

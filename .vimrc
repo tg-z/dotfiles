@@ -10,8 +10,7 @@ so ~/.vim/defaults.vim
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme iceberg
-set background=dark
+colorscheme desert
 set mouse=a
 set encoding=UTF-8
 set showmatch
