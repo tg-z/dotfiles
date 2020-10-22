@@ -7,13 +7,14 @@
 [alias]
 	gi = !sh -c 'vim .gitignore'
 	f = fetch
+	a = add
 	s = status
 	sb = status -s -b
 	bs = !git-branch-status
 	d = 'diff'
 	cam = commit -am
 	cl = clone
-	cld = clone --depth 1
+	cd = clone --depth 1
 	pl = pull
 	pu = push
 	puu = push upstream
@@ -31,7 +32,6 @@
 	subpull = !git submodule foreach git pull --tags origin main
 [github]
 	user = tg-z
-	username = tg-z
 	oauth-token = !pass show secrets/github-oauth-token
 [ghi]
 	token = !pass show secrets/github-token
@@ -40,7 +40,7 @@
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
+	required = false
 	clean = git-lfs clean -- %f
 [init]
 	templateDir = ~/.git-templates/git-secrets
@@ -73,7 +73,7 @@
 [delta]
 	syntax-theme = Github
 	side-by-side = true
-	line-numbers-left-format = 
+	line-numbers-left-format = ""
 	line-numbers-right-format = "| "
 [credential]
 	helper = !pass-git-helper $@
