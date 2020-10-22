@@ -59,9 +59,10 @@ bind-key Y pb-toggle-download-all
 
 # -- bookmarks 
 
-bookmark-cmd ~/.config/newsboat/bm
-bookmark-interactive no
-bookmark-autopilot yes
+# bookmark-cmd ~/.config/newsboat/bm
+bookmark-cmd ~/.local/share/newsboat/zone/bookmark.sh
+bookmark-interactive yes
+bookmark-autopilot no
 
 # -- misc 
 
