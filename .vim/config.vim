@@ -14,7 +14,10 @@ let g:fern_git_status#disable_submodules = 1
 let g:fern_git_status#disable_untracked = 0
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/.local/share/zet', 'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/.local/share/zet', 'auto_generate_tags': 1,'links_space_char': '_', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_markdown_link_ext = 1
+let g:vimwiki_links_header = 'Generated Links'
+let g:vimwiki_tags_header = 'Generated Tags'
 
 " ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
@@ -71,7 +74,7 @@ let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_keymap_kill   = '<F12>'
 
 " markdown
-let g:vim_markdown_folding_level = 3
+let g:vim_markdown_folding_level = 2
 let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'ini=dosini']
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
@@ -95,3 +98,10 @@ nmap n <Plug>(openbrowser-open)
 " gista
 let g:gista#client#default_username = 'tg-z'
 
+if exists("did_load_filetypes")
+  finish
+endif
+
+augroup filetypedetect
+  au BufNewFile,BufRead justfile setf make
+augroup END
