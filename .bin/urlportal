@@ -16,7 +16,7 @@
 #       | |_| | |  | | |_) | (_) | |  | || (_| | |
 #        \__,_|_|  |_| .__/ \___/|_|   \__\__,_|_|
 #                    |_|
-#       DESC: custom way to handle url (similar idea to xdg-open, mailcap)
+#       DESC: custom way to handle url (similar idea to open, mailcap)
 #             works with just about all programs (e.g w3m, rtv, newsboat, urlview ...etc)
 #       DEMO: https://www.youtube.com/watch?v=2jyfrmBYzVQ
 #       install: lynx youtube-dl task-spooler newsboat rtv w3m mpv urlview tmux feh plowshare streamlink curl coreutils
@@ -46,11 +46,12 @@
 #                     https://github.com/budlabs/youtube/blob/master/letslinux/032-queue-files-in-mpv/openvideo
 # ji99 - mpv queue script https://www.reddit.com/r/commandline/comments/920p5d/bash_script_for_queueing_youtube_links_in_mpv/
 
+# edited by @tg-z on github for personal use
 
-# BROWSERCLI="w3m"
-# BROWSER="chromium"
-# DEFAULT="xdg-open"
-# DEFAULT="chromium --incognito"
+
+BROWSERCLI="w3m"
+BROWSER="firefox -new-tab"
+DEFAULT="open"
 # DEFAULT="w3m"
 DEFAULT="$BROWSERCLI"
 ## long videos like youtube
@@ -64,7 +65,7 @@ IMAGECLI="w3m -o display_image=1 -o imgdisplay=w3mimgdisplay"
 TORRENTCLI="transmission-remote --add"
 # LIVEFEED='streamlink -p "mpv --cache 2048 --ontop --no-border --force-window --autofit=500x280 --geometry=-15-60"'
 LIVEFEED="tsp streamlink"
-DDL_PATH=~/Downloads/plowshare
+DDL_PATH=~/Downloads/plow
 DDL_QUEUE_FAST=~/.config/plowshare/queuefast.txt
 
 
