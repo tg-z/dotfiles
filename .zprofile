@@ -27,6 +27,7 @@ export ANDROID_TZDATA_ROOT="/apex/com.android.tzdata"
 export TMPDIR="/data/data/com.termux/files/usr/tmp"
 export BOOTCLASSPATH="/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/android.test.base.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar"
 export WAKATIME_HOME="$HOME/.config/waka"
+export RRC_CONFIG="$HOME/.config/rrc/config.toml"
 export MAILCAPS="$HOME/.config/tuir/mailcap:$HOME/.config/mailcap"
 export SUBS_FILE="$HOME/.local/share/subs/subs.txt"
 export TUIR_EDITOR="vim"
@@ -46,7 +47,6 @@ export PODCAST="$STORAGED/shared/Podcasts"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export RDR="$STORAGED/shared/buildapks"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zet"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
@@ -86,7 +86,6 @@ path=(
 	$HOME/.local/bin
 	$GOBIN
 	$CARGOBIN
-	$HOME/arch
 	)
 typeset -u fpath
 fpath=(
@@ -98,6 +97,7 @@ fpath=(
 typeset -u manpath
 manpath=(
     ~/.local/share/man
+    $PREFIX/share/man
     )
 
 export LF_ICONS="\

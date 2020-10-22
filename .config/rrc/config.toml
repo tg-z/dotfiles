@@ -1,0 +1,5 @@
+[default]
+root = "/data/data/com.termux/files/home/repos"
+
+[go]
+root = "/data/data/com.termux/files/home/.local/share/go/src"
