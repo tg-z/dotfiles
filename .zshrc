@@ -65,6 +65,7 @@ alias e='vim'
 alias zal='alias -L'
 alias nmpv='/Applications/mpv.app/Contents/MacOS/mpv'
 alias mvim='open -a MacVim'
+alias macvim='mvim'
 alias firefox='firefox -new-tab'
 alias gimme='git pull'
 alias cdu='cdu -i'
@@ -79,7 +80,6 @@ alias gols='ls -1 $GOBIN'
 alias carls='ls -1 $CARGOBIN'
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
-alias ytv='youtube-viewer'
 alias rr='curl -sL https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias cua='cargo-install-update install-update --all'
 alias clr='clear'
@@ -110,27 +110,6 @@ source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
 
-export FZF_DEFAULT_COMMAND="fd -t f -H -i -L"
-export FZF_DEFAULT_OPTS="-m --preview 'bat {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap'"
-
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#8a90e6,fg+:-1,bg+:-1,hl+:#5ba6f0
---color=info:#af87ff,prompt:#385ed9,pointer:#ff87d7,marker:#ff7ad3,spinner:#ff87d7
-'
-
-export FORGIT_FZF_DEFAULT_OPTS="
---exact
---border
---cycle
---reverse
---height '80%'
-"
-export OPENER=open
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat {} || tree -C {}) 2> /dev/null | head -150'"
-export FZF_ALT_C_OPTS="--preview 'glow {} | head -200'"
-
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -141,22 +120,10 @@ lfcd () {
     fi
 }
 
-# fzf --bind 'f1:execute(less -f {}),ctrl-y:execute-silent(echo {} | pbcopy)+abort'
 
+source ~/.config/broot/launcher/bash/br
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source ~/.config/broot/launcher/bash/br
-
-# HSTR configuration
-setopt histignorespace           # skip cmds w/ leading space from history
-export HSTR_CONFIG=hicolor,prompt-bottom,keywords-matching,help-on-opposite-side
-
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
-
-PATH="/Users/bluetooth/.local/share/mangadl:${PATH}"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/bluetooth/.sdkman"
-[[ -s "/Users/bluetooth/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bluetooth/.sdkman/bin/sdkman-init.sh"

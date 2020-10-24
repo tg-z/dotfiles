@@ -12,9 +12,10 @@ export PAGER="less"
 export TERMINAL="alacritty"
 export MANPAGER="less"
 export BROWSER="firefox"
+export OPENER="open"
 export COLORTERM="truecolor"
+# xdg home dirs
 export PODCAST="$HOME/podcasts"
-export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded --preview-window=hidden"
 export GISTY_DIR="$HOME/documents/promnesia/gist"
 export XDG_DESKTOP_DIR="$HOME/desktop"
 export XDG_DOWNLOAD_DIR="$HOME/downloads"
@@ -26,6 +27,7 @@ export XDG_VIDEOS_DIR="$HOME/videos"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+# declutter home
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME}/zet"
 export NIMBLE_DIR="${XDG_DATA_HOME}/nimble"
@@ -38,37 +40,54 @@ export GOPATH="${XDG_DATA_HOME}/go"
 export GOBIN="${GOPATH}/bin"
 export WEECHAT_HOME="${XDG_DATA_HOME}/weechat"
 export HISTFILE="${XDG_DATA_HOME}/history"
-export TUIR_EDITOR="vim"
-export TUIR_BROWSER="firefox"
+export TUIR_EDITOR="${EDITOR}"
+export TUIR_BROWSER="${BROWSER}"
 export TUIR_URLVIEWER="urlscan"
 export TTRV_URLVIEWER="urlscan"
-export TTRV_BROWSER="firefox"
-export TTRV_EDITOR="vim"
-export WAKATIME_HOME="${XDG_CONFIG_HOME}/waka"
-export MAILCAPS="${XDG_CONFIG_HOME/mailcap:$HOME/.mailcap"
-export SUBS_FILE="${XDG_DATA_HOME}/subs/subs.txt"
-export RRC_CONFIG="${XDG_CONFIG_HOME}/rrc/config.toml"
-export MY_CONFIG="${XDG_CONFIG_HOME}/my"
-export FZF_DEFAULT_OPTS="--layout=reverse --height 65%"
-export ZSH_PECO_HISTORY_OPTS="--layout=bottom-up"
-export ZSH_PECO_HISTORY_DEDUP="1"
-export LESS="-R"
-export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
-export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
-export LESS_TERMCAP_me="$(printf '%b' '[0m')"
-export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
-export LESS_TERMCAP_se="$(printf '%b' '[0m')"
-export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
-export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
-export PASSWORD_STORE_ENABLE_EXTENSIONS=true
-export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
-export PASSWORD_STORE_CLIP_TIME=120
+export TTRV_BROWSER="${BROWSER}"
+export TTRV_EDITOR="${mvim}"
 export SURFRAW_CONF="${XDG_CONFIG_HOME}/surfraw/conf"
 export RFC_DIR="${XDG_CACHE_HOME}/rfc"
 export VDIRSYNCER_CONFIG="${XDG_CONFIG_HOME}/vdirsyncer/config"
 export MATES_DIR="${XDG_CACHE_HOME}/contacts"
+export WAKATIME_HOME="${XDG_CONFIG_HOME}/waka"
+export SUBS_FILE="${XDG_DATA_HOME}/subs/subs.txt"
+export RRC_CONFIG="${XDG_CONFIG_HOME}/rrc/config.toml"
+export MY_CONFIG="${XDG_CONFIG_HOME}/my"
+export HSTR_CONFIG="hicolor,prompt-bottom,keywords-matching,help-on-opposite-side"
+
+# program defaults
+
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
+export PASSWORD_STORE_CLIP_TIME=120
+
+export FZF_DEFAULT_COMMAND="fd -t f -H -i -L"
+export FZF_DEFAULT_OPTS="-m --preview 'bat {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap'"
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color=dark
+--color=fg:-1,bg:-1,hl:#8a90e6,fg+:-1,bg+:-1,hl+:#5ba6f0
+--color=info:#af87ff,prompt:#385ed9,pointer:#ff87d7,marker:#ff7ad3,spinner:#ff87d7
+'
+
+export FORGIT_COPY_CMD='pbcopy'
+export FORGIT_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
+export FORGIT_CMD_FZF_OPTS=""
+export FORGIT_LOG_FZF_OPTS='
+--bind="ctrl-e:execute(echo {} |grep -Eo [a-f0-9]+ |head -1 |xargs git show |vim -)"
+'
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat {} || tree -C {}) 2> /dev/null | head -150'"
+export FZF_ALT_C_OPTS="--preview 'glow {}'"
+export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded --preview-window=hidden"
+export FZF_DEFAULT_OPTS="--layout=reverse --height 65%"
+export ZSH_PECO_HISTORY_OPTS="--layout=bottom-up"
+export ZSH_PECO_HISTORY_DEDUP="1"
+export LESS="-R"
 export JUSTFILE_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
 export JUSTFILE_EDITOR="${EDITOR:-mvim}"
+
 export DOTBARE_BACKUP="${XDG_DATA_HOME}/dotbare"
 export DOTBARE_PREVIEW="bat {}"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"
@@ -79,9 +98,9 @@ export DOTBARE_KEY="
   --bind=alt-s:toggle-sort      # toggle sorting
   --bind=alt-t:toggle-preview   # toggle preview
 "
-export BOOST_INC_DIR="/usr/local/include/boost"
+# path settings
 
-# fpath + manpages
+export MAILCAPS="${XDG_CONFIG_HOME}/mailcap:${HOME}/.mailcap"
 
 typeset -U path
 path=(
@@ -111,6 +130,7 @@ path=(
     /Applications/Firefox.app/Contents/MacOS
     /usr/local/opt/curl/bin
     $XDG_DATA_HOME/flutter/bin
+    $XDG_DATA_HOME/mangadl
     /usr/local/opt/python@3.8/bin
     ~/Library/Python/3.8/bin
     )
@@ -153,6 +173,15 @@ pkg_config_path=(
     /usr/local/Cellar/libtoxcore/HEAD-470fa79/lib/pkgconfig
     /usr/local/opt/curl/lib/pkgconfig
     )
+
+
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
 export LF_ICONS="\
 di=:\
