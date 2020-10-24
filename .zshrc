@@ -14,6 +14,7 @@ source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
 [ -f ~/.zsh.d/functions/wakatime.zsh ] && source ~/.zsh.d/functions/wakatime.zsh
 [ -f ~/.zsh.d/functions/forgit.zsh ] && source ~/.zsh.d/functions/forgit.zsh
+# to update: curl -sSL git.io/forgit > ~/.zsh.d/functions/forgit.zsh
 
 set -o vi
 setopt autocd
@@ -100,7 +101,6 @@ alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-0
 alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
 alias cf='cd ~/.config && changed'
-alias old='ls -ltr'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
 alias twt='twtxt -c ~/.config/twtxt/config'
