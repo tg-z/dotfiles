@@ -99,7 +99,6 @@ alias farbe='farbe -h 10 -w 20'
 alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
-alias npmls='npm list -g --depth 1'
 alias cf='cd ~/.config && changed'
 alias old='ls -ltr'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
@@ -111,7 +110,7 @@ source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
 
-export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow"
+export FZF_DEFAULT_COMMAND="fd -t f -H -i -L"
 export FZF_DEFAULT_OPTS="-m --preview 'bat {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap'"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
