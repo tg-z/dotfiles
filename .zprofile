@@ -2,8 +2,8 @@
 
 export USER="bluetooth"
 export HOME="/Users/$USER"
-export SHELL="/usr/local/bin/zsh"
-export ZSH="zsh"
+export SHELL="zsh"
+export ZSH="${PREFIX}/bin/${SHELL}"
 export EDITOR="vim"
 export VISUAL="vim"
 export READER="zathura"
