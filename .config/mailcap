@@ -1,14 +1,17 @@
-image/x-imgur-album; feh -g 640x480  -. %s; test=test -n "$DISPLAY"
+# mailcap
 image/gif; mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
-image/*; feh -g 640x480 -. '%s'; test=test -n "$DISPLAY"
-video/*; mpv '%s' --autofit=640x480 --loop=inf; test=test -n "$DISPLAY"
+image/*; feh -b trans -B black --max-dimension 640x640 -. '%s'; test=test -n "$DISPLAY"
+video/*; mpv '%s' --loop=inf; test=test -n "$DISPLAY"
 image/*; mpv --config-dir=$HOME/.config/mvi "%s"
+image/x-imgur-album; feh -x -b trans -B black -g 640x480  -. %s; test=test -n "$DISPLAY"
+
 # text
 text/html; w3m "%s"
 text/html; readable "%s"
 text/html; firefox -new-tab "%s"
 text/plain; less "%s"
 text/*; vim "%s"
+
 # media
 video/*; mpv "%s"
 image/*; viu "%s"

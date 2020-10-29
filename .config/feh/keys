@@ -1,6 +1,6 @@
-render n
-next_img t Right space
-prev_img h Left BackSpace
+next_img n Right space
+next_img j Right space
+prev_img k Left BackSpace
 
 jump_fwd T Next
 jump_back H Prior
@@ -29,3 +29,5 @@ menu_child s Right
 menu_down t Down
 menu_up h Up
 menu_select Return space
+size_to_image w
+

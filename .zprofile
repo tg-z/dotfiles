@@ -183,6 +183,27 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
+# Input prompt of fuzzy searcher
+export FONTPREVIEW_SEARCH_PROMPT=">> "
+
+# Size of the font preview window
+export FONTPREVIEW_SIZE=532x365
+
+# The position where the font preview window should be displayed
+export FONTPREVIEW_POSITION="+0+0"
+
+# Font size
+export FONTPREVIEW_FONT_SIZE=38
+
+# Background color of the font preview window
+export FONTPREVIEW_BG_COLOR="#ffffff"
+
+# Foreground color of the font preview window
+export FONTPREVIEW_FG_COLOR="#000000"
+
+# Preview text that should be displayed in the font preview window
+export FONTPREVIEW_PREVIEW_TEXT="ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]"
+
 export LF_ICONS="\
 di=:\
 fi=:\

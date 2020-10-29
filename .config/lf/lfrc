@@ -124,7 +124,7 @@ map br $vimv $fx
 map iv $viu "$f"
 map d trash
 map D delete
-map dd rm -rf 
+map rd rm -rf $fx 
 map up unpk $fx
 map zo $zathura "$f"
 map p paste
