@@ -1,24 +1,45 @@
-# editor files 
-#--------------
 *~
 *#
 *.swp
 *.swo
-
-# osx meta files
-#--------------- 
 .DS_Store
 ehthumbs.db
 Icon?
 Thumbs.db
-
-# direnv files 
-#---------------
 .direnv
 .envrc
-
-# secrets + keys  
-#---------------
 *.secret*
 *.key*
+Downloads
+Documents
+Desktop
+Movies
+Pictures
+Public
+podcasts
+repos
+.cache
+.local
+.vim/bundle
+.taskbook
+.ssh
+.rustup
+.matplotlib
+.luarocks
+.mailbox
+.markdownNavigator
+.gradle
+.grip
+.gnupg
+.gmailctl
+.decent
+.dart
+.gem
+.abook
+.android
+.bashhub
+.cachier
+.cmake
+.cordless
+.cpan
 
