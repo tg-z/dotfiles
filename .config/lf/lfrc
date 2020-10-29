@@ -1,13 +1,9 @@
 set hidden true
 set shell sh
 set shellopts '-eu'
-set color256 true
 set icons true
 set drawbox true
-# set preview true
-# set previewer ~/.config/lf/preview
 
-cmd trash %trash $fx
 cmd zip %zip -r "$f" "$f"
 cmd tar %tar cvf "$f.tar" "$f"
 cmd targz %tar -cvzf "$f.tar.gz" "$f"
@@ -34,6 +30,15 @@ cmd delete ${{
 	[ $ans = "y" ] && mv -f $fx ~/.Trash 
 }}
 
+cmd trash ${{
+    mkdir -p ~/.local/share/trash/files
+    if [ -z "$fs" ]; then
+        mv "$f" ~/.local/share/trash/files
+    else
+        IFS="`printf '\n\t'`"; mv $fs ~/.local/share/trash/files
+    fi
+}}
+
 cmd fzf_jump ${{
   res="$(find . -maxdepth 3 | fzf --reverse --header='jump to location')"
   if [ -f "$res" ]; then
@@ -43,11 +48,26 @@ cmd fzf_jump ${{
   fi
   lf -remote "send $id $cmd \"$res\""
 }}
-
 cmd unpk ${{
-  if [ -f "$1"  ] ; then
-    case "$1" in
-
+        if [ -f $fx ]
+        then
+                case $1 in
+                        (*.tar.bz2) open $fx -a Keka ;;
+                        (*.tar.gz) open $fx -a Keka ;;
+                        (*.bz2) open $fx -a Keka ;;
+                        (*.rar) open $fx -a Keka ;;
+                        (*.gz) gunzip $fx ;;
+                        (*.tar) open $fx -a Keka ;;
+                        (*.tbz2) open $fx -a Keka ;;
+                        (*.tgz) open $fx -a Keka ;;
+                        (*.zip) open $fx -a Keka ;;
+                        (*.Z) open $fx -a Keka ;;
+                        (*.7z) open $fx -a Keka ;;
+                        (*) echo "I don't know how to unpack '$fx'..." ;;
+                esac
+        else
+                echo "'$1' is not a valid file"
+        fi
 }}
 
 cmd pview ${{
@@ -90,14 +110,19 @@ map e
 map f
 
 # functions
-map st :set sortby time
-map se :set sortby ext; set info
+map zr :set reverse!
+map se :set sortby 'ext'; set info
+map st :set sortby 'time'; set info time
+map ss :set sortby 'size'
+map sn :set sortby 'name'
 map ee $vim $f
+map me $mvim $f
 map re rename $f
 map ii $less $f
 map bb $bat $f
 map br $vimv $fx
 map iv $viu "$f"
+map d trash
 map D delete
 map dd rm -rf 
 map up unpk $fx
@@ -116,15 +141,14 @@ map md mkdir
 map tg targz
 map mch chmod
 map R reload
-map H top
-map L bottom
+map gg top
+map G bottom
 
 # movement
 map gh cd ~
 map gcf cd ~/.config
 map gdl cd ~/downloads
 map gdc cd ~/documents
-map gdt cd ~/desktop
 map gp cd ~/pictures
 map gls cd ~/.local/share
 map gz cd ~/.local/share/zet
