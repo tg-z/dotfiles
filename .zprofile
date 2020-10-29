@@ -9,6 +9,7 @@ export READER="zathura"
 export LOGNAME="u0_a170"
 export USER="${LOGNAME}"
 export EXTERNAL_STORAGE="/sdcard"
+export DISPLAY=":1"
 export ANDROID_RUNTIME_ROOT="/apex/com.android.runtime"
 export LD_PRELOAD="$PREFIX/lib/libtermux-exec.so"
 export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
@@ -18,6 +19,7 @@ export HTTPIE_CONFIG_DIR="$HOME/.config/httpie"
 export PAGER="less"
 export MANPAGER="less"
 export BROWSER="xdg-open"
+export OPENER="termux-open"
 export COLORTERM=truecolor
 export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"
@@ -85,9 +87,9 @@ path=(
 	$HOME/bin
 	$HOME/.bin
 	$HOME/.local/bin
+	$HOME/bin/plugin/desktop
 	$GOBIN
 	$CARGOBIN
-	$PREFIX/tmp/rust_install_v8iyq27t/bin
 	)
 typeset -u fpath
 fpath=(

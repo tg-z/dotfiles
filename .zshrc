@@ -47,14 +47,12 @@ SAVEHIST=100000
 alias ..='cd ..'
 alias ls='ls --color=always'
 alias tree='tree -C'
-alias nvim='vim'
 alias vi='vim'
 alias bc='dntk'
 alias e='vim'
 alias zal='alias -L'
 alias gimme='git pull'
 alias tl='timeline'
-alias open='xdg-open'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
 alias go-t='got'
@@ -80,16 +78,25 @@ alias farbe='farbe -h 10 -w 20'
 alias ccli-assignments='ccli assignments "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias ccli-files='ccli files "INTRO TO WEBSITE DEVELOPMENT CS 1220-01"'
 alias changed='ls -ltrA'
-alias npmls='npm list -g --depth 1'
 alias cf='cd ~/.config && changed'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
+alias ll='ls -lah'
+alias rd='rm -rf'
+alias u='cd $PREFIX'
+alias h='cd $HOME'
+alias open='termux-open'
+alias rel='termux-reload-settings'
+alias style='termux-style'
+alias py='python3.9'
+alias she='echo /data/data/com.termux/files/usr/bin/bash'
+alias st='st -f Iosevka -g 80x16'
 
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/termux.zsh
 
-export FZF_DEFAULT_COMMAND="fd . -t f --hidden --follow --exlude .git --preview 'bat {}'"
+export FZF_DEFAULT_COMMAND="fd -t f -H -L --exlude .git --preview 'bat {}'"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
  --color=fg:#cbccc6,bg:#1f2430,hl:#707a8c
@@ -120,4 +127,3 @@ lfcd () {
 
 source ~/.zsh.d/functions/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.zsh.d/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
