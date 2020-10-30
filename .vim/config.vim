@@ -32,10 +32,9 @@ nmap <leader>et  :EphemerisToggleTask<CR>
 " zettelkasten
 let g:zettel_format = '%Y%m%d%H%M%S-%title'
 let g:zettel_date_format = '%B %m, %Y'
-let g:vimwiki_markdown_link_ext = 1
 let g:zettel_fzf_command = 'rg --column --line-number --ignore-case --no-heading --color=always'
 let g:zettel_fzf_options = ['--exact', '--tiebreak=end']
-let g:zettel_backlinks_title = 'backlinks'
+let g:zettel_backlinks_title = 'Backlinks'
 let g:zettel_link_format='[%title](%link)'
 let g:zettel_options = [{}, {'template': '~/.local/share/tpl/zet.tpl'}]
 nnoremap <leader>zn :ZettelNew<space>
@@ -80,9 +79,9 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
-let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_no_extensions_in_markdown = 0
 let g:vim_markdown_autowrite = 1
-let g:vim_markdown_edit_url_in = 'tab'
+let g:vim_markdown_edit_url_in = 'vsplit'
 let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_conceal = 0
 
