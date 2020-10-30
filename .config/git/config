@@ -5,13 +5,14 @@
 	name = serafina
 	email = parasitism@protonmail.com
 [alias]
-	gi = !sh -c 'vim .gitignore'
 	f = fetch
 	a = add
 	s = status
+	sh = "!exec "
 	sb = status -s -b
 	bs = !git-branch-status
 	d = 'diff'
+	cm = commit
 	cam = commit -am
 	cl = clone
 	cd = clone --depth 1
@@ -50,7 +51,7 @@
 [ghi "highlight"]
 	style = rainbow_dash
 [core]
-	editor = vim
+	editor = mvim
 	hooksPath = ~/.hooks
 	excludesfile = ~/.config/git/ignore
 	pager = delta
