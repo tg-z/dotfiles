@@ -6,7 +6,7 @@
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.bashhub/bashhub.zsh ] && source ~/.bashhub/bashhub.zsh > /dev/null 2>&1
-[ -f ~/.zsh.d/functions/z.lua.plugin.zsh ] && source ~/.zsh.d/functions/z.lua.plugin.zsh
+# [ -f ~/.zsh.d/functions/z.lua.plugin.zsh ] && source ~/.zsh.d/functions/z.lua.plugin.zsh
 [ -f ~/.zsh.d/functions/fzf.zsh ] && source ~/.zsh.d/functions/fzf.zsh
 [ -f ~/bin/plugin/jq-zsh/jq.plugin.zsh ] && ~/bin/plugin/jq-zsh/jq.plugin.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
@@ -105,7 +105,7 @@ alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
 alias twt='twtxt -c ~/.config/twtxt/config'
 
-# eval "$(ntfy shell-integration)"
+eval "$(lua ~/.zsh.d/functions/z.lua --init zsh)" 
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/fiz.zsh
