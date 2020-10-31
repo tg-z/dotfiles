@@ -1,0 +1,43 @@
+#!/bin/bash
+# dont forget to set the default chooser -> fzf, peco, pick, etc...
+# by default this script uses fzf
+
+user="${1}"
+fzf_cmd="$(which fzf)"
+pick="${fzf_cmd:-fzf}"
+
+gh-open () {
+        gitURL="$(git config --get remote.origin.url)"
+        gitURL="${gitURL%.git}"
+        if [[ ! -z $1 && ! -z $2 ]]
+        then
+                open https://github.com/"$1"/"$2"
+        elif [[ $gitURL =~ ^git@ ]]
+        then
+                branch=${1:-"$(git symbolic-ref --short HEAD)"}
+                branchExists="$(git ls-remote --heads $gitURL $branch | wc -l)"
+                github="$(echo $gitURL | sed 's/git@//')"
+                github="$(echo $github | sed 's/\:/\//')"
+                if [[ $branchExists == "       1" ]]
+                then
+                        open http://"$github"/tree/"$branch"
+                else
+                        open http://"$github"
+                fi
+        elif [[ $gitURL =~ ^https?:// ]]
+        then
+                branch=${1:-"$(git symbolic-ref --short HEAD)"}
+                branchExists="$(git ls-remote --heads $gitURL $branch | wc -l)"
+                if [[ $branchExists == "       1" ]]
+                then
+                        open "$gitURL"/tree/"$branch"
+                else
+                        open "$gitURL"
+                fi
+        else
+                open https://github.com/"$1"
+        fi
+        echo "🐙 Opened GitHub in browser"
+}
+
+gh-open $(curl -sL "https://api.github.com/users/${user}/repos?per_page=100" | jq '.[].full_name' | sed 's/"//g' | ${pick})
