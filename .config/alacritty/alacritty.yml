@@ -391,38 +391,31 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: iceberge_dark.yml
-  # Default colors
+  # COLORSCHEME: nocturnal_winter.yml
   primary:
-    background: '#161821'
-    foreground: '#d2d4de'
-
-  # Normal colors
+    background: '#0d0d17'
+    foreground: '#e6e5e5'
   cursor:
-    text: '0xF81CE5'
-    cursor: '0xffffff'
-
-  # Normal colors
+    cursor: '#e6e5e5'
+    text: '#ffffff'
   normal:
-    black: '#161821'
-    red: '#e27878'
-    green: '#759375'
-    yellow: '#fde290'
-    blue: '#84a0c6'
-    magenta: '#a093c7'
-    cyan: '#89b8c2'
-    white: '#c6c8d1'
-
-  # Bright colors
+    black: '#4d4d4d'
+    blue: '#3182e0'
+    cyan: '#09c87a'
+    green: '#09cd7e'
+    magenta: '#ff2b6d'
+    red: '#f12d52'
+    white: '#fcfcfc'
+    yellow: '#f5f17a'
   bright:
-    black: '#6b7089'
-    red: '#e98989'
-    green: '#cbffac'
-    yellow: '#FFFBDa'
-    blue: '#91acd1'
-    magenta: '#ada0d3'
-    cyan: '#95c4ce'
-    white: '#d2d4de'
+    black: '#808080'
+    blue: '#6096ff'
+    cyan: '#0ae78d'
+    green: '#0ae78d'
+    magenta: '#ff78a2'
+    red: '#f16d86'
+    white: '#ffffff'
+    yellow: '#fffc67'
   selection:
     background: '#adbdd0'
     text: '#000000'
