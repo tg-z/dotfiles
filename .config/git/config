@@ -4,29 +4,32 @@
 	username = tg-z
 	name = serafina
 	email = parasitism@protonmail.com
+[committer]
+	name = tg-z
+	email = parasitism@protonmail.com
 [alias]
 	f = fetch
 	a = add
 	s = status
 	sh = "!exec "
 	sb = status -s -b
-	bs = !git-branch-status
-	d = 'diff'
+	b = branch
+	d = diff
 	cm = commit
 	cam = commit -am
 	cl = clone
+	co = checkout
 	cd = clone --depth 1
+	lo = log --oneline
 	pl = pull
 	pu = push
-	puu = push upstream
+	pup = push upstream
 	r = remote
 	ra = remote add
-	grmv = 'git remote rename'
-	rrm = 'git remote remove'
-	gsb = 'git status -sbu'
+	grmv = remote rename
+	rrm = remote remove
 	ghi = 'TERM=xterm-256color ghi'
-	start = "!f() { git commit --allow-empty -m 'initial commit' && git add . && git commit -m 'project skeleton'; }; f"
-	co = checkout
+	start = !sh git commit --allow-empty -m 'initial commit' && git add . && git commit -m 'project skeleton'
 	subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
@@ -69,6 +72,7 @@
 	untracked = red normal
 [fetch]
 	prune = true
+	output = full
 [include]
 	path = ~/.config/git/private
 [delta]
@@ -87,3 +91,12 @@
         ignoreWhitespace = change
 [http "https://pkg.re"]
 	followRedirects = true
+[diff]
+	renames = true
+[gitcvs]
+	commitMsgAnnotation = ""
+[gpg]
+	program = gpg
+[grep]
+	extendedRegexp = true
+	lineNumber = true
