@@ -96,3 +96,5 @@
 [grep]
 	extendedRegexp = true
 	lineNumber = true
+[credential]
+	helper = store
