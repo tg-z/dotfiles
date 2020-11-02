@@ -32,3 +32,6 @@ repos
 .degit
 .gist
 .gh.json
+.vim/bundle/*
+.gnupg
+.X*
