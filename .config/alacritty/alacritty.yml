@@ -391,31 +391,31 @@ key_bindings:
 
 # BEGIN ACE
 colors:
-  # COLORSCHEME: nocturnal_winter.yml
+  # COLORSCHEME: embark.yml
   primary:
-    background: '#0d0d17'
-    foreground: '#e6e5e5'
+    background: '0x1e1c31'
+    foreground: '0xcbe3e7'
   cursor:
-    cursor: '#e6e5e5'
-    text: '#ffffff'
+    text: '0x1e1c31'
+    cursor: '0xa1efd3'
   normal:
-    black: '#4d4d4d'
-    blue: '#3182e0'
-    cyan: '#09c87a'
-    green: '#09cd7e'
-    magenta: '#ff2b6d'
-    red: '#f12d52'
-    white: '#fcfcfc'
-    yellow: '#f5f17a'
+    black: '0x1e1c31'
+    red: '0xf48fb1'
+    green: '0xa1efd3'
+    yellow: '0xffe6b3'
+    blue: '0x91ddff'
+    magenta: '0xd4bfff'
+    cyan: '0x87dfeb'
+    white: '0xcbe3e7'
   bright:
-    black: '#808080'
-    blue: '#6096ff'
-    cyan: '#0ae78d'
-    green: '#0ae78d'
-    magenta: '#ff78a2'
-    red: '#f16d86'
-    white: '#ffffff'
-    yellow: '#fffc67'
+    black: '0x585273'
+    red: '0xf02e6e'
+    green: '0x62d196'
+    yellow: '0xf2b482'
+    blue: '0x65b2ff'
+    magenta: '0xa37acc'
+    cyan: '0x63f2f1'
+    white: '0x8a889d'
   selection:
-    background: '#adbdd0'
-    text: '#000000'
+    text: CellForeground
+    background: '#e5e5e6' # syntax-selection-color
