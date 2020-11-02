@@ -1,24 +1,34 @@
-# editor files 
-#--------------
 *~
 *#
 *.swp
 *.swo
-
-# osx meta files
-#--------------- 
 .DS_Store
 ehthumbs.db
 Icon?
 Thumbs.db
-
-# direnv files 
-#---------------
 .direnv
 .envrc
-
-# secrets + keys  
-#---------------
 *.secret*
 *.key*
-
+storage
+lib
+repos
+.cache
+.local
+.ssh
+.trc
+.npm
+.pipupgrade
+.thumb*
+.theme*
+.mypy*
+.fonts
+.feh*
+.lesshst
+.icons
+.gem
+.cmake
+.dbus
+.degit
+.gist
+.gh.json
