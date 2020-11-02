@@ -5,7 +5,6 @@
 
 source ~/.zprofile && source ~/.config/aliasrc
 [ -f ~/.secrets ] && source ~/.secrets
-[ -f ~/.zsh.d/functions/z.zsh ] && source ~/.zsh.d/functions/z.zsh
 [ -f ~/.zsh.d/functions/hist.zsh ] && source ~/.zsh.d/functions/hist.zsh
 [ -f ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh ] && source ~/.zsh.d/prompts/typewritten/typewritten.plugin.zsh
 [ -f ~/.zsh.d/functions/codestats.zsh ] && source ~/.zsh.d/functions/codestats.zsh
