@@ -36,7 +36,6 @@
 	subpull = !git submodule foreach git pull --tags origin main
 [github]
 	user = tg-z
-	oauth-token = !pass show secrets/github-oauth-token
 [ghi]
 	token = !pass show secrets/github-token
 [web]
@@ -80,13 +79,10 @@
 	side-by-side = true
 	line-numbers-left-format = ""
 	line-numbers-right-format = "| "
-[credential]
-	helper = !pass-git-helper $@
 [gitlab]
 	tls = true
 	format = json
 	host = gitlab.com
-	token = !pass show secrets/gitlab-token
 [apply]
         ignoreWhitespace = change
 [http "https://pkg.re"]
