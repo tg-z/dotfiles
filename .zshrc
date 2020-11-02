@@ -50,16 +50,12 @@ alias vi='vim'
 alias bc='dntk'
 alias e='vim'
 alias zal='alias -L'
-alias gimme='git pull'
 alias tl='timeline'
 alias bu='buku --suggest --colors oepxm'
 alias rsfetch='rsfetch -UcehHilBs@dp cargo'
 alias go-t='got'
 alias gols='ls -1 $GOBIN'
 alias carls='ls -1 $CARGOBIN'
-alias yt='youtube-dl --add-metadata -i'
-alias yta='yt -x -f bestaudio/best'
-alias ytv='youtube-viewer'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias cua='cargo-install-update install-update --all'
 alias clr='clear'
@@ -91,6 +87,7 @@ alias py='python3.9'
 alias she='echo /data/data/com.termux/files/usr/bin/bash'
 alias st='st -f Iosevka -g 80x16'
 
+eval "$(lua ~/.zsh.d/functions/z.lua --init zsh)"
 source <(navi widget zsh)
 source ~/bin/plugin/dotbare/dotbare.plugin.zsh
 source ~/.zsh.d/functions/termux.zsh
