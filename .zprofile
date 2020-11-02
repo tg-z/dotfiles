@@ -115,6 +115,7 @@ path=(
     $CARGOBIN
     $PERLBREW_BIN
     $NIMBLE_DIR/bin
+    ~/.local/share/npm/bin
     ~/.local/share/kyrat/bin
     /opt/X11/bin
     /usr/local/opt/fzf/bin
@@ -143,6 +144,7 @@ manpath=(
     /usr/local/Cellar/zsh/5.8/share/zsh/help
     /opt/X11/share/man
     /usr/share/man
+    ~/.local/share/npm/share/man
     /usr/local/opt/ghi/share/man
     /usr/local/opt/gist/share/man
     /usr/local/opt/help2man/share/man/man1
