@@ -62,16 +62,7 @@ export HSTR_CONFIG="hicolor,prompt-bottom,keywords-matching,help-on-opposite-sid
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export PASSWORD_STORE_CLIP_TIME=120
-
 export FZF_DEFAULT_COMMAND="fd -t f -H -i -L"
-export FZF_DEFAULT_OPTS="-m --preview 'bat {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap'"
-
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#8a90e6,fg+:-1,bg+:-1,hl+:#5ba6f0
---color=info:#af87ff,prompt:#385ed9,pointer:#ff87d7,marker:#ff7ad3,spinner:#ff87d7
-'
-
 export FORGIT_COPY_CMD='pbcopy'
 export FORGIT_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
 export FORGIT_CMD_FZF_OPTS=""
@@ -132,8 +123,8 @@ path=(
     /usr/local/opt/curl/bin
     $XDG_DATA_HOME/flutter/bin
     $XDG_DATA_HOME/mangadl
-    /usr/local/opt/python@3.8/bin
-    ~/Library/Python/3.8/bin
+    /usr/local/opt/python@3.9/bin
+    ~/Library/Python/3.9/bin
     )
 
 typeset -u fpath
@@ -153,7 +144,7 @@ manpath=(
     /opt/X11/share/man
     /usr/share/man
     /usr/local/opt/ghi/share/man
-    /usr/local/opt/gist/share/man    
+    /usr/local/opt/gist/share/man
     /usr/local/opt/help2man/share/man/man1
     /usr/local/opt/irssi/share/man
     /usr/local/opt/gh/share/man
@@ -164,6 +155,7 @@ manpath=(
     /usr/local/opt/coreutils/share/man
     /usr/local/opt/cowsay/share/man
     ~/.local/share/man
+    /usr/local/opt/python@3.9/share/man
     )
 
 typeset -u pkg_config_path
