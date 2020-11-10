@@ -2,7 +2,7 @@
 
 [user]
 	username = tg-z
-	name = serafina
+	name = tg-z
 	email = parasitism@protonmail.com
 [committer]
 	name = tg-z
@@ -54,7 +54,7 @@
 [ghi "highlight"]
 	style = rainbow_dash
 [core]
-	editor = mvim
+	editor = vim
 	hooksPath = ~/.hooks
 	excludesfile = ~/.config/git/ignore
 	pager = delta
