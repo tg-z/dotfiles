@@ -8,6 +8,7 @@ Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'gkeep/iceberg-dark'
 Plug 'rkitover/vimpager'
+Plug 'mzlogin/vim-markdown-toc'
 Plug 'tyru/notify-changed.vim'
 Plug 'mbbill/undotree'
 Plug 'benmills/vimux'

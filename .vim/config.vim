@@ -85,6 +85,12 @@ let g:vim_markdown_edit_url_in = 'vsplit'
 let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_conceal = 0
 
+" markdown toc
+let g:vmt_fence_text = 'ts'
+let g:vmt_fence_closing_text = 'te'
+let g:vmt_fence_hidden_markdown_style = 'GFM'
+let g:vmt_cycle_list_item_markers = 0
+
 " csv
 let g:csv_arrange_align = 'l*'
 let g:csv_arrange_use_all_rows = 0
