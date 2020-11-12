@@ -1,4 +1,4 @@
-# -- feeds 
+# -- default
 
 auto-reload yes
 reload-time 120
@@ -7,19 +7,27 @@ download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
 save-path "~/.local/share/newsboat/saved"
-
-# -- display 
-
+error-log "~/.cache/backup/newsboat/error.log" 
 show-read-feeds yes
 feed-sort-order date
 text-width 80
-
-
-# -- navigation 
-
+unbind-key C feedlist
+confirm-exit no
+cleanup-on-quit no
 goto-next-feed no
 player 'musikcube'
 browser 'firefox -new-tab'
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
+browser linkhandler
+
+# -- bookmarks 
+
+# bookmark-cmd ~/.config/newsboat/bm
+bookmark-cmd ~/.local/share/newsboat/zone/bookmark.sh
+bookmark-interactive yes
+bookmark-autopilot no
+
+# -- keybindings
 
 bind-key h quit articlelist
 bind-key h quit article
@@ -49,25 +57,11 @@ bind-key U show-urls
 bind-key x pb-delete
 bind-key Y pb-toggle-download-all
 
-# -- bookmarks 
 
-# bookmark-cmd ~/.config/newsboat/bm
-bookmark-cmd ~/.local/share/newsboat/zone/bookmark.sh
-bookmark-interactive yes
-bookmark-autopilot no
+# -- macros
 
-# -- misc 
-
-
-unbind-key C feedlist
-confirm-exit no
-cleanup-on-quit no
-
-external-url-viewer "urlscan -dc -r 'linkhandler {}'"
-
-browser linkhandler
 macro , open-in-browser
-macro t set browser "qndl youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+macro f set browser "feh -b trans -B black --max-dimension 640x640"; open-in-browser ; set browser linkhandler
 macro a set browser "mpv --vid=no --save-position-on-quit"; open-in-browser ; set browser linkhandler
 macro n set browser "open -a mpv"; open-in-browser ; set browser linkhandler
 macro u set browser "firefox -new-tab"; open-in-browser ; set browser linkhandler
@@ -76,4 +70,5 @@ macro p set browser "pocketadd"; open-in-browser ; set browser linkhandler
 macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
 macro i set browser "mvi"; open-in-browser ; set browser linkhandler
 
-# COLORS 
+# COLORSCHEME
+include "~/.config/newsboat/colors/inkpot" 
