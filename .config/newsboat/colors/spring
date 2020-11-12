@@ -1,0 +1,26 @@
+# vim: ft=conf nospell
+# spring colorscheme
+# colors
+color   listnormal          color15  color0
+color   listfocus           color0   color5
+color   listnormal_unread   color30   color0
+color   listfocus_unread    color0   color5
+color   info                color0   color5
+color   article             color15 default bold
+color   background          color9   color0
+
+# highlights
+highlight all         "---.*---"                            color75 default 
+highlight article     "^(Feed|Title|Author|Link|Date):.*"   color75 default bold
+highlight article     "^Podcast Download URL:.*"            color5  default
+highlight article     "(^Link:.*|^Date:.*)"                 default default
+highlight article     "https?://[^ ]+"                      color9  default
+highlight article     "^Links:"                             color15 default underline
+highlight article     "\\[[0-9][0-9]*\\]"                   color13 default
+highlight article     "\\[image [0-9][0-9]*\\]"             color2  default
+highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   color5  default
+highlight article     ":.*\\(link\\)$"                      color12 default
+highlight article     ":.*\\(image\\)$"                     color2  default
+highlight article     ":.*\\(embedded flash\\)$"            color3  default
+highlight feedlist    ".*(0/0))"                            color0  default
+highlight feedlist    "^─.*$"                               color61 color235 bold
