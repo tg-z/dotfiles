@@ -71,4 +71,4 @@ macro c set browser "pbcopy <<<" ; open-in-browser ; set browser linkhandler
 macro i set browser "mvi"; open-in-browser ; set browser linkhandler
 
 # COLORSCHEME
-include "~/.config/newsboat/colors/spring" 
+include "~/.config/newsboat/colors/pond" 

@@ -1,9 +1,9 @@
 # vim: ft=conf nospell
-# spring colorscheme
+# pond colorscheme
 # colors
 color   listnormal          color255  color0
 color   listfocus           color0   color117
-color   listnormal_unread   color66   color0
+color   listnormal_unread   color4   color0
 color   listfocus_unread    color0   color117
 color   info                color0   color117
 color   article             color255 default bold
