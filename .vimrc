@@ -14,7 +14,7 @@ set rtp+=/usr/local/opt/fzf
 syntax on 
 filetype plugin on 
 set termguicolors
-colorscheme iceberg
+colorscheme embark
 set guifont=MesloLGSDZ_Nerd_Font:h11 
 set background=dark
 set mouse=a

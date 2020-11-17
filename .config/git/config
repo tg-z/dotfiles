@@ -100,3 +100,5 @@
 [grep]
 	extendedRegexp = true
 	lineNumber = true
+[pull]
+	rebase = false
