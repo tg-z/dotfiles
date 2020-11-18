@@ -40,4 +40,4 @@ gh-open () {
         echo "🐙 Opened GitHub in browser"
 }
 
-gh-open $(curl -sL "https://api.github.com/users/${user}/repos?per_page=100" | jq '.[].full_name' | sed 's/"//g' | ${pick})
+gh-open $(curl -sL "https://api.github.com/users/${user}/repos?per_page=100" | jq '.[].full_name' | sed 's/"//g' | ${pick} --preview-window=hidden)

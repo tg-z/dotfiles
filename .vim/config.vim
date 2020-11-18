@@ -109,4 +109,5 @@ endif
 
 augroup filetypedetect
   au BufNewFile,BufRead justfile setf make
+  autocmd BufRead,BufNewFile Baskfile call SetFileTypeSH("bash")
 augroup END
