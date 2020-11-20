@@ -62,6 +62,12 @@ export HSTR_CONFIG="hicolor,prompt-bottom,keywords-matching,help-on-opposite-sid
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export PASSWORD_STORE_CLIP_TIME=120
+export PASH_LENGTH=19
+export PASH_PATTERN="_A-Z-a-z-0-9"
+export PASH_DIR="${XDG_DATA_HOME}/pash"
+export PASH_CLIP="pbcopy"
+export PASH_TIMEOUT=off
+export PASH_KEYID="E912D56014735E825B5245B1B01FD9091D237004"
 export FZF_DEFAULT_COMMAND="fd -t f -H -i -L"
 export FORGIT_COPY_CMD='pbcopy'
 export FORGIT_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
@@ -92,7 +98,7 @@ export DOTBARE_KEY="
 "
 # path settings
 
-export MAILCAPS="${XDG_CONFIG_HOME}/mailcap:${HOME}/.mailcap"
+export MAILCAPS="${XDG_CONFIG_HOME}/mailcap"
 
 typeset -U path
 path=(
@@ -121,6 +127,7 @@ path=(
     /usr/local/opt/fzf/bin
     /usr/local/opt/openjdk/bin
     /Applications/Firefox.app/Contents/MacOS
+    /Applications/mindforger.app/Contents/MacOS
     /usr/local/opt/curl/bin
     $XDG_DATA_HOME/flutter/bin
     $XDG_DATA_HOME/mangadl
