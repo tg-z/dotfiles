@@ -1,5 +1,5 @@
 " plugin customizations
- 
+
 " airline
 let g:webdevicons_enable = 1
 let g:airline_powerline_fonts = 1
@@ -35,7 +35,7 @@ let g:zettel_date_format = '%B %m, %Y'
 let g:zettel_fzf_command = 'rg --column --line-number --ignore-case --no-heading --color=always'
 let g:zettel_fzf_options = ['--exact', '--tiebreak=end']
 let g:zettel_backlinks_title = 'Backlinks'
-let g:zettel_link_format='[%title](%link)'
+let g:zettel_link_format='[%title](%link.md)'
 let g:zettel_options = [{}, {'template': '~/.local/share/tpl/zet.tpl'}]
 nnoremap <leader>zn :ZettelNew<space>
 

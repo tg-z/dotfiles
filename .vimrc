@@ -11,20 +11,20 @@ so ~/.vim/plugins.vim
 
 set rtp+=/usr/local/opt/fzf
 
-syntax on 
-filetype plugin on 
+syntax on
+filetype plugin on
 set termguicolors
 colorscheme embark
-set guifont=MesloLGSDZ_Nerd_Font:h11 
+set guifont=MesloLGSDZ_Nerd_Font:h11
 set background=dark
 set mouse=a
-set noerrorbells 
+set noerrorbells
 set novisualbell
 set visualbell t_vb=
 set encoding=UTF-8
 set showmatch
 set noswapfile
-set hidden 
+set hidden
 set noruler
 
 " ----------
