@@ -88,7 +88,7 @@ let g:vim_markdown_conceal = 0
 " markdown toc
 let g:vmt_fence_text = 'ts'
 let g:vmt_fence_closing_text = 'te'
-let g:vmt_fence_hidden_markdown_style = 'GFM'
+let g:vmt_fence_hidden_markdown_style = 'gfm'
 let g:vmt_cycle_list_item_markers = 0
 
 " csv
