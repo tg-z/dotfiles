@@ -90,6 +90,7 @@ let g:vmt_fence_text = 'ts'
 let g:vmt_fence_closing_text = 'te'
 let g:vmt_fence_hidden_markdown_style = 'gfm'
 let g:vmt_cycle_list_item_markers = 0
+let g:vmt_list_item_char = '-'
 
 " csv
 let g:csv_arrange_align = 'l*'
