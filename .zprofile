@@ -30,6 +30,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # declutter home
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME}/notmuch-config"
 export ZETTEL_DIR="${XDG_DATA_HOME}/zet"
+export ZET_DIR="${HOME}/repos/git.sr.ht/~gpanders/wiki"
 export NIMBLE_DIR="${XDG_DATA_HOME}/nimble"
 export PERLBREW_ROOT="${XDG_DATA_HOME}/perlbrew"
 export PERLBREW_BIN="${PERLBREW_ROOT}/bin"
