@@ -39,4 +39,5 @@ noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>ev :e ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
+nmap <leader>b :bprev<CR>
 nmap <leader>e :PlugInstall<CR>
