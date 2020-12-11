@@ -1,0 +1,350 @@
+#!/usr/bin/env bash
+
+set -e
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+_ME="${0##*/}"
+_VERSION="0.0.1"
+_HOMEPAGE="https://github.com/tg-z/zit"
+DEFAULT_COMMAND="${DEFAULT_COMMAND:-help}"
+[ -z "$EDITOR" ] && EDITOR="vim"
+COPY_FILE_FLAG=0
+COPY_ID_FLAG=0
+
+if [[ -n "${ZETTEL_DIR}" ]]; then
+  NOTE_DIR="$ZETTEL_DIR"
+else
+  NOTE_DIR="./"
+fi
+
+copy_string() {
+  if [ -x "$(command -v xclip)" ]; then
+    echo "${1}" | xclip -selection c
+  fi
+
+  if [ -x "$(command -v pbcopy)" ]; then
+    echo "${1}" | pbcopy
+  fi
+}
+_generate(){
+  cd "${ZETTEL_DIR}"
+  local _content
+  read -r -d '' _content <<TEMPLATE || true
+---
+id: $(date +%Y%m%d%H%M%S)
+title: new_zettel
+date: $(date +"%B %d, %Y")
+tags:
+- $(date +%Y)
+---
+# new_zettel
+TEMPLATE
+
+  printf "creating new zettel in %s\\n" "${ZETTEL_DIR}"
+  printf "%s\\n" "${_content}" >> "${note_name}"
+  exit 0
+}
+
+new() {
+  cd "${ZETTEL_DIR}"
+  local id
+  id=$(date +"%Y%m%d%H%M%S")
+  local note_name
+  if [[ "$#" -gt 0 ]]; then
+    _note_name="$NOTE_DIR/$id-$@.md"
+    note_name="$(echo "${_note_name}" | tr ' ' '_' | tr '[:upper:]' '[:lower:]')"
+
+  else
+    note_name="$NOTE_DIR/$id.md"
+  fi
+  if [[ -f "${note_name}" ]]
+  then
+    printf "zettel already exists in this location.\\n"
+    exit 0
+  fi
+
+  touch "$note_name"
+
+  if [[ $COPY_ID_FLAG -eq 1 ]]; then
+    copy_string "$id"
+    echo "${id}"
+  fi
+
+  if [[ $COPY_FILE_FLAG -eq 1 ]]; then
+    copy_string "${note_name}"
+    echo "${note_name}"
+  fi
+  printf "new() \${PWD}: %s\\n" "${ZETTEL_DIR}"
+  _generate "${1}"
+}
+
+ag_check() {
+  if [ ! -x "$(command -v ag )" ]; then
+    echo "You need to have silver search (ag) installed to run this command"
+    exit 1
+  fi
+}
+
+find_file() {
+  ag_check
+  local files="${1}"
+  # local results=$(ag -G -g "$id") || true
+  local results
+  results=$(ag -rg "${files}" "${ZETTEL_DIR}")
+
+  if [ ! $? -eq 0 ]; then
+    echo "No results were found"
+    exit 1
+  fi
+
+  if [[ "${COPY_FILE_FLAG}" -gt 1 ]]; then
+    copy_string "${results}"
+  fi
+
+  echo "${results}"
+}
+
+find_tag() {
+  ag_check
+  local tag="${1}"
+  local results
+  results=$(ag -rl "${tag}" "${ZETTEL_DIR}")
+
+  if [ ! $? -eq 0 ]; then
+    echo "No results were found"
+    exit 1
+  fi
+
+  if [[ "${COPY_FILE_FLAG}" -eq 1 ]]; then
+    copy_string "${results}"
+  fi
+
+  echo "${results}"
+}
+
+version() {
+  printf "%s %s\n" "${_ME}" "${_VERSION}"
+}
+
+sync() {
+  cd "${ZETTEL_DIR}"
+  git rev-parse HEAD > /dev/null 2>&1
+  git commit -am "auto commit + push on $(date)" > /dev/null 2>&1
+  echo "committing changes"
+  git push
+  echo "pushing changes"
+}
+
+push() {
+  cd "${ZETTEL_DIR}"
+  git rev-parse HEAD > /dev/null 2>&1
+  git push > /dev/null 2>&1
+  echo "changes pushed"
+}
+
+get_id() {
+  local id
+  id=$(echo "${1}" | grep -Eo "[[:digit:]]{14}")
+
+  if [[ $COPY_ID_FLAG -eq 1 ]]; then
+    copy_string "${id}"
+  fi
+
+  echo "${id}"
+}
+
+list() {
+    cd "${ZETTEL_DIR}"
+    fd 20 -e md | sed 's/\([0-9]*\).-*/\1 /' | sed 's/.md//'
+}
+
+preview() {
+  cd "${ZETTEL_DIR}"
+  command -v mlp &> /dev/null
+  fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap' | xargs mlp && cd
+}
+
+help() {
+  cat <<EOF
+        __ __
+.-----.|__|  |_
+|-- __||  |   _|
+|_____||__|____|
+
+${_ME} - a small tool for managing your zettelkasten.
+
+Usage:
+  tel <cmd> [--cmd-options] [<args>]
+  tel -h | --help
+  tel -V | --version
+Options:
+  -i --id          Copy zettel id after running command.
+  -f --file        Copy zettel location/path after running command.
+  -h --help        Display this help information.
+  -V --version     Display version information and exit.
+Help:
+  tel help [<cmd>]
+Home:
+  ${_HOMEPAGE}
+Available commands:
+  commands
+  find
+  help
+  id
+  list
+  new
+  open
+  preview
+  push
+  sync
+  show
+  tag
+  version
+EOF
+}
+usage() {
+  echo "Usage:
+  ${_ME} [options] [command] [parameters]"
+  echo "Example: \`${_ME} -i new Hello World\`"
+  printf "  ----------------------------------------------- \n" > /dev/stderr
+  echo "Options:"
+  echo "  -i: Copy note id after running command"
+  echo "  -f: Copy note location/path after running command"
+  printf "  ----------------------------------------------- \n" > /dev/stderr
+  echo "Commands:"
+  echo "  new:  Creates a new note, parameters are added to note name."
+  echo "  find: Finds a note by name. Can only copy file path."
+  echo "  tag:  Searches notes for tag."
+  echo "  id:   Gets ID from filename, if it exists. Only copies file id."
+   exit 0
+}
+while getopts 'fihV' flag; do
+  case "${flag}" in
+    f)
+      shift
+      COPY_FILE_FLAG=1
+      ;;
+    i)
+      shift
+      COPY_ID_FLAG=1
+      ;;
+    h)
+      shift
+      help
+      ;;
+     V)
+      shift
+      printf "%s %s\n" "${_ME}" "${_VERSION}"
+      ;;
+     *) echo "Usage: $0 [-V] [-h]" >&2
+      exit 1
+      ;;
+esac
+done
+
+case "${1:-help}" in
+  ("new")
+    shift
+    new "${@}"
+    ;;
+  ("find")
+    shift
+    find_file "${1}"
+    ;;
+  ("help")
+    shift
+    help
+    ;;
+  ("list")
+    shift
+    list
+    ;;
+  ("tag")
+    shift
+    find_tag "${1}"
+    ;;
+  ("id")
+    shift
+    get_id "${1}"
+    ;;
+  ("usage")
+    shift
+    usage
+    ;;
+  ("open")
+    shift
+    open
+    ;;
+  ("preview")
+    shift
+    preview
+    ;;
+  ("push")
+    shift
+    push
+    ;;
+  ("sync")
+    shift
+    sync
+    ;;
+  ("show")
+    shift
+    show
+    ;;
+  ("version")
+    shift
+    printf "%s %s\n" "${_ME}" "${_VERSION}"
+    ;;
+  *)
+    shift
+    help
+    exit 1
+    ;;
+esac
+
+# case "$1" in
+#         commands)
+#             commands
+#             ;;
+#         find)
+# 	    find_file "${1}"
+#             ;;
+         
+#         help)
+#             help
+#             ;;
+#         id)
+#             get_id "${1}"
+#             ;;
+#         list|ls)
+#             list
+#             ;;
+#         new|n)
+# 	    new "${@}"
+# 	    ;;
+# 	open)
+# 	    open
+# 	    ;;
+#         *)
+# 	    shift
+# 	    help
+#             exit 1
+# 	    ;;
+# esac
+# case "$*" in
+#     --help|h)
+#         help
+#         ;;
+#     list|ls)
+#         list
+#         ;;
+#     new|n)
+#         shift
+#         new
+#         ;;
+#     *) --help
+#         ;;
+# esac
