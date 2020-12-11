@@ -1,4 +1,4 @@
-" plugin customizations
+" plugin configurations
 
 " airline
 let g:webdevicons_enable = 1

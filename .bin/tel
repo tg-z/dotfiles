@@ -10,10 +10,10 @@ _ME="${0##*/}"
 _VERSION="0.0.1"
 _HOMEPAGE="https://github.com/tg-z/zit"
 DEFAULT_COMMAND="${DEFAULT_COMMAND:-help}"
-[ -z "$EDITOR" ] && EDITOR="vim"
 COPY_FILE_FLAG=0
 COPY_ID_FLAG=0
 
+[ -z "$EDITOR" ] && EDITOR="vim"
 if [[ -n "${ZETTEL_DIR}" ]]; then
   NOTE_DIR="$ZETTEL_DIR"
 else
