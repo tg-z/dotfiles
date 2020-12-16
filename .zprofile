@@ -80,6 +80,8 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || bat {} || tree -C {}) 2> /dev/null | head -150'"
 export FZF_ALT_C_OPTS="--preview 'glow {}'"
 export SUBS_MENU_PROG="fzf --height=95% --cycle --border=rounded --preview-window=hidden"
+export FZF_MENU_PROG="fzf --height=95% --cycle --border=rounded --preview-window=hidden
+"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 65%"
 export ZSH_PECO_HISTORY_OPTS="--layout=bottom-up"
 export ZSH_PECO_HISTORY_DEDUP="1"
