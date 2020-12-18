@@ -16,7 +16,7 @@ filetype plugin on
 set termguicolors
 colorscheme fine_blue
 set guifont=MesloLGSDZ_Nerd_Font:h11
-set background=dark
+set background=light
 set mouse=a
 set noerrorbells
 set novisualbell
@@ -38,8 +38,8 @@ noremap ; :
 nmap <leader>w :w<CR>
 map <leader>/ :Rg<CR>
 noremap <C-q> :q<CR>
-nmap <leader>r :so ~/.vimrc<CR>
-nmap <leader>ev :e ~/.vimrc<CR>
+nmap <leader>r :so ~/.gvimrc<CR>
+nmap <leader>ev :e ~/.gvimrc<CR>
 nmap <leader>q :bd<CR>
 nmap <leader>b :bprev<CR>
 nmap <leader>e :PlugInstall<CR>
