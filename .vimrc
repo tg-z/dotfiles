@@ -16,7 +16,7 @@ filetype plugin on
 set termguicolors
 colorscheme fine_blue
 set guifont=MesloLGSDZ_Nerd_Font:h11
-set background=dark
+set background=light
 set mouse=a
 set noerrorbells
 set novisualbell

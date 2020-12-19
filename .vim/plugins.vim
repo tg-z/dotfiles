@@ -4,6 +4,8 @@ Plug 'michal-h21/vimwiki-sync'
 Plug 'michal-h21/vim-zettel'
 Plug 'alok/notational-fzf-vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'Jorengarenar/vim-MvVis'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'ryanoasis/vim-devicons'
