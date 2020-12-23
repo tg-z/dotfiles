@@ -37,6 +37,7 @@ copy_string() {
     echo "${1}" | pbcopy
   fi
 }
+
 _generate(){
   cd "${ZETTEL_DIR}"
   local _content
