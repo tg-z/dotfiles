@@ -86,6 +86,7 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 65%"
 export ZSH_PECO_HISTORY_OPTS="--layout=bottom-up"
 export ZSH_PECO_HISTORY_DEDUP="1"
 export LESS="-R"
+export EDIT="open -a MacVim"
 export JUSTFILE_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
 export JUSTFILE_EDITOR="${EDITOR:-mvim}"
 

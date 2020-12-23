@@ -14,11 +14,19 @@ COPY_FILE_FLAG=0
 COPY_ID_FLAG=0
 
 [ -z "$EDITOR" ] && EDITOR="vim"
+[ -z "${EDIT}" ] && EDIT="open -a MacVim"
 if [[ -n "${ZETTEL_DIR}" ]]; then
   NOTE_DIR="$ZETTEL_DIR"
 else
   NOTE_DIR="./"
 fi
+
+# input="${1}"
+# if [ -z "${input}" ]; then
+#     _edit
+# else
+#     terminal-notifier -message "opening" "${input}"
+# fi
 
 copy_string() {
   if [ -x "$(command -v xclip)" ]; then
@@ -160,10 +168,51 @@ list() {
     fd 20 -e md | sed 's/\([0-9]*\).-*/\1 /' | sed 's/.md//'
 }
 
+_edit() {
+    fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' | xargs "${EDIT}"
+}
+
+open() {
+    cd "${ZETTEL_DIR}"
+    if [ -z "${1}" ];
+    then
+	    _edit
+    else
+    fd 20 -e md | rg "${1}" | xargs "${EDIT}"
+    fi
+}
+
 preview() {
   cd "${ZETTEL_DIR}"
   command -v mlp &> /dev/null
-  fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' --bind='alt-w:toggle-preview-wrap' | xargs mlp && cd
+  fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' | xargs mlp
+}
+
+_generate_index() {
+  cd "${ZETTEL_DIR}"
+  local _content
+  find 20* -type f > .index
+  read -r -d '' _content <<TEMPLATE || true
+---
+id: $(date +%Y%m%d%H%M%S)
+title: index
+date: $(date +"%B %d, %Y")
+tags:
+- $(date +%Y)
+---
+
+# index
+
+$(while read -r file; do echo "- [$file]($file)"; done < .index)
+
+TEMPLATE
+
+  printf "%s\\n" "${_content}"
+  exit 0
+}
+
+index() {
+	_generate_index
 }
 
 help() {
@@ -193,6 +242,7 @@ Available commands:
   find
   help
   id
+  index
   list
   new
   open
@@ -254,13 +304,17 @@ case "${1:-help}" in
     shift
     get_id "${1}"
     ;;
+  ("index")
+    shift
+    index
+    ;;
   ("usage")
     shift
     usage
     ;;
   ("open")
     shift
-    open
+    open "${@}"
     ;;
   ("preview")
     shift
