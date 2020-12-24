@@ -64,6 +64,7 @@ yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Setapp$" manage=off
 yabai -m rule --add app="^Podcasts$" manage=off
-yabai -m rule --add app="^Calender" manage=off
-yabai -m rule --add app="^ProtonVPN" manage=off
-
+yabai -m rule --add app="^Calender$" manage=off
+yabai -m rule --add app="^ProtonVPN$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Photos$" manage=off
