@@ -3,7 +3,6 @@
 " airline
 let g:webdevicons_enable = 1
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='base16_spacemacs'
 let g:airline#extensions#tabline#enabled = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
@@ -73,7 +72,6 @@ let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_keymap_kill   = '<F12>'
 
 " markdown
-let g:vim_markdown_folding_level = 2
 let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'ini=dosini']
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
@@ -84,13 +82,46 @@ let g:vim_markdown_autowrite = 1
 let g:vim_markdown_edit_url_in = 'vsplit'
 let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_conceal = 0
+let g:vim_markdown_new_list_item_indent = 2
 
 " markdown toc
 let g:vmt_fence_text = 'vim-markdown-toc'
 let g:vmt_fence_closing_text = 'vim-markdown-toc'
-let g:vmt_fence_hidden_markdown_style = 'gfm'
 let g:vmt_cycle_list_item_markers = 0
 let g:vmt_list_item_char = '-'
+
+" markdown-preview.vim
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_open_to_the_world = 0
+let g:mkdp_command_for_global = 0
+let g:mkdp_open_ip = ''
+let g:mkdp_browser = ''
+let g:mkdp_echo_preview_url = 0
+let g:mkdp_markdown_css = ''
+let g:mkdp_highlight_css = '/Users/bluetooth/Downloads/highlight/styles/github.css'
+let g:mkdp_port = '9999'
+let g:mkdp_page_title = '${name}'
+let g:mkdp_filetypes = ['markdown']
+
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 1,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 1
+    \ }
+" example
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " csv
 let g:csv_arrange_align = 'l*'

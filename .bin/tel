@@ -14,7 +14,6 @@ COPY_FILE_FLAG=0
 COPY_ID_FLAG=0
 
 [ -z "$EDITOR" ] && EDITOR="vim"
-[ -z "${EDIT}" ] && EDIT="open -a MacVim"
 if [[ -n "${ZETTEL_DIR}" ]]; then
   NOTE_DIR="$ZETTEL_DIR"
 else
@@ -170,7 +169,7 @@ list() {
 }
 
 _edit() {
-    fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' | xargs "${EDIT}"
+    fd 20 -e md | fzf -m --preview 'glow -s dark {}' --border=rounded --cycle --height '95%' --preview-window='right:70%' | xargs "${EDITOR}"
 }
 
 open() {
@@ -179,7 +178,7 @@ open() {
     then
 	    _edit
     else
-    fd 20 -e md | rg "${1}" | xargs "${EDIT}"
+    fd 20 -e md | rg "${1}" | xargs "${EDITOR}"
     fi
 }
 

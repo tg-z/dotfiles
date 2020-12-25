@@ -6,6 +6,7 @@ Plug 'alok/notational-fzf-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'Jorengarenar/vim-MvVis'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'ryanoasis/vim-devicons'
