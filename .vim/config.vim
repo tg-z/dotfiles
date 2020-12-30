@@ -91,7 +91,7 @@ let g:vmt_cycle_list_item_markers = 0
 let g:vmt_list_item_char = '-'
 
 " markdown-preview.vim
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
 let g:mkdp_refresh_slow = 0
 let g:mkdp_open_to_the_world = 0
