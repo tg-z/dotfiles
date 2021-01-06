@@ -16,8 +16,8 @@ shell="$(basename "$SHELL")"
 if [ -x "$(command -v pkgin)" ]; then
 	packages="$(pkgin list | wc -l)"
 elif [ -x "$(command -v brew)" ]; then
-	brew_packages="$(brew list | wc -l)"
-	cask_packages="$(brew cask list 2> /dev/null | wc -l)"
+	brew_packages="$(brew list --formula | wc -l)"
+	cask_packages="$(brew list --cask 2> /dev/null | wc -l)"
 	packages="$(( ${brew_packages} + ${cask_packages} ))"
 elif [ -x "$(command -v port)" ]; then
 	packages="$(port installed | wc -l)"
