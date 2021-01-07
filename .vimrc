@@ -10,13 +10,15 @@ so ~/.vim/defaults.vim
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme desert
+colorscheme peaksea
 set mouse=a
 set encoding=UTF-8
 set showmatch
 set noswapfile
 set hidden
 set noruler
+
+let g:airline_theme='peaksea'
 
 " ---------
 "| keymaps |
@@ -30,4 +32,3 @@ noremap <C-q> :q<CR>
 nmap <leader>r :so ~/.vimrc<CR>
 nmap <leader>q :bd<CR>
 nmap <leader>e :PlugInstall<CR>
-

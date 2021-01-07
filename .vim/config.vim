@@ -1,7 +1,6 @@
 " plugin customizations
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='lucius'
 let g:airline#extensions#tabline#enabled = 1
 
 " Fern.vim
@@ -69,7 +68,7 @@ let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 
 " markdown
-let g:vim_markdown_folding_level = 2
+let g:vim_markdown_folding_level = 1
 let g:vim_markdown_fenced_languages = ['viml=vim', 'bash=sh', 'ini=dosini']
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
