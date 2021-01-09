@@ -7,7 +7,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 
-" Fern.vim
+" fern.vim
 let g:fern_git_status#disable_ignored = 1
 let g:fern_git_status#disable_submodules = 1
 let g:fern_git_status#disable_untracked = 0
@@ -118,7 +118,8 @@ let g:mkdp_preview_options = {
     \ 'content_editable': v:false,
     \ 'disable_filename': 1
     \ }
-" example
+
+" preview bindings
 nmap <C-s> <Plug>MarkdownPreview
 nmap <M-s> <Plug>MarkdownPreviewStop
 nmap <C-p> <Plug>MarkdownPreviewToggle
