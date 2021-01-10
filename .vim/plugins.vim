@@ -1,6 +1,5 @@
 " vim plugins
 call plug#begin('~/.vim/bundle')
-Plug 'michal-h21/vimwiki-sync', { 'for': ['rust'] }
 Plug 'michal-h21/vim-zettel'
 Plug 'alok/notational-fzf-vim'
 Plug 'cocopon/iceberg.vim'
