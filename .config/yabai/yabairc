@@ -68,3 +68,9 @@ yabai -m rule --add app="^Calender$" manage=off
 yabai -m rule --add app="^ProtonVPN$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Photos$" manage=off
+yabai -m rule --add app="^Flixerr$" manage=off
+yabai -m rule --add app="^GIMP-2.10$" manage=off
+yabai -m rule --add app="^WebTorrent$" manage=off
+yabai -m rule --add app="^Tunnelblick$" manage=off
+yabai -m rule --add app="^macSVG$" manage=off
+yabai -m rule --add app="^mindforger$" manage=off
