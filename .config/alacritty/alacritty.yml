@@ -393,6 +393,7 @@ key_bindings:
 colors:
   # COLORSCHEME: embark.yml
   primary:
+    # hard contrast: background = '#1d2021'
     background: '0x1e1c31'
     foreground: '0xcbe3e7'
   cursor:
