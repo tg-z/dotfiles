@@ -14,7 +14,7 @@ set rtp+=/usr/local/opt/fzf
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme fine_blue
+colorscheme AutumnLeaf
 set guifont=MesloLGSDZ_Nerd_Font:h11
 set background=light
 set mouse=a

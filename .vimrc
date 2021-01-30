@@ -14,7 +14,7 @@ set rtp+=/usr/local/opt/fzf
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme peaksea
+colorscheme embark
 set guifont=MesloLGSDZ_Nerd_Font:h11
 set background=dark
 set mouse=a
@@ -28,7 +28,7 @@ set hidden
 set noruler
 
 let mapleader=","
-let g:airline_theme='peaksea'
+let g:airline_theme='embark'
 
 " ----------
 "| keymaps  |
