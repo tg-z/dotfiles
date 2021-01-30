@@ -1,23 +1,24 @@
 #!/bin/bash
 # dont forget to set the default chooser -> fzf, peco, pick, etc...
-# by default this script uses fzf
+# fzf is used by default
+# shellcheck disable=SC2001
 
 user="${1}"
-fzf_cmd="$(which fzf)"
+fzf_cmd="$(command -v fzf)"
 pick="${fzf_cmd:-fzf}"
 
 gh-open () {
         gitURL="$(git config --get remote.origin.url)"
         gitURL="${gitURL%.git}"
-        if [[ ! -z $1 && ! -z $2 ]]
+        if [[ -n "${1}" && -n "${2}" ]]
         then
                 open https://github.com/"$1"/"$2"
         elif [[ $gitURL =~ ^git@ ]]
         then
                 branch=${1:-"$(git symbolic-ref --short HEAD)"}
-                branchExists="$(git ls-remote --heads $gitURL $branch | wc -l)"
-                github="$(echo $gitURL | sed 's/git@//')"
-                github="$(echo $github | sed 's/\:/\//')"
+                branchExists="$(git ls-remote --heads "${gitURL}" "${branch}" | wc -l)"
+		github="$(echo "${gitURL}" | sed 's/git@//')"
+		github="$(echo "${github}" | sed 's/\:/\//')"
                 if [[ $branchExists == "       1" ]]
                 then
                         open http://"$github"/tree/"$branch"
@@ -27,7 +28,7 @@ gh-open () {
         elif [[ $gitURL =~ ^https?:// ]]
         then
                 branch=${1:-"$(git symbolic-ref --short HEAD)"}
-                branchExists="$(git ls-remote --heads $gitURL $branch | wc -l)"
+                branchExists="$(git ls-remote --heads "${gitURL}" "${branch}" | wc -l)"
                 if [[ $branchExists == "       1" ]]
                 then
                         open "$gitURL"/tree/"$branch"
@@ -40,4 +41,4 @@ gh-open () {
         echo "🐙 Opened GitHub in browser"
 }
 
-gh-open $(curl -sL "https://api.github.com/users/${user}/repos?per_page=100" | jq '.[].full_name' | sed 's/"//g' | ${pick} --preview-window=hidden)
+gh-open "$(curl -sL "https://api.github.com/users/${user}/repos?per_page=100" | jq '.[].full_name' -r | ${pick} --preview-window=hidden)"
