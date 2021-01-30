@@ -26,6 +26,7 @@ set showmatch
 set noswapfile
 set hidden
 set noruler
+set number
 
 let mapleader=","
 let g:airline_theme='embark'
