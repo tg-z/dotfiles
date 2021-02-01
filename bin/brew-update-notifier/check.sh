@@ -39,8 +39,8 @@ else
 	      echo "${outdated}" >> "${LOG}"
 	      echo "---"
             } >> "${LOG}"
-	    lc="$(("$(echo "$outdated" | wc -l)"))"
-	outdated="$(echo "${outdated}" | tail -$lc)"
+	lc="$(echo "${outdated}" | wc -l)"
+	outdated="$(echo "${outdated}" | tail -"${lc}")"
 	message="$(echo "${outdated}" | head -5)"
         if [ "$outdated" != "$message" ]; then
             message="Some of the outdated formulae are:

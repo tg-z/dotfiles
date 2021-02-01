@@ -124,7 +124,6 @@ path=(
     /bin
     $GOBIN
     $CARGOBIN
-    $PERLBREW_BIN
     $NIMBLE_DIR/bin
     ~/.local/share/npm/bin
     ~/.local/share/kyrat/bin
@@ -138,6 +137,7 @@ path=(
     $XDG_DATA_HOME/mangadl
     /usr/local/opt/python@3.9/bin
     ~/Library/Python/3.9/bin
+    /usr/local/Cellar/perl/5.32.1/bin
     )
 
 typeset -u fpath
