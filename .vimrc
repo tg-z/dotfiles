@@ -16,6 +16,7 @@ filetype plugin on
 set termguicolors
 colorscheme embark
 set guifont=MesloLGSDZ_Nerd_Font:h11
+set backupext=.bkp
 set background=dark
 set mouse=a
 set noerrorbells
