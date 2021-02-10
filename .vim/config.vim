@@ -140,6 +140,11 @@ if exists("did_load_filetypes")
   finish
 endif
 
+" prettier
+let g:prettier#autoformat = 0
+let g:prettier#autoformat_require_pragma = 1
+let g:prettier#exec_cmd_async = 1
+
 augroup filetypedetect
   au BufNewFile,BufRead justfile setf make
   autocmd BufRead,BufNewFile Baskfile call SetFileTypeSH("bash")
