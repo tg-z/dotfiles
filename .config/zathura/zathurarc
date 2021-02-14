@@ -1,13 +1,22 @@
+# zathura config
+
+set guioptions none
 set selection-clipboard "clipboard"
+set continuous-hist-save true
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set database plain
 set show-hidden true
 set show-directories true
 set show-recent 10
-set window-title-home-tilde true
+set incremental-search true
+set window-title-page false
+# set window-title-home-tilde true
 set statusbar-home-tilde true
 set page-padding 1
+
+# keybindings
+
 map u scroll half-up
 map d scroll half-down
 map D toggle_page_mode
@@ -16,9 +25,14 @@ map R rotate
 map K zoom in
 map J zoom out
 map i recolor
+map x toggle_index
 map p print
 map q quit
-map <C-i> recolor
+map o follow_link
+map n display_link
+map m mark_add
+map M mark_evaluate
+map F toggle_fullscreen
 
 # Dracula color theme for Zathura
 # Swaps Foreground for Background to get a light version if the user prefers
