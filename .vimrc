@@ -28,6 +28,7 @@ set noswapfile
 set hidden
 set noruler
 set number
+set ignorecase smartcase
 
 let mapleader=","
 let g:airline_theme='embark'
