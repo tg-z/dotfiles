@@ -1,7 +1,7 @@
 # zathura config
 
 set guioptions none
-set selection-clipboard "clipboard"
+set selection-clipboard clipboard
 set continuous-hist-save true
 set statusbar-h-padding 0
 set statusbar-v-padding 0
