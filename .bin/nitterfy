@@ -1,6 +1,0 @@
-#!/bin/bash
-if [ -z "$1" ]; then
-  echo "Usage: nitterfy <file>"
-  exit 1
-fi
-while read -r user; do echo "https://nitter.net/$user/rss"; done < "$1"

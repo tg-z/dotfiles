@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export cfg="$HOME/.config/nitter/config"
-export url="$HOME/.config/nitter/urls"
-export cache="$HOME/.local/share/nitter/cache.db"
-
-newsboat -r -u "${url}" -C "${cfg}" -c "${cache}"
