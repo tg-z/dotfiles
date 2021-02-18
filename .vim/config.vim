@@ -82,7 +82,9 @@ let g:vim_markdown_autowrite = 1
 let g:vim_markdown_edit_url_in = 'vsplit'
 let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_conceal = 0
-let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
+" let g:vim_markdown_new_list_item_indent = 2
 
 " markdown toc
 let g:vmt_fence_text = 'vim-markdown-toc'

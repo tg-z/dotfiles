@@ -50,7 +50,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 Plug 'vim-scripts/python_match.vim'
 Plug 'python-mode/python-mode', {'branch': 'develop'}
 Plug 'rust-lang/rust.vim', {'for': ['rust']}
