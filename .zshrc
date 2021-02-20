@@ -59,7 +59,6 @@ alias hh='hstr'
 alias gyb="~/documents/promnesia/gmail/gyb/gyb"
 alias nano='/usr/local/bin/nano'
 alias ytdl='/usr/local/bin/youtube-dl'
-alias canvas-assignments='canvas assignment ls 52351'
 alias bc='dntk'
 alias e='vim'
 alias zal='alias -L'
