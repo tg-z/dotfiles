@@ -57,6 +57,7 @@ export SUBS_FILE="${XDG_DATA_HOME}/subs/subs.txt"
 export RRC_CONFIG="${XDG_CONFIG_HOME}/rrc/config.toml"
 export MY_CONFIG="${XDG_CONFIG_HOME}/my"
 export HSTR_CONFIG="hicolor,prompt-bottom,keywords-matching,help-on-opposite-side"
+export FIREFOX_DATA="${HOME}/Library/ApplicationSupport/firefox/profiles/thz5mssg.dev-edition-default"
 
 # program defaults
 
