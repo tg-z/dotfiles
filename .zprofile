@@ -92,6 +92,11 @@ export JUSTFILE_DIR="${XDG_DATA_HOME}/justfiles"
 export JUSTFILE_FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS}"
 export JUSTFILE_EDITOR="${EDITOR:-mvim}"
 
+export YTFZF_HIST=1
+export YTFZF_LOOP=0
+export YTFZF_PREF="bestvideo[height<=?1080]+bestaudio/best"
+export YTFZF_CACHE="${HOME}/.cache/ytfzf"
+
 export DOTBARE_BACKUP="${XDG_DATA_HOME}/dotbare"
 export DOTBARE_PREVIEW="bat {}"
 export DOTBARE_FZF_DEFAULT_OPTS="--preview-window=right:65%"
