@@ -162,6 +162,4 @@ map grl cd ~/repos/gitlab.com
 map gre cd ~/repos/exercism
 map grh cd ~/repos/github.com
 map gsh cd ~/repos/git.sr.ht
-map gdP cd ~/documents/pond
 map gdp cd ~/documents/promnesia
-map gdw cd ~/documents/wiki
