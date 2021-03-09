@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-source ~/.config/yabai/colors.sh 
+# source ~/.config/yabai/colors.sh 
 
 # yabai template colours
 CBACK=$(echo $background | sed 's/#//')
