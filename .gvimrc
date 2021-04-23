@@ -1,4 +1,4 @@
-" vimrc file
+" gvimrc file
 " ---------
 "| default |
 " ---------
@@ -14,9 +14,9 @@ set rtp+=/usr/local/opt/fzf
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme AutumnLeaf
+colorscheme argonaut
 set guifont=MesloLGSDZ_Nerd_Font:h11
-set background=light
+set background=dark
 set mouse=a
 set noerrorbells
 set novisualbell
@@ -28,7 +28,7 @@ set hidden
 set noruler
 
 let mapleader=","
-let g:airline_theme='base16_spacemacs'
+let g:airline_theme='iceberg'
 
 " ----------
 "| keymaps  |
