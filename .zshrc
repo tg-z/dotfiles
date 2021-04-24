@@ -99,6 +99,7 @@ alias cf='cd ~/.config && changed'
 alias dotbare='~/bin/plugin/dotbare/dotbare'
 alias cfg='dotbare'
 alias twt='twtxt -c ~/.config/twtxt/config'
+alias withmy='/Users/bluetooth/repos/github.com/karlicoss/hpi/with_my'
 
 eval "$(lua ~/.zsh.d/functions/z.lua --init zsh)" 
 source <(navi widget zsh)

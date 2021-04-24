@@ -119,6 +119,7 @@ path=(
     ~/.bin
     ~/bin
     ~/.local/bin
+    ~/Library/Python/3.9/bin
     /usr/local/bin
     /usr/local/opt/binutils/bin
     /usr/local/opt/ruby/bin
@@ -142,7 +143,6 @@ path=(
     $XDG_DATA_HOME/flutter/bin
     $XDG_DATA_HOME/mangadl
     /usr/local/opt/python@3.9/bin
-    ~/Library/Python/3.9/bin
     /usr/local/Cellar/perl/5.32.1/bin
     )
 
