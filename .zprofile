@@ -119,8 +119,8 @@ path=(
     ~/.bin
     ~/bin
     ~/.local/bin
-    ~/Library/Python/3.9/bin
     /usr/local/bin
+    ~/Library/Python/3.9/bin
     /usr/local/opt/binutils/bin
     /usr/local/opt/ruby/bin
     /usr/local/lib/ruby/gems/2.7.0/bin
