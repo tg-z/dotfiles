@@ -14,8 +14,9 @@ set rtp+=/usr/local/opt/fzf
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme argonaut
+colorscheme iceberg " afterglow/argonaut is cool too
 set guifont=MesloLGSDZ_Nerd_Font:h11
+set backupext=.bkp
 set background=dark
 set mouse=a
 set noerrorbells
@@ -26,6 +27,8 @@ set showmatch
 set noswapfile
 set hidden
 set noruler
+set number
+set ignorecase smartcase
 
 let mapleader=","
 let g:airline_theme='iceberg'
@@ -38,8 +41,8 @@ noremap ; :
 nmap <leader>w :w<CR>
 map <leader>/ :Rg<CR>
 noremap <C-q> :q<CR>
-nmap <leader>r :so ~/.gvimrc<CR>
+nmap <leader>rv :so ~/.gvimrc<CR>
 nmap <leader>ev :e ~/.gvimrc<CR>
 nmap <leader>q :bd<CR>
 nmap <leader>b :bprev<CR>
-nmap <leader>e :PlugInstall<CR>
+nmap <leader>en :PlugInstall<CR>

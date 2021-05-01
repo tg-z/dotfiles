@@ -20,6 +20,7 @@ let g:vimwiki_tags_header = 'Generated Tags'
 
 " ephemeris 
 let g:ephemeris_diary = '~/documents/wiki/diary'
+"let g:ephemeris_todos = 'TODOs'
 nmap <leader>eci :EphemerisCreateIndex<CR>
 nmap <leader>egt :EphemerisGotoToday<CR>
 nmap <leader>ect :EphemerisCopyTodos<CR>
