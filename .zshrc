@@ -124,3 +124,5 @@ lfcd () {
 
 source ~/.zsh.d/functions/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.zsh.d/functions/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+PATH="/data/data/com.termux/files/home/.mangadl-bash:${PATH}"
