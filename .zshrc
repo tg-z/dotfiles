@@ -130,5 +130,3 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
-
-PATH="/Users/bluetooth/.local/share/mangadl:${PATH}"
