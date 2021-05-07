@@ -42,12 +42,12 @@ else
 	lc="$(echo "${outdated}" | wc -l)"
 	outdated="$(echo "${outdated}" | tail -"${lc}")"
 	message="$(echo "${outdated}" | head -5)"
-        if [ "$outdated" != "$message" ]; then
+        if [ "${outdated}" != "${message}" ]; then
             message="Some of the outdated formulae are:
-$message"
+${message}"
         else
             message="The following formulae are outdated:
-$message"
+${message}"
         fi
         # Send to the Nofication Center
         "${TERMINAL_NOTIFIER}" -execute "${DO_UPGRADE}" -title "Homebrew Updates Available" -message "${message}" -timeout 10
