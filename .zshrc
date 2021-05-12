@@ -82,7 +82,6 @@ alias rickroll='curl -sL https://raw.githubusercontent.com/keroserene/rickrollrc
 alias cua='cargo-install-update install-update --all'
 alias clr='clear'
 alias ref='zsh --login'
-alias grep='grep --color=always'
 alias ffmpeg='ffmpeg -hide_banner'
 alias chmodx='chmod +x'
 alias mvi='mpv --config-dir=$HOME/.config/mvi'

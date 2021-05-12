@@ -29,7 +29,7 @@
 	grmv = remote rename
 	rrm = remote remove
 	ghi = 'TERM=xterm-256color ghi'
-	start = !sh git commit --allow-empty -m 'initial commit' && git add . && git commit -m 'project skeleton'
+	start = !sh git commit --allow-empty -m 'initial commit' && git add . && git commit -m 'init commit'
 	subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
