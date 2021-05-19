@@ -108,6 +108,11 @@ export DOTBARE_KEY="
   --bind=alt-s:toggle-sort      # toggle sorting
   --bind=alt-t:toggle-preview   # toggle preview
 "
+# buku
+export BUKUSERVER_PER_PAGE=100
+export BUKUSERVER_DB_FILE="${XDG_DATA_HOME}/buku/bookmarks.db"
+export BUKUSERVER_OPEN_IN_NEW_TAB=true
+
 # path settings
 
 export MAILCAPS="${XDG_CONFIG_HOME}/mailcap"
