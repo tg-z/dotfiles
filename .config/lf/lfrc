@@ -131,7 +131,8 @@ map G bottom
 map gh cd ~
 map gcf cd ~/.config
 map gdl cd ~/storage/shared/downloads
-map gdc cd ~/documents
+map gdc cd ~/storage/shared/documents
+map gsp cd ~/storage/shared/Pictures
 map gls cd ~/.local/share
 map gz cd ~/.local/share/zet
 map gca cd ~/.cache
@@ -141,4 +142,3 @@ map gr. cd ~/repos
 map grl cd ~/repos/gitlab.com
 map grh cd ~/repos/github.com
 map gsh cd ~/repos/git.sr.ht
-map gdw cd ~/documents/wiki
