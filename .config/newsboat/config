@@ -16,7 +16,7 @@ confirm-exit no
 cleanup-on-quit no
 goto-next-feed no
 player 'musikcube'
-browser 'firefox -new-tab'
+browser "firefox -new-tab %u"
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 browser linkhandler
 
@@ -73,4 +73,4 @@ macro i set browser "mvi"; open-in-browser ; set browser linkhandler
 
 # COLORSCHEME
 include "~/.config/newsboat/colors/pond"
-# include "~/.config/newsboat/colors/brodie"
+# include "~/.config/newsboat/colors/inkpot"
