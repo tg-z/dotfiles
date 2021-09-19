@@ -40,10 +40,10 @@ set backspace=indent,eol,start
 nnoremap <leader><leader> <c-^>
 
 " force use of hjkl navigation
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+map <Left> :echo "H!"<cr>
+map <Right> :echo "L!"<cr>
+map <Up> :echo "K!"<cr>
+map <Down> :echo "J!"<cr>
 
 " indent if we're at the beginning of a line. else, do completion.
 function! InsertTabWrapper()
