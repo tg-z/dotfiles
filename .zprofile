@@ -149,7 +149,7 @@ path=(
     /usr/local/opt/curl/bin
     $XDG_DATA_HOME/flutter/bin
     $XDG_DATA_HOME/mangadl
-    /usr/local/opt/python@3.9/bin
+    /usr/local/opt/python@3.11/bin
     /usr/local/Cellar/perl/5.32.1/bin
     )
 
