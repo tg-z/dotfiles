@@ -28,3 +28,8 @@ thumb_b_nt --thumbnails --cache-thumbnails --thumb-width 256 --thumb-height 256 
            --limit-width 1024 --sort filename --index-name 0
 
 manga --image-bg "black" -Z -. -d -S filename --version-sort
+
+
+mkindex -iVO index.jpg .
+
+
